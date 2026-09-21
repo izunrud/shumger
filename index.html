@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ШУМГЕР — Профессиональный монтаж воркаут, детских площадок и МАФ</title>
-  <meta name="description" content="Монтаж спортивных воркаут площадок, детских игровых городков и малых архитектурных форм по ГОСТ. Полный цикл благоустройства.">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,170 +17,111 @@
       --color-pure-white: #ffffff;
       --color-ash: #d2d2c8;
       --color-graphite: #6e6e64;
-      --color-deep-charcoal: #30302a;
-      --color-stone: #919183;
-      --color-smoke: #b9b9b7;
-      --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-family: 'Plus Jakarta Sans', sans-serif;
       --font-weight-regular: 400;
       --font-weight-medium: 500;
-      --text-eyebrow: 11px;
-      --text-caption: 12px;
-      --text-body-sm: 14px;
       --text-body: 16px;
-      --text-subheading: 22px;
-      --text-heading: 28px;
-      --text-heading-lg: 52px;
       --radius-cards: 28px;
       --radius-buttons: 28px;
       --radius-pills: 9999px;
       --radius-inputs: 8px;
       --radius-inner: 18px;
-      --page-max-width: 1200px;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
-    body { font-family: var(--font-family); font-weight: var(--font-weight-regular); font-size: var(--text-body); line-height: 1.5; color: var(--color-off-black-ink); background-color: var(--color-pure-white); overflow-x: hidden; }
+    body { font-family: var(--font-family); font-size: var(--text-body); line-height: 1.5; color: var(--color-off-black-ink); background-color: var(--color-pure-white); overflow-x: hidden; }
     a { color: inherit; text-decoration: none; }
     button { font-family: inherit; cursor: pointer; border: none; background: none; }
-    input, select, textarea { font-family: inherit; font-size: var(--text-body); }
-    .container { max-width: var(--page-max-width); margin-left: auto; margin-right: auto; padding-left: 24px; padding-right: 24px; }
-    .eyebrow { font-size: var(--text-eyebrow); font-weight: var(--font-weight-medium); text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-graphite); display: inline-block; margin-bottom: 12px; }
-    .eyebrow-pill { font-size: var(--text-eyebrow); font-weight: var(--font-weight-medium); text-transform: uppercase; letter-spacing: 0.1em; padding: 6px 14px; border-radius: var(--radius-pills); background-color: var(--color-pure-white); color: var(--color-off-black-ink); border: 1px solid var(--color-ash); display: inline-flex; align-items: center; gap: 8px; }
-    .dot-live { width: 7px; height: 7px; border-radius: 50%; background-color: #38a169; display: inline-block; }
+    input { font-family: inherit; font-size: var(--text-body); }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .eyebrow { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-graphite); margin-bottom: 12px; display: inline-block; }
+    .eyebrow-pill { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; padding: 6px 14px; border-radius: var(--radius-pills); border: 1px solid var(--color-ash); display: inline-flex; align-items: center; gap: 8px; }
+    .dot-live { width: 7px; height: 7px; border-radius: 50%; background-color: #38a169; }
     
-    /* Кнопки */
-    .btn-lime { background-color: var(--color-electric-lime); color: var(--color-off-black-ink); font-weight: var(--font-weight-medium); font-size: var(--text-body); padding: 14px 28px; border-radius: var(--radius-buttons); display: inline-flex; align-items: center; justify-content: center; gap: 10px; transition: transform 0.15s ease, opacity 0.15s ease; text-align: center; }
-    .btn-lime:hover { transform: translateY(-1px); opacity: 0.95; }
-    .btn-secondary { background-color: var(--color-off-white-canvas); color: var(--color-off-black-ink); border: 1px solid var(--color-ash); font-weight: var(--font-weight-medium); font-size: var(--text-body); padding: 14px 28px; border-radius: var(--radius-buttons); display: inline-flex; align-items: center; justify-content: center; transition: background-color 0.15s ease; }
-    .btn-secondary:hover { background-color: #ebebe0; }
-    .link-underline { display: inline-flex; align-items: center; gap: 6px; font-weight: var(--font-weight-medium); border-bottom: 1px solid var(--color-off-black-ink); padding-bottom: 2px; }
-    .section-divider { height: 1px; background-color: var(--color-ash); width: 100%; border: none; }
+    .btn-lime { background-color: var(--color-electric-lime); color: var(--color-off-black-ink); font-weight: 500; padding: 14px 28px; border-radius: var(--radius-buttons); display: inline-flex; align-items: center; justify-content: center; gap: 10px; transition: 0.15s; }
+    .btn-lime:hover { opacity: 0.9; }
+    .btn-secondary { background-color: var(--color-off-white-canvas); color: var(--color-off-black-ink); border: 1px solid var(--color-ash); font-weight: 500; padding: 14px 28px; border-radius: var(--radius-buttons); display: inline-flex; align-items: center; justify-content: center; }
     
-    /* Шапка сайта */
+    /* Шапка */
     header.site-header { position: sticky; top: 0; z-index: 100; background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--color-ash); height: 76px; }
-    .header-inner { display: flex; align-items: center; justify-content: space-between; height: 76px; }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; height: 100%; }
     .brand-logo-wrapper { display: flex; align-items: center; gap: 14px; }
-    .brand-logo-mark { width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 12px; background-color: var(--color-off-white-canvas); border: 1px solid var(--color-ash); overflow: hidden; padding: 4px; }
-    .brand-logo-svg { width: 100%; height: 100%; object-fit: contain; }
-    .brand-name { font-size: 20px; font-weight: var(--font-weight-medium); letter-spacing: -0.02em; color: var(--color-off-black-ink); }
-    .brand-tagline { font-size: 11px; color: var(--color-graphite); letter-spacing: 0.05em; text-transform: uppercase; margin-top: -2px; }
+    .brand-logo-mark { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 12px; background-color: var(--color-off-white-canvas); border: 1px solid var(--color-ash); }
+    .brand-name { font-size: 20px; font-weight: 500; }
     .nav-links { display: flex; align-items: center; gap: 24px; }
-    .nav-link { font-size: var(--text-body-sm); font-weight: var(--font-weight-medium); color: var(--color-off-black-ink); transition: color 0.15s; }
-    .nav-link:hover { color: #8bc741; }
+    .nav-link { font-size: 14px; font-weight: 500; transition: 0.15s; }
     .header-contacts { display: flex; align-items: center; gap: 16px; }
-    .header-phone { font-size: var(--text-body-sm); font-weight: var(--font-weight-medium); color: var(--color-off-black-ink); text-align: right; }
-    .header-phone small { display: block; font-size: 11px; color: var(--color-graphite); font-weight: var(--font-weight-regular); }
+    .mobile-menu-btn { display: none; }
 
-    /* Главный экран */
-    .hero-section { padding-top: 56px; padding-bottom: 72px; background-color: var(--color-pure-white); }
-    .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 36px; align-items: stretch; }
-    .hero-main-card { background-color: var(--color-off-white-canvas); border-radius: var(--radius-cards); padding: 48px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid var(--color-ash); }
-    .hero-title { font-size: clamp(34px, 4.4vw, 54px); font-weight: var(--font-weight-medium); line-height: 1.05; letter-spacing: -0.03em; color: var(--color-off-black-ink); margin-top: 16px; margin-bottom: 20px; }
-    .hero-subtitle { font-size: 18px; line-height: 1.5; color: var(--color-graphite); margin-bottom: 36px; max-width: 540px; }
-    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-bottom: 36px; }
-    .hero-proof-bar { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding-top: 28px; border-top: 1px solid var(--color-ash); }
-    .proof-item strong { display: block; font-size: 26px; font-weight: var(--font-weight-medium); letter-spacing: -0.03em; color: var(--color-off-black-ink); line-height: 1.1; }
-    .proof-item span { font-size: 13px; color: var(--color-graphite); line-height: 1.3; display: block; margin-top: 4px; }
-    .hero-side-card { display: flex; flex-direction: column; gap: 20px; }
-    .hero-banner-lime { background-color: var(--color-electric-lime); border-radius: var(--radius-cards); padding: 36px; display: flex; flex-direction: column; justify-content: space-between; flex: 1; }
-    .hero-banner-lime h3 { font-size: 26px; font-weight: var(--font-weight-medium); line-height: 1.15; letter-spacing: -0.02em; margin-top: 8px; margin-bottom: 12px; color: var(--color-off-black-ink); }
-    .hero-banner-lime p { font-size: 15px; line-height: 1.45; color: var(--color-off-black-ink); margin-bottom: 24px; }
-    .hero-quick-features { background-color: var(--color-pure-white); border: 1px solid var(--color-ash); border-radius: var(--radius-cards); padding: 28px; display: flex; flex-direction: column; gap: 16px; }
-    .quick-feature-item { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; color: var(--color-off-black-ink); }
-    .check-icon-svg { width: 18px; height: 18px; border-radius: 50%; background-color: var(--color-electric-lime); color: var(--color-off-black-ink); display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
-
-    /* Блок аудиторий */
-    .audience-section { padding-top: 80px; padding-bottom: 80px; background-color: var(--color-off-white-canvas); border-top: 1px solid var(--color-ash); border-bottom: 1px solid var(--color-ash); }
-    .section-header { margin-bottom: 44px; text-align: left; }
-    .section-title { font-size: clamp(26px, 3.2vw, 40px); font-weight: var(--font-weight-medium); letter-spacing: -0.03em; line-height: 1.1; margin-top: 8px; color: var(--color-off-black-ink); }
-    .section-subtitle { font-size: 17px; color: var(--color-graphite); margin-top: 10px; max-width: 680px; }
-    .audience-tabs { display: inline-flex; background-color: var(--color-pure-white); border: 1px solid var(--color-ash); border-radius: var(--radius-pills); padding: 4px; gap: 4px; margin-bottom: 32px; flex-wrap: wrap; }
-    .audience-tab-btn { padding: 10px 22px; border-radius: var(--radius-pills); font-size: var(--text-body-sm); font-weight: var(--font-weight-medium); color: var(--color-graphite); transition: all 0.15s ease; }
+    /* Блоки */
+    .hero-section { padding: 56px 0 72px; }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 36px; }
+    .hero-main-card, .hero-quick-features { background-color: var(--color-off-white-canvas); border-radius: var(--radius-cards); border: 1px solid var(--color-ash); padding: 48px; }
+    .hero-quick-features { padding: 28px; background-color: var(--color-pure-white); }
+    .hero-title { font-size: clamp(34px, 4.4vw, 54px); font-weight: 500; line-height: 1.05; margin: 16px 0 20px; }
+    .hero-proof-bar { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding-top: 28px; border-top: 1px solid var(--color-ash); margin-top: 36px; }
+    .hero-banner-lime { background-color: var(--color-electric-lime); border-radius: var(--radius-cards); padding: 36px; }
+    
+    .audience-section, .portfolio-section { padding: 80px 0; background-color: var(--color-off-white-canvas); border-top: 1px solid var(--color-ash); border-bottom: 1px solid var(--color-ash); }
+    .section-title { font-size: clamp(26px, 3.2vw, 40px); font-weight: 500; line-height: 1.1; margin-bottom: 32px; }
+    .audience-tabs { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 32px; }
+    .audience-tab-btn { padding: 10px 22px; border-radius: var(--radius-pills); border: 1px solid var(--color-ash); background: var(--color-pure-white); font-size: 14px; font-weight: 500; }
     .audience-tab-btn.active { background-color: var(--color-off-black-ink); color: var(--color-pure-white); }
     .audience-card-container { background-color: var(--color-pure-white); border-radius: var(--radius-cards); border: 1px solid var(--color-ash); padding: 40px; }
     .audience-content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
-    .audience-meta-list { list-style: none; display: flex; flex-direction: column; gap: 16px; margin-top: 24px; margin-bottom: 32px; }
-    .audience-meta-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: var(--color-off-black-ink); line-height: 1.4; }
-    .audience-feature-box { background-color: var(--color-off-white-canvas); border-radius: var(--radius-inner); padding: 32px; border: 1px solid var(--color-ash); }
-    .audience-feature-box h4 { font-size: 18px; font-weight: var(--font-weight-medium); margin-bottom: 16px; letter-spacing: -0.02em; }
-    .feature-pill-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
-    .tag-badge { background-color: var(--color-pure-white); border: 1px solid var(--color-ash); font-size: 12px; font-weight: var(--font-weight-medium); padding: 6px 14px; border-radius: var(--radius-pills); color: var(--color-off-black-ink); }
 
-    /* Калькулятор */
-    .calc-section { padding-top: 96px; padding-bottom: 96px; background-color: var(--color-pure-white); }
-    .calc-wrapper { background-color: var(--color-pure-white); border-radius: var(--radius-cards); border: 1px solid var(--color-ash); padding: 48px; display: grid; grid-template-columns: 1.3fr 0.9fr; gap: 48px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); }
-    .step-indicator { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; }
-    .step-badge { font-size: 11px; font-weight: var(--font-weight-medium); text-transform: uppercase; letter-spacing: 0.1em; padding: 4px 10px; background-color: var(--color-electric-lime); color: var(--color-off-black-ink); border-radius: var(--radius-pills); }
-    .step-title { font-size: 22px; font-weight: var(--font-weight-medium); letter-spacing: -0.02em; margin-bottom: 16px; }
-    .quiz-options-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 32px; }
-    .quiz-option { background-color: var(--color-off-white-canvas); border: 1px solid var(--color-ash); border-radius: var(--radius-inner); padding: 16px 20px; cursor: pointer; display: flex; flex-direction: column; gap: 6px; transition: all 0.15s ease; text-align: left; }
-    .quiz-option:hover { border-color: var(--color-graphite); }
-    .quiz-option.selected { background-color: var(--color-off-black-ink); border-color: var(--color-off-black-ink); color: var(--color-pure-white); }
-    .quiz-option.selected .quiz-opt-sub { color: var(--color-smoke); }
-    .quiz-opt-title { font-size: 15px; font-weight: var(--font-weight-medium); }
-    .quiz-opt-sub { font-size: 12px; color: var(--color-graphite); }
-    .calc-sidebar { background-color: var(--color-off-white-canvas); border-radius: var(--radius-inner); border: 1px solid var(--color-ash); padding: 32px; display: flex; flex-direction: column; justify-content: space-between; }
-    .estimate-box { border-bottom: 1px solid var(--color-ash); padding-bottom: 24px; margin-bottom: 24px; }
-    .estimate-price-range { font-size: 32px; font-weight: var(--font-weight-medium); letter-spacing: -0.03em; color: var(--color-off-black-ink); margin-top: 8px; }
-    .calc-summary-item { display: flex; justify-content: space-between; font-size: 13px; padding: 6px 0; color: var(--color-graphite); }
-    .calc-summary-item span:last-child { font-weight: var(--font-weight-medium); color: var(--color-off-black-ink); text-align: right; }
-    .input-field { width: 100%; background-color: var(--color-pure-white); border: 1px solid var(--color-ash); border-radius: var(--radius-inputs); padding: 12px 16px; font-size: 15px; color: var(--color-off-black-ink); outline: none; margin-bottom: 12px; }
-    
-    /* Портфолио */
-    .portfolio-section { padding-top: 96px; padding-bottom: 96px; background-color: var(--color-off-white-canvas); border-top: 1px solid var(--color-ash); border-bottom: 1px solid var(--color-ash); }
-    .portfolio-filter-bar { display: flex; gap: 8px; margin-bottom: 36px; flex-wrap: wrap; }
-    .filter-btn { font-size: var(--text-body-sm); font-weight: var(--font-weight-medium); padding: 8px 20px; border-radius: var(--radius-pills); background-color: var(--color-pure-white); border: 1px solid var(--color-ash); color: var(--color-off-black-ink); transition: all 0.15s ease; }
-    .filter-btn.active { background-color: var(--color-off-black-ink); color: var(--color-pure-white); border-color: var(--color-off-black-ink); }
+    .calc-section, .contact-section { padding: 96px 0; }
+    .calc-wrapper { border: 1px solid var(--color-ash); border-radius: var(--radius-cards); padding: 48px; display: grid; grid-template-columns: 1.3fr 0.9fr; gap: 48px; }
+    .quiz-options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 32px; }
+    .quiz-option { border: 1px solid var(--color-ash); border-radius: var(--radius-inner); padding: 16px; cursor: pointer; }
+    .quiz-option.selected { background: var(--color-off-black-ink); color: var(--color-pure-white); }
+    .calc-sidebar { background: var(--color-off-white-canvas); border-radius: var(--radius-inner); border: 1px solid var(--color-ash); padding: 32px; }
+    .input-field { width: 100%; border: 1px solid var(--color-ash); border-radius: var(--radius-inputs); padding: 12px 16px; margin-bottom: 12px; }
+
     .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .case-card { background-color: var(--color-pure-white); border-radius: var(--radius-cards); border: 1px solid var(--color-ash); overflow: hidden; display: flex; flex-direction: column; }
-    .case-image-wrap { height: 200px; background-color: #e4e4d8; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-    .case-image-graphic { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, #f2f2e8 0%, #e2e2d5 100%); color: var(--color-graphite); gap: 12px; }
-    .case-graphic-icon { width: 52px; height: 52px; border-radius: 14px; background-color: var(--color-pure-white); border: 1px solid var(--color-ash); display: flex; align-items: center; justify-content: center; color: var(--color-off-black-ink); }
-    .case-tag-overlay { position: absolute; top: 16px; left: 16px; background-color: var(--color-pure-white); padding: 4px 12px; border-radius: var(--radius-pills); font-size: 11px; font-weight: var(--font-weight-medium); text-transform: uppercase; letter-spacing: 0.08em; border: 1px solid var(--color-ash); }
-    .case-content { padding: 28px; display: flex; flex-direction: column; flex: 1; justify-content: space-between; }
-    .case-title { font-size: 20px; font-weight: var(--font-weight-medium); letter-spacing: -0.02em; margin-bottom: 8px; }
-    .case-desc { font-size: 14px; color: var(--color-graphite); line-height: 1.45; margin-bottom: 20px; }
-    .case-stats-row { display: flex; justify-content: space-between; border-top: 1px solid var(--color-ash); padding-top: 14px; font-size: 12px; color: var(--color-graphite); }
-    .case-stats-row strong { display: block; font-size: 14px; color: var(--color-off-black-ink); font-weight: var(--font-weight-medium); }
+    .case-card { background: var(--color-pure-white); border-radius: var(--radius-cards); border: 1px solid var(--color-ash); overflow: hidden; }
+    .case-image-wrap { height: 200px; background: #e4e4d8; display: flex; align-items: center; justify-content: center; }
+    .case-content { padding: 28px; }
 
-    /* Лаймовая секция и Контакты */
-    .lime-cta-section { background-color: var(--color-electric-lime); padding: 88px 0; border-top: 1px solid var(--color-ash); border-bottom: 1px solid var(--color-ash); }
+    .lime-cta-section { background-color: var(--color-electric-lime); padding: 80px 0; border-top: 1px solid var(--color-ash); border-bottom: 1px solid var(--color-ash); }
     .lime-cta-inner { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 48px; align-items: center; }
-    .lime-cta-title { font-size: clamp(30px, 4vw, 50px); font-weight: var(--font-weight-medium); line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 16px; }
-    .lime-cta-box { background-color: var(--color-pure-white); border-radius: var(--radius-cards); padding: 36px; border: 1px solid rgba(20, 20, 15, 0.1); }
-    .contact-section { padding-top: 96px; padding-bottom: 96px; background-color: var(--color-pure-white); }
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
-    .contact-info-card { background-color: var(--color-off-white-canvas); border-radius: var(--radius-cards); border: 1px solid var(--color-ash); padding: 44px; display: flex; flex-direction: column; justify-content: space-between; }
-    .contact-meta-row { display: flex; flex-direction: column; gap: 20px; margin-top: 28px; }
-    .meta-item strong { font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-graphite); display: block; margin-bottom: 4px; }
-    .meta-item p, .meta-item a { font-size: 18px; font-weight: var(--font-weight-medium); color: var(--color-off-black-ink); }
-    .contact-form-card { background-color: var(--color-pure-white); border-radius: var(--radius-cards); border: 1px solid var(--color-ash); padding: 44px; }
+    .contact-info-card, .contact-form-card { padding: 44px; border-radius: var(--radius-cards); border: 1px solid var(--color-ash); }
+    .contact-info-card { background: var(--color-off-white-canvas); }
 
     /* Подвал */
-    footer.site-footer { background-color: var(--color-off-black-ink); color: var(--color-off-white-canvas); padding-top: 80px; padding-bottom: 48px; }
-    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 60px; }
-    .footer-col h5 { font-size: var(--text-caption); font-weight: var(--font-weight-medium); text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-ash); margin-bottom: 20px; }
-    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-    .footer-links a { font-size: var(--text-body-sm); color: var(--color-smoke); }
-    .footer-links a:hover { color: var(--color-pure-white); }
-    .footer-bottom { border-top: 1px solid var(--color-deep-charcoal); padding-top: 32px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--color-graphite); }
+    footer { background: var(--color-off-black-ink); color: var(--color-pure-white); padding: 60px 0 30px; }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+    .footer-links a { color: var(--color-ash); display: block; margin-bottom: 8px; }
 
+    /* Мобильное меню (Оверлей) */
+    .mobile-menu-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--color-pure-white); z-index: 1000; display: none; flex-direction: column; padding: 24px; }
+    .mobile-menu-close { align-self: flex-end; font-size: 32px; background: none; border: none; cursor: pointer; color: var(--color-off-black-ink); margin-bottom: 40px; }
+    .mobile-nav-list { display: flex; flex-direction: column; gap: 24px; font-size: 24px; font-weight: 500; }
+    
     /* Модальное окно */
-    .modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(20, 20, 15, 0.65); backdrop-filter: blur(4px); z-index: 999; display: none; align-items: center; justify-content: center; padding: 20px; }
-    .modal-card { background-color: var(--color-pure-white); border-radius: var(--radius-cards); max-width: 520px; width: 100%; padding: 40px; position: relative; }
-    .modal-close { position: absolute; top: 24px; right: 24px; font-size: 20px; color: var(--color-graphite); cursor: pointer; }
+    .modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); z-index: 999; display: none; align-items: center; justify-content: center; padding: 20px; }
+    .modal-card { background: #fff; padding: 40px; border-radius: var(--radius-cards); max-width: 500px; width: 100%; position: relative; }
+    .modal-close { position: absolute; top: 20px; right: 20px; font-size: 20px; cursor: pointer; border:none; background:none; }
 
-    /* Адаптивность */
+    /* АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ (MOBILE) */
     @media (max-width: 992px) {
-      .hero-grid, .audience-content-grid, .calc-wrapper, .lime-cta-inner, .contact-grid { grid-template-columns: 1fr; gap: 32px; }
-      .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-      .nav-links, .header-phone { display: none; }
+      .nav-links, .header-phone { display: none; } /* Прячем обычное меню */
+      .mobile-menu-btn { display: block; border: none; background: none; margin-left: auto; margin-right: 16px; }
+      .header-contacts .btn-lime { display: none; } /* На телефонах кнопка в шапке мешает */
+      
+      .hero-grid, .audience-content-grid, .calc-wrapper, .lime-cta-inner, .contact-grid { grid-template-columns: 1fr; }
+      .portfolio-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
     }
+    
     @media (max-width: 640px) {
-      .hero-main-card { padding: 28px; }
-      .portfolio-grid, .quiz-options-grid, .footer-grid { grid-template-columns: 1fr; }
-      .hero-proof-bar { grid-template-columns: 1fr; gap: 16px; }
-      .calc-wrapper { padding: 28px 20px; }
+      .container { padding: 0 16px; }
+      .hero-main-card, .audience-card-container, .calc-wrapper, .contact-info-card, .contact-form-card { padding: 24px; }
+      .hero-proof-bar, .quiz-options-grid, .portfolio-grid { grid-template-columns: 1fr; }
+      .btn-lime, .btn-secondary { width: 100%; } /* Кнопки на всю ширину на мобилке */
+      .hero-actions { flex-direction: column; width: 100%; }
+      .audience-tabs { flex-direction: column; width: 100%; }
+      .audience-tab-btn { text-align: center; }
     }
   </style>
 </head>
@@ -191,84 +131,70 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand-logo-wrapper">
-        <div class="brand-logo-mark">
-          <svg class="brand-logo-svg" viewBox="0 0 520 440" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="shumger-g1" x1="60" y1="120" x2="130" y2="380" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#2d6431" /><stop offset="100%" stop-color="#163e1a" /></linearGradient>
-              <linearGradient id="shumger-g2" x1="150" y1="120" x2="230" y2="380" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#559938" /><stop offset="100%" stop-color="#2c5f1c" /></linearGradient>
-              <linearGradient id="shumger-g3" x1="240" y1="120" x2="330" y2="380" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#9acb47" /><stop offset="100%" stop-color="#4a8927" /></linearGradient>
-              <linearGradient id="shumger-g4" x1="335" y1="210" x2="405" y2="380" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#4a8831" /><stop offset="100%" stop-color="#235218" /></linearGradient>
-              <linearGradient id="shumger-g5" x1="330" y1="230" x2="470" y2="120" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#8bc741" /><stop offset="100%" stop-color="#c4e26a" /></linearGradient>
-            </defs>
-            <path d="M 60 162 C 60 134, 82 112, 110 112 C 138 112, 160 134, 160 162 L 160 262 C 160 290, 138 312, 110 312 C 82 312, 60 290, 60 262 Z" fill="url(#shumger-g1)"/>
-            <path d="M 60 240 L 60 270 C 60 326, 105 370, 160 370 C 192 370, 220 355, 238 332 C 214 316, 196 288, 196 256 L 196 240 C 196 280, 164 312, 128 312 C 90 312, 60 280, 60 240 Z" fill="url(#shumger-g1)"/>
-            <path d="M 152 162 C 152 134, 174 112, 202 112 C 230 112, 252 134, 252 162 L 252 262 C 252 290, 230 312, 202 312 C 174 312, 152 290, 152 262 Z" fill="url(#shumger-g2)"/>
-            <path d="M 152 240 L 152 270 C 152 326, 197 370, 252 370 C 284 370, 312 355, 330 332 C 306 316, 288 288, 288 256 L 288 240 C 288 280, 256 312, 220 312 C 182 312, 152 280, 152 240 Z" fill="url(#shumger-g2)"/>
-            <path d="M 244 162 C 244 134, 266 112, 294 112 C 322 112, 344 134, 344 162 L 344 262 C 344 326, 299 370, 244 370 C 200 370, 165 342, 152 305 C 165 315, 182 322, 202 322 C 245 322, 280 287, 280 244 L 280 162 C 280 144, 264 128, 244 128 Z" fill="url(#shumger-g3)"/>
-            <path d="M 370 238 C 370 230, 376 222, 385 220 C 402 216, 420 226, 422 244 L 422 322 C 422 348, 401 369, 375 369 C 349 369, 328 348, 328 322 L 328 290 C 328 260, 348 240, 370 238 Z" fill="url(#shumger-g4)"/>
-            <path d="M 326 215 C 326 156, 372 110, 431 110 L 450 110 C 475 110, 495 130, 495 155 C 495 180, 475 200, 450 200 L 435 200 C 395 200, 362 225, 348 258 C 336 248, 326 233, 326 215 Z" fill="url(#shumger-g5)"/>
-            <path d="M 328 265 C 345 235, 380 215, 425 212 C 432 212, 435 218, 430 222 C 388 230, 355 252, 338 285 C 332 290, 324 280, 328 265 Z" fill="#ffffff"/>
-          </svg>
-        </div>
-        <div>
-          <div class="brand-name">ШУМГЕР</div>
-          <div class="brand-tagline">Монтаж площадок & МАФ</div>
-        </div>
+        <div class="brand-logo-mark"><span style="font-weight:bold; color:#beff50; font-size:24px;">Ш</span></div>
+        <div class="brand-name">ШУМГЕР</div>
       </a>
-
-      <!-- МЕНЮ СО ССЫЛКАМИ НА СТРАНИЦЫ -->
+      
+      <!-- Десктопное меню -->
       <nav class="nav-links">
         <a href="services.html" class="nav-link">Услуги</a>
         <a href="#audiences" class="nav-link">Для кого</a>
         <a href="#calculator" class="nav-link">Калькулятор</a>
-        <a href="services.html#safety" class="nav-link">Стандарты ГОСТ</a>
+        <a href="services.html#safety" class="nav-link">Стандарты</a>
         <a href="#portfolio" class="nav-link">Объекты</a>
-        <a href="#contacts" class="nav-link">Контакты</a>
       </nav>
-
+      
       <div class="header-contacts">
-        <div class="header-phone">
-          <a href="tel:+79990000000">+7 (999) 000-00-00</a>
-          <small>Прием заявок 8:00 – 21:00</small>
-        </div>
-        <button class="btn-lime" onclick="openModal('Получить смету проекта')">Получить смету</button>
+        <div class="header-phone"><a href="tel:+79990000000">+7 (999) 000-00-00</a></div>
+        <button class="btn-lime" onclick="openModal('Получить смету')">Получить смету</button>
       </div>
+
+      <!-- Кнопка бургер-меню для мобильных -->
+      <button class="mobile-menu-btn" onclick="toggleMenu()">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#14140f" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
     </div>
   </header>
+
+  <!-- МОБИЛЬНОЕ ВЫЕЗЖАЮЩЕЕ МЕНЮ -->
+  <div class="mobile-menu-overlay" id="mobileNav">
+    <button class="mobile-menu-close" onclick="toggleMenu()">✕</button>
+    <div class="mobile-nav-list">
+      <a href="services.html">Услуги монтажа</a>
+      <a href="#audiences" onclick="toggleMenu()">Для кого мы работаем</a>
+      <a href="#calculator" onclick="toggleMenu()">Калькулятор сметы</a>
+      <a href="services.html#safety">Стандарты ГОСТ</a>
+      <a href="#portfolio" onclick="toggleMenu()">Наши объекты</a>
+      <a href="#contacts" onclick="toggleMenu()">Контакты</a>
+      <hr style="border:none; border-top:1px solid #d2d2c8; margin: 10px 0;">
+      <a href="tel:+79990000000" style="color: #6e6e64;">+7 (999) 000-00-00</a>
+      <button class="btn-lime" onclick="toggleMenu(); openModal('Консультация')">Оставить заявку</button>
+    </div>
+  </div>
 
   <!-- ГЛАВНЫЙ ЭКРАН -->
   <section class="hero-section">
     <div class="container">
       <div class="hero-grid">
         <div class="hero-main-card">
-          <div>
-            <div class="eyebrow-pill"><span class="dot-live"></span>Монтажные бригады в полной готовности</div>
-            <h1 class="hero-title">Профессиональный монтаж воркаут, детских площадок и МАФ</h1>
-            <p class="hero-subtitle">Работаем строго по ГОСТ. Полный цикл благоустройства: от подготовки основания и закладных до травмобезопасных покрытий и сдачи технадзору.</p>
-            <div class="hero-actions">
-              <button class="btn-lime" onclick="scrollToElement('calculator')">Рассчитать смету за 2 минуты</button>
-              <button class="btn-secondary" onclick="openModal('Консультация инженера')">Вызов инженера на объект</button>
-            </div>
+          <div class="eyebrow-pill"><span class="dot-live"></span>Работаем по договору</div>
+          <h1 class="hero-title">Монтаж воркаут, детских площадок и МАФ</h1>
+          <p style="margin-bottom: 24px; color: var(--color-graphite);">Работаем строго по ГОСТ. Полный цикл благоустройства: от подготовки основания до покрытий.</p>
+          <div class="hero-actions">
+            <button class="btn-lime" onclick="scrollToElement('calculator')">Рассчитать смету</button>
+            <button class="btn-secondary" onclick="openModal('Вызов инженера')">Вызов инженера</button>
           </div>
           <div class="hero-proof-bar">
-            <div class="proof-item"><strong>500+</strong><span>установленных комплексов</span></div>
-            <div class="proof-item"><strong>до 5 лет</strong><span>официальной гарантии</span></div>
-            <div class="proof-item"><strong>100% ГОСТ</strong><span>Р 52169 и ТР ЕАЭС 042</span></div>
+            <div><strong style="font-size:24px;">500+</strong><br><span style="font-size:12px;">объектов</span></div>
+            <div><strong style="font-size:24px;">до 5 лет</strong><br><span style="font-size:12px;">гарантии</span></div>
+            <div><strong style="font-size:24px;">100%</strong><br><span style="font-size:12px;">по ГОСТ</span></div>
           </div>
         </div>
-
-        <div class="hero-side-card">
+        <div style="display:flex; flex-direction:column; gap:20px;">
           <div class="hero-banner-lime">
-            <div>
-              <span class="eyebrow" style="color: #14140f;">ШУМГЕР СЕРВИС</span>
-              <h3>Есть проект или спецификация?</h3>
-              <p>Прикрепите чертеж — за 30 минут проверим соответствие зонам безопасности и рассчитаем точную смету.</p>
-            </div>
-            <button class="btn-secondary" style="background: #ffffff; border-color: transparent;" onclick="openModal('Быстрый расчет')">Отправить проект на расчет →</button>
-          </div>
-          <div class="hero-quick-features">
-            <div class="quick-feature-item"><div class="check-icon-svg"><svg width="11" height="9" viewBox="0 0 11 9" fill="none" stroke="#14140f" stroke-width="2"><path d="M1 4.5L4 7.5L10 1.5"/></svg></div><span><strong>Опытные штатные звенья</strong> со своим профессиональным инструментом</span></div>
-            <div class="quick-feature-item"><div class="check-icon-svg"><svg width="11" height="9" viewBox="0 0 11 9" fill="none" stroke="#14140f" stroke-width="2"><path d="M1 4.5L4 7.5L10 1.5"/></svg></div><span><strong>Работа по договору:</strong> прозрачная смета, КС-2 и КС-3</span></div>
+            <h3 style="font-size:22px; margin-bottom:10px;">Есть проект?</h3>
+            <p style="margin-bottom:20px;">Прикрепите чертеж — за 30 минут рассчитаем точную смету.</p>
+            <button class="btn-secondary" style="background:#fff; border:none;" onclick="openModal('Расчет по проекту')">Отправить →</button>
           </div>
         </div>
       </div>
@@ -278,63 +204,29 @@
   <!-- ДЛЯ КОГО -->
   <section class="audience-section" id="audiences">
     <div class="container">
-      <div class="section-header">
-        <span class="eyebrow">Решения под ваши задачи</span>
-        <h2 class="section-title">Кому мы помогаем сдавать объекты без нервов</h2>
-      </div>
+      <h2 class="section-title">Кому мы помогаем</h2>
       <div class="audience-tabs">
-        <button class="audience-tab-btn active" onclick="switchAudience('dev', this)">Девелоперам и генподрядчикам</button>
-        <button class="audience-tab-btn" onclick="switchAudience('uk', this)">УК, ТСЖ и паркам</button>
-        <button class="audience-tab-btn" onclick="switchAudience('private', this)">Частным владельцам и КП</button>
+        <button class="audience-tab-btn active" onclick="switchAudience('dev', this)">Застройщикам</button>
+        <button class="audience-tab-btn" onclick="switchAudience('uk', this)">УК и ТСЖ</button>
+        <button class="audience-tab-btn" onclick="switchAudience('private', this)">Частным лицам</button>
       </div>
       <div class="audience-card-container">
-        <!-- Девелоперы -->
         <div id="audience-dev" class="audience-content-grid">
           <div>
-            <span class="eyebrow">Для застройщиков и девелоперов ЖК</span>
-            <h3 style="font-size: 28px; font-weight: 500; letter-spacing: -0.02em; margin-bottom: 14px;">Сдавайте дворы благоустройства точно в срок перед комиссией</h3>
-            <p style="color: var(--color-graphite); margin-bottom: 24px;">Берем на себя монтаж любого объема игрового, спортивного оборудования и МАФ в новых жилых комплексах. Работаем в плотном контакте с вашим технадзором.</p>
-            <button class="btn-lime" onclick="openModal('Спецпредложение для Застройщиков')">Запросить КП для тендера</button>
-          </div>
-          <div class="audience-feature-box">
-            <h4>Ключевые компетенции для B2B:</h4>
-            <div class="feature-pill-grid">
-              <span class="tag-badge">Шеф-монтаж</span><span class="tag-badge">Бетонирование закладных</span><span class="tag-badge">EPDM крошка</span>
-              <span class="tag-badge">Установка пергол</span><span class="tag-badge">Антивандальные узлы</span>
-            </div>
+            <h3 style="font-size: 24px; margin-bottom: 14px;">Сдавайте дворы благоустройства точно в срок</h3>
+            <p style="color: var(--color-graphite); margin-bottom: 24px;">Берем на себя монтаж любого объема игрового и спортивного оборудования в ЖК.</p>
+            <button class="btn-lime" onclick="openModal('Для застройщика')">Запросить КП</button>
           </div>
         </div>
-        <!-- УК и ТСЖ -->
-        <div id="audience-uk" class="audience-content-grid" style="display: none;">
-          <div>
-            <span class="eyebrow">Для управляющих компаний и ТСЖ</span>
-            <h3 style="font-size: 28px; font-weight: 500; letter-spacing: -0.02em; margin-bottom: 14px;">Безопасные дворовые площадки без риска штрафов от инспекций</h3>
-            <p style="color: var(--color-graphite); margin-bottom: 24px;">Модернизация, демонтаж старого аварийного оборудования и монтаж современных воркаут-комплексов, детских городков и скамеек.</p>
-            <button class="btn-lime" onclick="openModal('Расчет для УК')">Рассчитать смету для двора</button>
-          </div>
-          <div class="audience-feature-box">
-            <h4>Готовые пакеты для дворов:</h4>
-            <div class="feature-pill-grid">
-              <span class="tag-badge">Демонтаж аварийных форм</span><span class="tag-badge">Ремонт резинового покрытия</span>
-              <span class="tag-badge">Воркаут для всех возрастов</span><span class="tag-badge">Урны и лавочки</span>
-            </div>
-          </div>
+        <div id="audience-uk" style="display: none;">
+          <h3 style="font-size: 24px; margin-bottom: 14px;">Безопасные дворы без штрафов</h3>
+          <p style="color: var(--color-graphite); margin-bottom: 24px;">Модернизация и монтаж воркаут-комплексов во дворах.</p>
+          <button class="btn-lime" onclick="openModal('Для УК')">Рассчитать двор</button>
         </div>
-        <!-- Частные -->
-        <div id="audience-private" class="audience-content-grid" style="display: none;">
-          <div>
-            <span class="eyebrow">Для загородных домов и КП</span>
-            <h3 style="font-size: 28px; font-weight: 500; letter-spacing: -0.02em; margin-bottom: 14px;">Собственный спортзал и игровой парк прямо на участке</h3>
-            <p style="color: var(--color-graphite); margin-bottom: 24px;">Создаем стильные компактные воркаут-зоны, детские домики и зоны отдыха с МАФ на частных участках. Бережно вписываем в ландшафт.</p>
-            <button class="btn-lime" onclick="openModal('Расчет для участка')">Вызвать замерщика</button>
-          </div>
-          <div class="audience-feature-box">
-            <h4>Популярно для загородных домов:</h4>
-            <div class="feature-pill-grid">
-              <span class="tag-badge">Воркаут-рамы</span><span class="tag-badge">Детские городки из дерева</span>
-              <span class="tag-badge">Бесшовная EPDM крошка</span><span class="tag-badge">Уличные батуты</span>
-            </div>
-          </div>
+        <div id="audience-private" style="display: none;">
+          <h3 style="font-size: 24px; margin-bottom: 14px;">Спортзал прямо на участке</h3>
+          <p style="color: var(--color-graphite); margin-bottom: 24px;">Создаем стильные компактные воркаут-зоны на частных участках.</p>
+          <button class="btn-lime" onclick="openModal('Для дома')">Вызвать замерщика</button>
         </div>
       </div>
     </div>
@@ -343,55 +235,21 @@
   <!-- КАЛЬКУЛЯТОР -->
   <section class="calc-section" id="calculator">
     <div class="container">
-      <div class="section-header">
-        <span class="eyebrow">Онлайн калькулятор сметы</span>
-        <h2 class="section-title">Рассчитайте ориентировочный бюджет монтажа</h2>
-      </div>
+      <h2 class="section-title">Онлайн калькулятор</h2>
       <div class="calc-wrapper">
         <div>
-          <!-- Шаг 1 -->
-          <div class="step-indicator"><span class="step-badge">Шаг 1 из 3</span><span style="font-size: 13px; color: var(--color-graphite);">Тип оборудования</span></div>
-          <h3 class="step-title">Что требуется смонтировать?</h3>
+          <h3 style="font-size:20px; margin-bottom:16px;">Тип оборудования</h3>
           <div class="quiz-options-grid">
-            <div class="quiz-option selected" onclick="selectQuizOption(this, 'type', 'Воркаут площадка', 35000)"><div class="quiz-opt-title">Воркаут & Спорткомплекс</div></div>
-            <div class="quiz-option" onclick="selectQuizOption(this, 'type', 'Детский городок', 55000)"><div class="quiz-opt-title">Детская игровая зона</div></div>
-            <div class="quiz-option" onclick="selectQuizOption(this, 'type', 'МАФ', 28000)"><div class="quiz-opt-title">МАФ и благоустройство</div></div>
-            <div class="quiz-option" onclick="selectQuizOption(this, 'type', 'Комплекс «под ключ»', 90000)"><div class="quiz-opt-title">Комплекс «под ключ»</div></div>
-          </div>
-          <!-- Шаг 2 -->
-          <div class="step-indicator"><span class="step-badge">Шаг 2 из 3</span><span style="font-size: 13px; color: var(--color-graphite);">Масштаб объекта</span></div>
-          <h3 class="step-title">Какая площадь или объем площадки?</h3>
-          <div class="quiz-options-grid">
-            <div class="quiz-option" onclick="selectQuizOption(this, 'size', 'До 50 м²', 15000)"><div class="quiz-opt-title">До 50 м²</div></div>
-            <div class="quiz-option selected" onclick="selectQuizOption(this, 'size', '50–150 м²', 35000)"><div class="quiz-opt-title">50 – 150 м²</div></div>
-            <div class="quiz-option" onclick="selectQuizOption(this, 'size', '150–350 м²', 75000)"><div class="quiz-opt-title">150 – 350 м²</div></div>
-            <div class="quiz-option" onclick="selectQuizOption(this, 'size', 'Свыше 350 м²', 140000)"><div class="quiz-opt-title">Свыше 350 м²</div></div>
-          </div>
-          <!-- Шаг 3 -->
-          <div class="step-indicator"><span class="step-badge">Шаг 3 из 3</span><span style="font-size: 13px; color: var(--color-graphite);">Покрытие</span></div>
-          <div class="quiz-options-grid">
-            <div class="quiz-option selected" onclick="selectQuizOption(this, 'surface', 'Только монтаж', 0)"><div class="quiz-opt-title">Только монтаж оборудования</div></div>
-            <div class="quiz-option" onclick="selectQuizOption(this, 'surface', 'Монтаж + Покрытие', 45000)"><div class="quiz-opt-title">Монтаж + Покрытие EPDM</div></div>
+            <div class="quiz-option selected" onclick="calc(this,35000)">Воркаут площадка</div>
+            <div class="quiz-option" onclick="calc(this,55000)">Детская зона</div>
+            <div class="quiz-option" onclick="calc(this,28000)">МАФ и скамейки</div>
+            <div class="quiz-option" onclick="calc(this,90000)">Под ключ</div>
           </div>
         </div>
         <div class="calc-sidebar">
-          <div>
-            <span class="eyebrow">Предварительный расчет</span>
-            <div class="estimate-box">
-              <span style="font-size: 13px; color: var(--color-graphite);">Ориентировочная стоимость:</span>
-              <div class="estimate-price-range" id="calc-price-display">от 70 000 ₽</div>
-            </div>
-            <div style="margin-bottom: 24px;">
-              <div class="calc-summary-item"><span>Оборудование:</span><span id="summary-type">Воркаут площадка</span></div>
-              <div class="calc-summary-item"><span>Площадь:</span><span id="summary-size">50–150 м²</span></div>
-              <div class="calc-summary-item"><span>Покрытие:</span><span id="summary-surface">Только монтаж</span></div>
-            </div>
-          </div>
-          <form onsubmit="handleCalcSubmit(event)">
-            <label style="font-size: 12px; font-weight: 500; text-transform: uppercase; margin-bottom: 6px; display: block;">Получить детальную смету:</label>
-            <input type="tel" class="input-field" placeholder="+7 (___) ___-__-__" required id="calc-phone">
-            <button type="submit" class="btn-lime" style="width: 100%;">Получить смету в WhatsApp</button>
-          </form>
+          <div style="font-size:14px; color:var(--color-graphite);">Ориентировочно:</div>
+          <div style="font-size:32px; font-weight:500; margin-bottom:24px;" id="price">от 35 000 ₽</div>
+          <button class="btn-lime" style="width:100%;" onclick="openModal('Точный расчет')">Получить точную смету</button>
         </div>
       </div>
     </div>
@@ -400,50 +258,15 @@
   <!-- ПОРТФОЛИО -->
   <section class="portfolio-section" id="portfolio">
     <div class="container">
-      <div class="section-header">
-        <span class="eyebrow">Реализованные объекты</span>
-        <h2 class="section-title">Примеры выполненных работ</h2>
-      </div>
+      <h2 class="section-title">Наши объекты</h2>
       <div class="portfolio-grid">
         <div class="case-card">
-          <div class="case-image-wrap"><div class="case-image-graphic"><span class="case-graphic-title">СПОРТИВНЫЙ ВОРКАУТ</span></div><span class="case-tag-overlay">Спорт</span></div>
-          <div class="case-content">
-            <h4 class="case-title">ЖК «Северные Кварталы»</h4>
-            <p class="case-desc">Монтаж многофункциональной воркаут-зоны и 6 уличных силовых тренажеров.</p>
-          </div>
+          <div class="case-image-wrap">ВОРКАУТ</div>
+          <div class="case-content"><h4>ЖК «Северные Кварталы»</h4><p style="font-size:14px; color:gray;">Монтаж многофункциональной зоны.</p></div>
         </div>
         <div class="case-card">
-          <div class="case-image-wrap"><div class="case-image-graphic"><span class="case-graphic-title">ИГРОВОЙ ГОРОДОК</span></div><span class="case-tag-overlay">Детская</span></div>
-          <div class="case-content">
-            <h4 class="case-title">Сквер «Юбилейный»</h4>
-            <p class="case-desc">Установка масштабного деревянного городка и укладка крошки EPDM.</p>
-          </div>
-        </div>
-        <div class="case-card">
-          <div class="case-image-wrap"><div class="case-image-graphic"><span class="case-graphic-title">ПЕРГОЛЫ & СКАМЬИ</span></div><span class="case-tag-overlay">МАФ</span></div>
-          <div class="case-content">
-            <h4 class="case-title">Эко-парк</h4>
-            <p class="case-desc">Монтаж 18 радиусных скамей из термоясеня и теневой перголы длиной 34 метра.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- LIME CTA -->
-  <section class="lime-cta-section">
-    <div class="container">
-      <div class="lime-cta-inner">
-        <div>
-          <h2 class="lime-cta-title">Начните монтаж без проволочек и переделок</h2>
-          <p style="font-size: 18px; max-width: 540px;">Свяжитесь с нашими инженерами сегодня — мы предоставим смету в течение 2 часов.</p>
-        </div>
-        <div class="lime-cta-box">
-          <h4 style="font-size: 20px; font-weight: 500; margin-bottom: 8px;">Быстрый звонок инженера</h4>
-          <form onsubmit="handleQuickCall(event)">
-            <input type="tel" class="input-field" placeholder="+7 (___) ___-__-__" required id="quick-phone">
-            <button type="submit" class="btn-lime" style="width: 100%; border: 1px solid var(--color-ash);">Перезвонить мне</button>
-          </form>
+          <div class="case-image-wrap">ДЕТСКАЯ</div>
+          <div class="case-content"><h4>Сквер «Юбилейный»</h4><p style="font-size:14px; color:gray;">Установка деревянного городка.</p></div>
         </div>
       </div>
     </div>
@@ -452,108 +275,73 @@
   <!-- КОНТАКТЫ -->
   <section class="contact-section" id="contacts">
     <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Контакты компании «ШУМГЕР»</h2>
-      </div>
+      <h2 class="section-title">Контакты</h2>
       <div class="contact-grid">
         <div class="contact-info-card">
-          <div>
-            <h3 style="font-size: 24px; font-weight: 500; margin-bottom: 8px;">Центральный офис</h3>
-            <div class="contact-meta-row">
-              <div class="meta-item"><strong>Телефон</strong><a href="tel:+79990000000">+7 (999) 000-00-00</a></div>
-              <div class="meta-item"><strong>Почта</strong><a href="mailto:info@shumger.ru">info@shumger.ru</a></div>
-            </div>
-          </div>
+          <h3 style="margin-bottom:20px;">Центральный офис</h3>
+          <p><strong>Телефон:</strong> <a href="tel:+79990000000">+7 (999) 000-00-00</a></p>
+          <p><strong>Почта:</strong> info@shumger.ru</p>
         </div>
         <div class="contact-form-card">
-          <h3 style="font-size: 24px; font-weight: 500; margin-bottom: 24px;">Отправить проект на просчет</h3>
-          <form onsubmit="handleMainContact(event)">
-            <input type="text" class="input-field" placeholder="Ваше имя или организация" required>
-            <input type="tel" class="input-field" placeholder="+7 (___) ___-__-__" required>
-            <button type="submit" class="btn-lime" style="width: 100%;">Отправить заявку</button>
-          </form>
+          <h3 style="margin-bottom:20px;">Оставить заявку</h3>
+          <input type="text" class="input-field" placeholder="Имя / ООО">
+          <input type="tel" class="input-field" placeholder="Телефон">
+          <button class="btn-lime" style="width:100%;" onclick="alert('Отправлено!')">Отправить</button>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ПОДВАЛ -->
-  <footer class="site-footer">
+  <footer>
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-col">
-          <span style="font-size: 20px; font-weight: 500; color: var(--color-pure-white);">ШУМГЕР</span>
-          <p style="font-size: 13px; color: var(--color-ash); margin-top: 10px;">Профессиональный монтаж спортивных комплексов и площадок.</p>
-        </div>
-        <div class="footer-col">
-          <h5>Услуги</h5>
-          <ul class="footer-links">
-            <li><a href="services.html">Воркаут площадки</a></li>
-            <li><a href="services.html">Детские городки</a></li>
-            <li><a href="services.html">Монтаж МАФ</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h5>Для кого</h5>
-          <ul class="footer-links">
-            <li><a href="#audiences">Застройщикам и ЖК</a></li>
-            <li><a href="services.html#safety">Нормативы безопасности</a></li>
-          </ul>
+        <div><h3>ШУМГЕР</h3><p style="color:gray; font-size:14px;">Монтаж по ГОСТ.</p></div>
+        <div>
+          <h4 style="margin-bottom:10px;">Меню</h4>
+          <div class="footer-links">
+            <a href="services.html">Услуги</a>
+            <a href="services.html#safety">ГОСТ</a>
+            <a href="#portfolio">Объекты</a>
+          </div>
         </div>
       </div>
-      <div class="footer-bottom"><div>© 2026 Компания «ШУМГЕР».</div></div>
     </div>
   </footer>
 
   <!-- МОДАЛЬНОЕ ОКНО -->
-  <div class="modal-overlay" id="leadModal" onclick="closeModalOnOverlay(event)">
+  <div class="modal-overlay" id="leadModal" onclick="closeModal(event)">
     <div class="modal-card">
-      <button class="modal-close" onclick="closeModal()">✕</button>
-      <span class="eyebrow" id="modalTopic">Заявка на расчет</span>
-      <h3 style="font-size: 24px; font-weight: 500; margin-bottom: 20px;">Связаться с инженером</h3>
-      <form onsubmit="handleModalSubmit(event)">
-        <input type="text" class="input-field" placeholder="Имя / ООО" required>
-        <input type="tel" class="input-field" placeholder="Телефон" required>
-        <button type="submit" class="btn-lime" style="width: 100%;">Отправить заявку</button>
-      </form>
+      <button class="modal-close" onclick="document.getElementById('leadModal').style.display='none'">✕</button>
+      <h3 style="margin-bottom: 20px;" id="modalTopic">Заявка</h3>
+      <input type="text" class="input-field" placeholder="Имя">
+      <input type="tel" class="input-field" placeholder="Телефон">
+      <button class="btn-lime" style="width: 100%;" onclick="alert('Отправлено!'); document.getElementById('leadModal').style.display='none'">Отправить</button>
     </div>
   </div>
 
   <script>
-    let calcState = { type: { name: 'Воркаут площадка', price: 35000 }, size: { name: '50–150 м²', price: 35000 }, surface: { name: 'Только монтаж', price: 0 } };
-    function updateCalcDisplay() {
-      const minPrice = Math.round(calcState.type.price + calcState.size.price + calcState.surface.price);
-      const displayEl = document.getElementById('calc-price-display');
-      if(displayEl) displayEl.innerText = 'от ' + minPrice.toLocaleString('ru-RU') + ' ₽';
-      if(document.getElementById('summary-type')) document.getElementById('summary-type').innerText = calcState.type.name;
-      if(document.getElementById('summary-size')) document.getElementById('summary-size').innerText = calcState.size.name;
-      if(document.getElementById('summary-surface')) document.getElementById('summary-surface').innerText = calcState.surface.name;
+    function toggleMenu() {
+      const nav = document.getElementById('mobileNav');
+      nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
     }
-    function selectQuizOption(element, category, name, price) {
-      const options = element.parentElement.querySelectorAll('.quiz-option');
-      options.forEach(opt => opt.classList.remove('selected'));
-      element.classList.add('selected');
-      calcState[category] = { name: name, price: price };
-      updateCalcDisplay();
-    }
-    function switchAudience(tabKey, btn) {
+    function switchAudience(id, btn) {
       document.querySelectorAll('.audience-tab-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      ['dev', 'uk', 'private'].forEach(id => document.getElementById('audience-' + id).style.display = 'none');
-      document.getElementById('audience-' + tabKey).style.display = 'grid';
+      ['dev', 'uk', 'private'].forEach(tab => document.getElementById('audience-'+tab).style.display = 'none');
+      document.getElementById('audience-'+id).style.display = 'grid';
+    }
+    function calc(btn, price) {
+      document.querySelectorAll('.quiz-option').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      document.getElementById('price').innerText = 'от ' + price.toLocaleString() + ' ₽';
     }
     function openModal(topic) {
-      if (topic && document.getElementById('modalTopic')) document.getElementById('modalTopic').innerText = topic;
+      document.getElementById('modalTopic').innerText = topic;
       document.getElementById('leadModal').style.display = 'flex';
     }
-    function closeModal() { document.getElementById('leadModal').style.display = 'none'; }
-    function closeModalOnOverlay(e) { if (e.target.id === 'leadModal') closeModal(); }
-    function scrollToElement(id) { const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: 'smooth' }); }
-    function handleCalcSubmit(e) { e.preventDefault(); alert('Расчет сметы отправлен инженеру.'); e.target.reset(); }
-    function handleQuickCall(e) { e.preventDefault(); alert('Мы перезвоним в течение 5 минут.'); e.target.reset(); }
-    function handleMainContact(e) { e.preventDefault(); alert('Заявка передана в монтажный отдел.'); e.target.reset(); }
-    function handleModalSubmit(e) { e.preventDefault(); alert('Заявка успешно отправлена!'); closeModal(); e.target.reset(); }
-    window.addEventListener('DOMContentLoaded', updateCalcDisplay);
+    function closeModal(e) { if(e.target.id === 'leadModal') e.target.style.display='none'; }
+    function scrollToElement(id) { document.getElementById(id).scrollIntoView({behavior: 'smooth'}); }
   </script>
 </body>
 </html>
