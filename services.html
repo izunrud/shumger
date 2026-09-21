@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Услуги монтажа — ШУМГЕР</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Те же стили, что и на главной для адаптации -->
+  <style>
+    :root { --color-electric-lime: #beff50; --color-off-black-ink: #14140f; --color-off-white-canvas: #f5f5eb; --color-pure-white: #ffffff; --color-ash: #d2d2c8; --color-graphite: #6e6e64; --font-family: 'Plus Jakarta Sans', sans-serif; --radius-cards: 28px; --radius-buttons: 28px; --radius-inputs: 8px;}
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font-family); color: var(--color-off-black-ink); line-height: 1.5; }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; border: none; font-family: inherit; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .btn-lime { background: var(--color-electric-lime); font-weight: 500; padding: 14px 28px; border-radius: var(--radius-buttons); display: inline-flex; justify-content: center; width: 100%; max-width: 300px; }
+    
+    header { position: sticky; top: 0; background: rgba(255,255,255,0.95); border-bottom: 1px solid var(--color-ash); z-index: 100; height: 76px; }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; height: 100%; }
+    .nav-links, .header-phone { display: flex; gap: 24px; align-items: center; font-size: 14px; font-weight: 500; }
+    .mobile-menu-btn { display: none; background: none; }
+    
+    .inner-page-header { padding: 60px 0; background: var(--color-off-white-canvas); text-align: center; border-bottom: 1px solid var(--color-ash); }
+    .inner-title { font-size: clamp(28px, 4vw, 44px); font-weight: 500; margin-bottom: 16px; }
+    
+    .cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding: 80px 0; }
+    .service-card { background: var(--color-off-white-canvas); padding: 32px; border-radius: var(--radius-cards); border: 1px solid var(--color-ash); }
+    
+    .safety-section { background: var(--color-pure-white); padding: 80px 0; }
+    .dark-box { background: #30302a; color: white; padding: 48px; border-radius: var(--radius-cards); }
+    
+    footer { background: var(--color-off-black-ink); color: white; padding: 60px 0; }
+    
+    .mobile-menu-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #fff; z-index: 1000; display: none; flex-direction: column; padding: 24px; }
+    .mobile-nav-list { display: flex; flex-direction: column; gap: 24px; font-size: 24px; font-weight: 500; }
+
+    @media (max-width: 992px) {
+      .nav-links, .header-phone { display: none; }
+      .mobile-menu-btn { display: block; margin-left: auto; }
+      .header-inner .btn-lime { display: none; }
+      .cards-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .cards-grid { grid-template-columns: 1fr; padding: 40px 0; }
+      .dark-box { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" style="font-size: 20px; font-weight: 500;">ШУМГЕР</a>
+      <nav class="nav-links">
+        <a href="services.html" style="color: #beff50;">Услуги</a>
+        <a href="index.html#calculator">Калькулятор</a>
+        <a href="#safety">ГОСТ</a>
+        <a href="index.html#contacts">Контакты</a>
+      </nav>
+      <div class="header-phone">+7 (999) 000-00-00</div>
+      <button class="mobile-menu-btn" onclick="toggleMenu()">
+        <svg width="28" height="28" viewBox="0 0 24 24" stroke="#14140f" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- МОБИЛЬНОЕ МЕНЮ -->
+  <div class="mobile-menu-overlay" id="mobileNav">
+    <button onclick="toggleMenu()" style="align-self: flex-end; font-size: 32px; background:none;">✕</button>
+    <div class="mobile-nav-list">
+      <a href="index.html">Главная</a>
+      <a href="services.html">Услуги</a>
+      <a href="index.html#calculator">Калькулятор</a>
+      <a href="#safety" onclick="toggleMenu()">Стандарты ГОСТ</a>
+    </div>
+  </div>
+
+  <section class="inner-page-header">
+    <div class="container">
+      <h1 class="inner-title">Направления монтажных работ</h1>
+      <p style="color: var(--color-graphite);">От земляных работ и фундамента до финишной сборки.</p>
+    </div>
+  </section>
+
+  <section class="container cards-grid">
+    <div class="service-card"><h3>1. Воркаут площадки</h3><p style="margin-top:12px; color:gray;">Монтаж турников, брусьев и тренажеров.</p></div>
+    <div class="service-card"><h3>2. Детские комплексы</h3><p style="margin-top:12px; color:gray;">Установка городков, качелей и батутов.</p></div>
+    <div class="service-card"><h3>3. МАФ и скамейки</h3><p style="margin-top:12px; color:gray;">Парковые урны, перголы и велопарковки.</p></div>
+    <div class="service-card"><h3>4. Покрытия</h3><p style="margin-top:12px; color:gray;">Укладка резиновой EPDM крошки.</p></div>
+  </section>
+
+  <section class="safety-section" id="safety">
+    <div class="container dark-box">
+      <h2 style="font-size:32px; margin-bottom: 20px;">Строгое соблюдение ГОСТ</h2>
+      <p style="color:var(--color-ash); margin-bottom: 24px;">Мы знаем тонкости ГОСТ Р 52169-2012 и ТР ЕАЭС 042/2017 и не допускаем критических ошибок безопасности.</p>
+      <button class="btn-lime">Скачать сертификаты</button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <h3>ШУМГЕР © 2026</h3>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('mobileNav');
+      nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
+    }
+  </script>
+</body>
+</html>
