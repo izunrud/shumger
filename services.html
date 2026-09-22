@@ -4,62 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Услуги монтажа — ШУМГЕР</title>
-  <meta name="description" content="Монтаж воркаут-площадок, детских комплексов, МАФ и резиновых покрытий. Строгое соблюдение ГОСТ Р 52169-2012 и ТР ЕАЭС 042/2017.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>Ш</text></svg>" type="image/svg+xml">
+  <meta name="description" content="Монтаж воркаут-площадок, детских комплексов, МАФ и резиновых покрытий. ГОСТ Р 52169-2012, ТР ЕАЭС 042/2017.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 120 60%22%3E%3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%220%25%22%3E%3Cstop offset=%220%25%22 stop-color=%22%231a5a2e%25%22/%3E%3Cstop offset=%22100%25%22 stop-color=%22%23beff50%25%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x=%2250%25%22 y=%2280%25%22 font-family=%22sans-serif%22 font-size=%2248%22 font-weight=%22700%22 text-anchor=%22middle%22 fill=%22url(%23g)%22%3Eur%3C/text%3E%3C/svg%3E" type="image/svg+xml">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   
   <style>
-    :root { --color-electric-lime: #beff50; --color-off-black-ink: #14140f; --color-off-white-canvas: #f5f5eb; --color-pure-white: #ffffff; --color-ash: #d2d2c8; --color-graphite: #6e6e64; --font-family: 'Plus Jakarta Sans', sans-serif; --radius-cards: 28px; --radius-buttons: 28px; --radius-inputs: 8px; --radius-inner: 18px; }
+    :root { --color-lime: #beff50; --color-ink: #14140f; --color-dark: #30302a; --color-cream: #f5f5eb; --color-white: #ffffff; --color-graphite: #6e6e64; --color-ash: #d2d2c8; --font-family: 'Plus Jakarta Sans', 'OTSono', sans-serif; --radius: 26px; --radius-sm: 8px; --radius-pill: 9999px; }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
-    body { font-family: var(--font-family); color: var(--color-off-black-ink); line-height: 1.5; font-size: 16px; background: var(--color-pure-white); }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-family); color: var(--color-ink); line-height: 1.5; font-size: 16px; background: var(--color-white); }
     a { text-decoration: none; color: inherit; }
     button { cursor: pointer; border: none; font-family: inherit; background: none; }
     .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-    .btn-lime { background: var(--color-electric-lime); color: var(--color-off-black-ink); font-weight: 500; padding: 14px 28px; border-radius: var(--radius-buttons); display: inline-flex; justify-content: center; width: 100%; max-width: 300px; transition: 0.15s; }
-    .btn-lime:hover { opacity: 0.9; }
-    .btn-secondary { background: var(--color-off-white-canvas); color: var(--color-off-black-ink); border: 1px solid var(--color-ash); font-weight: 500; padding: 14px 28px; border-radius: var(--radius-buttons); display: inline-flex; justify-content: center; }
+    .btn-lime { background: var(--color-lime); color: var(--color-ink); font-weight: 500; padding: 14px 28px; border-radius: var(--radius); display: inline-flex; justify-content: center; width: 100%; max-width: 300px; transition: opacity 0.15s; }
+    .btn-lime:hover { opacity: 0.85; }
+    .btn-secondary { background: var(--color-cream); color: var(--color-ink); border: 1px solid var(--color-ash); font-weight: 500; padding: 14px 28px; border-radius: var(--radius); display: inline-flex; justify-content: center; }
     
-    header.site-header { position: sticky; top: 0; background: rgba(255,255,255,0.95); border-bottom: 1px solid var(--color-ash); z-index: 100; height: 76px; }
+    header.site-header { position: sticky; top: 0; background: var(--color-white); border-bottom: 1px solid var(--color-ash); z-index: 100; height: 76px; }
     .header-inner { display: flex; align-items: center; justify-content: space-between; height: 100%; }
+    .brand-logo-wrapper { display: flex; align-items: center; gap: 12px; }
+    .brand-logo-mark { width: 44px; height: 44px; border-radius: var(--radius); background: var(--color-cream); border: 1px solid var(--color-ash); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .brand-logo-mark svg { width: 80%; height: 80%; }
+    .brand-name { font-size: 20px; font-weight: 700; letter-spacing: -0.03em; }
     .nav-links, .header-phone { display: flex; gap: 24px; align-items: center; font-size: 14px; font-weight: 500; }
-    .nav-link { font-size: 14px; font-weight: 500; transition: 0.15s; }
+    .nav-link { transition: opacity 0.15s; }
     .nav-link:hover { opacity: 0.7; }
     .mobile-menu-btn { display: none; background: none; }
     
-    .inner-page-header { padding: 60px 0; background: var(--color-off-white-canvas); text-align: center; border-bottom: 1px solid var(--color-ash); }
-    .inner-title { font-size: clamp(28px, 4vw, 44px); font-weight: 500; margin-bottom: 16px; }
+    .inner-page-header { padding: 60px 0; background: var(--color-cream); text-align: center; border-bottom: 1px solid var(--color-ash); }
+    .inner-title { font-size: clamp(28px, 4vw, 44px); font-weight: 700; letter-spacing: -0.03em; margin-bottom: 16px; }
     
     .cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding: 80px 0; }
-    .service-card { background: var(--color-off-white-canvas); padding: 32px; border-radius: var(--radius-cards); border: 1px solid var(--color-ash); transition: 0.2s; }
-    .service-card:hover { transform: translateY(-4px); box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+    .service-card { background: var(--color-cream); padding: 32px; border-radius: var(--radius); border: 1px solid var(--color-ash); }
     .service-card h3 { margin-bottom: 8px; font-size: 18px; }
     .service-card p { color: var(--color-graphite); font-size: 14px; }
     
-    .safety-section { background: var(--color-pure-white); padding: 80px 0; }
-    .dark-box { background: #30302a; color: white; padding: 48px; border-radius: var(--radius-cards); }
+    .safety-section { padding: 80px 0; }
+    .dark-box { background: var(--color-dark); color: var(--color-white); padding: 48px; border-radius: var(--radius); }
     .dark-box h2 { margin-bottom: 20px; }
     .dark-box p { color: var(--color-ash); margin-bottom: 24px; }
     
-    footer { background: var(--color-off-black-ink); color: white; padding: 60px 0; }
+    footer { background: var(--color-ink); color: var(--color-white); padding: 60px 0; }
     .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 20px; }
     .footer-links a { color: var(--color-ash); display: block; margin-bottom: 8px; }
-    .footer-links a:hover { color: var(--color-electric-lime); }
+    .footer-links a:hover { color: var(--color-lime); }
     
-    .mobile-menu-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #fff; z-index: 1000; display: none; flex-direction: column; padding: 24px; }
-    .mobile-menu-close { align-self: flex-end; font-size: 32px; background: none; border: none; cursor: pointer; color: var(--color-off-black-ink); margin-bottom: 40px; }
+    .mobile-menu-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--color-white); z-index: 1000; display: none; flex-direction: column; padding: 24px; }
+    .mobile-menu-close { align-self: flex-end; font-size: 32px; background: none; border: none; cursor: pointer; color: var(--color-ink); margin-bottom: 40px; }
     .mobile-nav-list { display: flex; flex-direction: column; gap: 24px; font-size: 24px; font-weight: 500; }
 
     @media (max-width: 992px) {
       .nav-links, .header-phone { display: none; }
       .mobile-menu-btn { display: block; margin-left: auto; }
-      .header-inner .btn-lime { display: none; }
       .cards-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 640px) {
-      .cards-grid { grid-template-columns: 1fr; padding: 40px 0; }
+      .cards-grid { grid-template-columns: 1fr; }
       .dark-box { padding: 24px; }
       .container { padding: 0 16px; }
     }
@@ -70,15 +73,23 @@
   <!-- ШАПКА -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" style="font-size: 20px; font-weight: 500;">ШУМГЕР</a>
+      <a href="index.html" class="brand-logo-wrapper">
+        <div class="brand-logo-mark">
+          <svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg" aria-label="ШУМГЕР">
+            <defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#1a5a2e"/><stop offset="100%" stop-color="#beff50"/></linearGradient></defs>
+            <text x="50%" y="80%" font-family="sans-serif" font-size="48" font-weight="700" text-anchor="middle" fill="url(#g)">ur</text>
+          </svg>
+        </div>
+        <div class="brand-name">ШУМГЕР</div>
+      </a>
       <nav class="nav-links">
-        <a href="services.html" class="nav-link" style="color: #beff50;">Услуги</a>
+        <a href="services.html" class="nav-link" style="color: var(--color-lime);">Услуги</a>
         <a href="index.html#calculator" class="nav-link">Калькулятор</a>
         <a href="#safety" class="nav-link">ГОСТ</a>
         <a href="index.html#contacts" class="nav-link">Контакты</a>
       </nav>
       <div class="header-phone"><a href="tel:+79990000000">+7 (999) 000-00-00</a></div>
-      <button class="mobile-menu-btn" type="button" onclick="toggleMenu()" aria-label="Открыть меню">
+      <button class="mobile-menu-btn" type="button" onclick="toggleMenu()" aria-label="Меню">
         <svg width="28" height="28" viewBox="0 0 24 24" stroke="#14140f" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
       </button>
     </div>
@@ -86,12 +97,12 @@
 
   <!-- МОБИЛЬНОЕ МЕНЮ -->
   <div class="mobile-menu-overlay" id="mobileNav" role="dialog" aria-modal="true" aria-label="Мобильное меню">
-    <button class="mobile-menu-close" type="button" onclick="toggleMenu()" aria-label="Закрыть меню">✕</button>
+    <button class="mobile-menu-close" type="button" onclick="toggleMenu()" aria-label="Закрыть">✕</button>
     <div class="mobile-nav-list">
       <a href="index.html">Главная</a>
       <a href="services.html">Услуги</a>
       <a href="index.html#calculator">Калькулятор</a>
-      <a href="#safety" onclick="toggleMenu()">Стандарты ГОСТ</a>
+      <a href="#safety" onclick="toggleMenu()">ГОСТ</a>
       <a href="index.html#contacts" onclick="toggleMenu()">Контакты</a>
     </div>
   </div>
@@ -113,7 +124,7 @@
   <section class="safety-section" id="safety">
     <div class="container">
       <div class="dark-box">
-        <h2 style="font-size:32px; margin-bottom: 20px;">Строгое соблюдение ГОСТ</h2>
+        <h2>Строгое соблюдение ГОСТ</h2>
         <p>Мы знаем тонкости <strong>ГОСТ Р 52169-2012</strong> и <strong>ТР ЕАЭС 042/2017</strong> и не допускаем критических ошибок безопасности.</p>
         <button class="btn-lime" type="button" onclick="downloadCertificates()">Скачать сертификаты</button>
         <p style="margin-top:16px; font-size:13px; color:var(--color-ash); opacity:0.8;">Сертификаты будут доступны для скачивания в ближайшее время.</p>
@@ -124,8 +135,8 @@
   <footer>
     <div class="container">
       <div class="footer-grid">
-        <div><h3>ШУМГЕР © 2026</h3><p style="color:var(--color-ash); font-size:14px;">Монтаж по ГОСТ.</p></div>
-        <div style="text-align:right;">
+        <div><h3>ШУМГЕР © 2026</h3><p style="color:var(--color-graphite); font-size:14px;">Монтаж по ГОСТ.</p></div>
+        <div style="text-align: right;">
           <div class="footer-links">
             <a href="index.html">Главная</a>
             <a href="index.html#contacts">Контакты</a>
@@ -136,21 +147,10 @@
   </footer>
 
   <script>
-    function toggleMenu() {
-      var nav = document.getElementById('mobileNav');
-      nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
-    }
-    function downloadCertificates() {
-      // TODO: замени на реальную ссылку на PDF с сертификатами
-      alert('Сертификаты будут доступны для скачивания в ближайшее время.');
-    }
-    // Esc closes mobile menu
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        var nav = document.getElementById('mobileNav');
-        if (nav.style.display === 'flex') nav.style.display = 'none';
-      }
-    });
+    var nav = document.getElementById('mobileNav');
+    function toggleMenu() { nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex'; }
+    function downloadCertificates() { alert('Сертификаты будут доступны в ближайшее время.'); }
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && nav.style.display === 'flex') nav.style.display = 'none'; });
   </script>
 </body>
 </html>
