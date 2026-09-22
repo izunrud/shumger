@@ -4,10 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ШУМГЕР — Профессиональный монтаж воркаут, детских площадок и МАФ</title>
+  <meta name="description" content="Монтаж детских площадок, воркаут-зон и МАФ по ГОСТ. Полный цикл благоустройства: от подготовки основания до покрытий. Гарантия до 5 лет.">
+  <meta property="og:title" content="ШУМГЕР — Монтаж детских площадок и воркаут-зон">
+  <meta property="og:description" content="Монтаж по ГОСТ. 500+ объектов, гарантия до 5 лет.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shumger.ru/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>Ш</text></svg>" type="image/svg+xml">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -20,6 +26,7 @@
       --font-family: 'Plus Jakarta Sans', sans-serif;
       --font-weight-regular: 400;
       --font-weight-medium: 500;
+      --font-weight-bold: 700;
       --text-body: 16px;
       --radius-cards: 28px;
       --radius-buttons: 28px;
@@ -49,6 +56,7 @@
     .brand-name { font-size: 20px; font-weight: 500; }
     .nav-links { display: flex; align-items: center; gap: 24px; }
     .nav-link { font-size: 14px; font-weight: 500; transition: 0.15s; }
+    .nav-link:hover { opacity: 0.7; }
     .header-contacts { display: flex; align-items: center; gap: 16px; }
     .mobile-menu-btn { display: none; }
 
@@ -64,7 +72,8 @@
     .audience-section, .portfolio-section { padding: 80px 0; background-color: var(--color-off-white-canvas); border-top: 1px solid var(--color-ash); border-bottom: 1px solid var(--color-ash); }
     .section-title { font-size: clamp(26px, 3.2vw, 40px); font-weight: 500; line-height: 1.1; margin-bottom: 32px; }
     .audience-tabs { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 32px; }
-    .audience-tab-btn { padding: 10px 22px; border-radius: var(--radius-pills); border: 1px solid var(--color-ash); background: var(--color-pure-white); font-size: 14px; font-weight: 500; }
+    .audience-tab-btn { padding: 10px 22px; border-radius: var(--radius-pills); border: 1px solid var(--color-ash); background: var(--color-pure-white); font-size: 14px; font-weight: 500; cursor: pointer; transition: 0.15s; }
+    .audience-tab-btn:hover { opacity: 0.8; }
     .audience-tab-btn.active { background-color: var(--color-off-black-ink); color: var(--color-pure-white); }
     .audience-card-container { background-color: var(--color-pure-white); border-radius: var(--radius-cards); border: 1px solid var(--color-ash); padding: 40px; }
     .audience-content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
@@ -72,14 +81,18 @@
     .calc-section, .contact-section { padding: 96px 0; }
     .calc-wrapper { border: 1px solid var(--color-ash); border-radius: var(--radius-cards); padding: 48px; display: grid; grid-template-columns: 1.3fr 0.9fr; gap: 48px; }
     .quiz-options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 32px; }
-    .quiz-option { border: 1px solid var(--color-ash); border-radius: var(--radius-inner); padding: 16px; cursor: pointer; }
+    .quiz-option { border: 1px solid var(--color-ash); border-radius: var(--radius-inner); padding: 16px; cursor: pointer; transition: 0.15s; user-select: none; }
+    .quiz-option:hover { background-color: var(--color-off-white-canvas); }
     .quiz-option.selected { background: var(--color-off-black-ink); color: var(--color-pure-white); }
     .calc-sidebar { background: var(--color-off-white-canvas); border-radius: var(--radius-inner); border: 1px solid var(--color-ash); padding: 32px; }
-    .input-field { width: 100%; border: 1px solid var(--color-ash); border-radius: var(--radius-inputs); padding: 12px 16px; margin-bottom: 12px; }
+    .input-field { width: 100%; border: 1px solid var(--color-ash); border-radius: var(--radius-inputs); padding: 12px 16px; margin-bottom: 12px; font-family: inherit; font-size: var(--text-body); }
+    .input-field:focus { outline: 2px solid var(--color-electric-lime); border-color: var(--color-electric-lime); }
 
     .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .case-card { background: var(--color-pure-white); border-radius: var(--radius-cards); border: 1px solid var(--color-ash); overflow: hidden; }
-    .case-image-wrap { height: 200px; background: #e4e4d8; display: flex; align-items: center; justify-content: center; }
+    .case-card { background: var(--color-pure-white); border-radius: var(--radius-cards); border: 1px solid var(--color-ash); overflow: hidden; transition: 0.2s; }
+    .case-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .case-image-wrap { height: 200px; background: #e4e4d8; display: flex; align-items: center; justify-content: center; font-weight: 500; color: var(--color-graphite); position: relative; overflow: hidden; }
+    .case-image-wrap img { width: 100%; height: 100%; object-fit: cover; }
     .case-content { padding: 28px; }
 
     .lime-cta-section { background-color: var(--color-electric-lime); padding: 80px 0; border-top: 1px solid var(--color-ash); border-bottom: 1px solid var(--color-ash); }
@@ -90,8 +103,9 @@
 
     /* Подвал */
     footer { background: var(--color-off-black-ink); color: var(--color-pure-white); padding: 60px 0 30px; }
-    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
-    .footer-links a { color: var(--color-ash); display: block; margin-bottom: 8px; }
+    .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+    .footer-links a { color: var(--color-ash); display: block; margin-bottom: 8px; transition: 0.15s; }
+    .footer-links a:hover { color: var(--color-electric-lime); }
 
     /* Мобильное меню (Оверлей) */
     .mobile-menu-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--color-pure-white); z-index: 1000; display: none; flex-direction: column; padding: 24px; }
@@ -99,15 +113,15 @@
     .mobile-nav-list { display: flex; flex-direction: column; gap: 24px; font-size: 24px; font-weight: 500; }
     
     /* Модальное окно */
-    .modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); z-index: 999; display: none; align-items: center; justify-content: center; padding: 20px; }
+    .modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); z-index: 999; display: none; align-items: center; justify-content: center; padding: 20px; backdrop-filter: 4px; }
     .modal-card { background: #fff; padding: 40px; border-radius: var(--radius-cards); max-width: 500px; width: 100%; position: relative; }
     .modal-close { position: absolute; top: 20px; right: 20px; font-size: 20px; cursor: pointer; border:none; background:none; }
 
     /* АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ (MOBILE) */
     @media (max-width: 992px) {
-      .nav-links, .header-phone { display: none; } /* Прячем обычное меню */
+      .nav-links, .header-phone { display: none; }
       .mobile-menu-btn { display: block; border: none; background: none; margin-left: auto; margin-right: 16px; }
-      .header-contacts .btn-lime { display: none; } /* На телефонах кнопка в шапке мешает */
+      .header-contacts .btn-lime { display: none; }
       
       .hero-grid, .audience-content-grid, .calc-wrapper, .lime-cta-inner, .contact-grid { grid-template-columns: 1fr; }
       .portfolio-grid { grid-template-columns: 1fr 1fr; }
@@ -118,7 +132,7 @@
       .container { padding: 0 16px; }
       .hero-main-card, .audience-card-container, .calc-wrapper, .contact-info-card, .contact-form-card { padding: 24px; }
       .hero-proof-bar, .quiz-options-grid, .portfolio-grid { grid-template-columns: 1fr; }
-      .btn-lime, .btn-secondary { width: 100%; } /* Кнопки на всю ширину на мобилке */
+      .btn-lime, .btn-secondary { width: 100%; }
       .hero-actions { flex-direction: column; width: 100%; }
       .audience-tabs { flex-direction: column; width: 100%; }
       .audience-tab-btn { text-align: center; }
@@ -146,29 +160,29 @@
       
       <div class="header-contacts">
         <div class="header-phone"><a href="tel:+79990000000">+7 (999) 000-00-00</a></div>
-        <button class="btn-lime" onclick="openModal('Получить смету')">Получить смету</button>
+        <button class="btn-lime" type="button" onclick="openModal('Получить смету')">Получить смету</button>
       </div>
 
       <!-- Кнопка бургер-меню для мобильных -->
-      <button class="mobile-menu-btn" onclick="toggleMenu()">
+      <button class="mobile-menu-btn" type="button" onclick="toggleMenu()" aria-label="Открыть меню">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#14140f" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
       </button>
     </div>
   </header>
 
   <!-- МОБИЛЬНОЕ ВЫЕЗЖАЮЩЕЕ МЕНЮ -->
-  <div class="mobile-menu-overlay" id="mobileNav">
-    <button class="mobile-menu-close" onclick="toggleMenu()">✕</button>
+  <div class="mobile-menu-overlay" id="mobileNav" role="dialog" aria-modal="true" aria-label="Мобильное меню">
+    <button class="mobile-menu-close" type="button" onclick="toggleMenu()" aria-label="Закрыть меню">✕</button>
     <div class="mobile-nav-list">
       <a href="services.html">Услуги монтажа</a>
       <a href="#audiences" onclick="toggleMenu()">Для кого мы работаем</a>
       <a href="#calculator" onclick="toggleMenu()">Калькулятор сметы</a>
-      <a href="services.html#safety">Стандарты ГОСТ</a>
+      <a href="services.html#safety" onclick="toggleMenu()">Стандарты ГОСТ</a>
       <a href="#portfolio" onclick="toggleMenu()">Наши объекты</a>
       <a href="#contacts" onclick="toggleMenu()">Контакты</a>
       <hr style="border:none; border-top:1px solid #d2d2c8; margin: 10px 0;">
       <a href="tel:+79990000000" style="color: #6e6e64;">+7 (999) 000-00-00</a>
-      <button class="btn-lime" onclick="toggleMenu(); openModal('Консультация')">Оставить заявку</button>
+      <button class="btn-lime" type="button" onclick="toggleMenu(); openModal('Консультация')">Оставить заявку</button>
     </div>
   </div>
 
@@ -181,8 +195,8 @@
           <h1 class="hero-title">Монтаж воркаут, детских площадок и МАФ</h1>
           <p style="margin-bottom: 24px; color: var(--color-graphite);">Работаем строго по ГОСТ. Полный цикл благоустройства: от подготовки основания до покрытий.</p>
           <div class="hero-actions">
-            <button class="btn-lime" onclick="scrollToElement('calculator')">Рассчитать смету</button>
-            <button class="btn-secondary" onclick="openModal('Вызов инженера')">Вызов инженера</button>
+            <button class="btn-lime" type="button" onclick="scrollToElement('calculator')">Рассчитать смету</button>
+            <button class="btn-secondary" type="button" onclick="openModal('Вызов инженера')">Вызов инженера</button>
           </div>
           <div class="hero-proof-bar">
             <div><strong style="font-size:24px;">500+</strong><br><span style="font-size:12px;">объектов</span></div>
@@ -194,7 +208,7 @@
           <div class="hero-banner-lime">
             <h3 style="font-size:22px; margin-bottom:10px;">Есть проект?</h3>
             <p style="margin-bottom:20px;">Прикрепите чертеж — за 30 минут рассчитаем точную смету.</p>
-            <button class="btn-secondary" style="background:#fff; border:none;" onclick="openModal('Расчет по проекту')">Отправить →</button>
+            <button class="btn-secondary" type="button" style="background:#fff; border:none;" onclick="openModal('Расчет по проекту')">Отправить →</button>
           </div>
         </div>
       </div>
@@ -206,27 +220,27 @@
     <div class="container">
       <h2 class="section-title">Кому мы помогаем</h2>
       <div class="audience-tabs">
-        <button class="audience-tab-btn active" onclick="switchAudience('dev', this)">Застройщикам</button>
-        <button class="audience-tab-btn" onclick="switchAudience('uk', this)">УК и ТСЖ</button>
-        <button class="audience-tab-btn" onclick="switchAudience('private', this)">Частным лицам</button>
+        <button class="audience-tab-btn active" type="button" onclick="switchAudience('dev', this)">Застройщикам</button>
+        <button class="audience-tab-btn" type="button" onclick="switchAudience('uk', this)">УК и ТСЖ</button>
+        <button class="audience-tab-btn" type="button" onclick="switchAudience('private', this)">Частным лицам</button>
       </div>
       <div class="audience-card-container">
         <div id="audience-dev" class="audience-content-grid">
           <div>
             <h3 style="font-size: 24px; margin-bottom: 14px;">Сдавайте дворы благоустройства точно в срок</h3>
             <p style="color: var(--color-graphite); margin-bottom: 24px;">Берем на себя монтаж любого объема игрового и спортивного оборудования в ЖК.</p>
-            <button class="btn-lime" onclick="openModal('Для застройщика')">Запросить КП</button>
+            <button class="btn-lime" type="button" onclick="openModal('Для застройщика')">Запросить КП</button>
           </div>
         </div>
         <div id="audience-uk" style="display: none;">
           <h3 style="font-size: 24px; margin-bottom: 14px;">Безопасные дворы без штрафов</h3>
           <p style="color: var(--color-graphite); margin-bottom: 24px;">Модернизация и монтаж воркаут-комплексов во дворах.</p>
-          <button class="btn-lime" onclick="openModal('Для УК')">Рассчитать двор</button>
+          <button class="btn-lime" type="button" onclick="openModal('Для УК')">Рассчитать двор</button>
         </div>
         <div id="audience-private" style="display: none;">
           <h3 style="font-size: 24px; margin-bottom: 14px;">Спортзал прямо на участке</h3>
           <p style="color: var(--color-graphite); margin-bottom: 24px;">Создаем стильные компактные воркаут-зоны на частных участках.</p>
-          <button class="btn-lime" onclick="openModal('Для дома')">Вызвать замерщика</button>
+          <button class="btn-lime" type="button" onclick="openModal('Для дома')">Вызвать замерщика</button>
         </div>
       </div>
     </div>
@@ -240,16 +254,16 @@
         <div>
           <h3 style="font-size:20px; margin-bottom:16px;">Тип оборудования</h3>
           <div class="quiz-options-grid">
-            <div class="quiz-option selected" onclick="calc(this,35000)">Воркаут площадка</div>
-            <div class="quiz-option" onclick="calc(this,55000)">Детская зона</div>
-            <div class="quiz-option" onclick="calc(this,28000)">МАФ и скамейки</div>
-            <div class="quiz-option" onclick="calc(this,90000)">Под ключ</div>
+            <div class="quiz-option selected" type="button" onclick="calc(this,35000)">Воркаут площадка</div>
+            <div class="quiz-option" type="button" onclick="calc(this,55000)">Детская зона</div>
+            <div class="quiz-option" type="button" onclick="calc(this,28000)">МАФ и скамейки</div>
+            <div class="quiz-option" type="button" onclick="calc(this,90000)">Под ключ</div>
           </div>
         </div>
         <div class="calc-sidebar">
           <div style="font-size:14px; color:var(--color-graphite);">Ориентировочно:</div>
           <div style="font-size:32px; font-weight:500; margin-bottom:24px;" id="price">от 35 000 ₽</div>
-          <button class="btn-lime" style="width:100%;" onclick="openModal('Точный расчет')">Получить точную смету</button>
+          <button class="btn-lime" style="width:100%;" type="button" onclick="openModal('Точный расчет')">Получить точную смету</button>
         </div>
       </div>
     </div>
@@ -261,12 +275,16 @@
       <h2 class="section-title">Наши объекты</h2>
       <div class="portfolio-grid">
         <div class="case-card">
-          <div class="case-image-wrap">ВОРКАУТ</div>
+          <div class="case-image-wrap"><span style="color:var(--color-graphite); font-size:14px;">Фото объекта</span></div>
           <div class="case-content"><h4>ЖК «Северные Кварталы»</h4><p style="font-size:14px; color:gray;">Монтаж многофункциональной зоны.</p></div>
         </div>
         <div class="case-card">
-          <div class="case-image-wrap">ДЕТСКАЯ</div>
+          <div class="case-image-wrap"><span style="color:var(--color-graphite); font-size:14px;">Фото объекта</span></div>
           <div class="case-content"><h4>Сквер «Юбилейный»</h4><p style="font-size:14px; color:gray;">Установка деревянного городка.</p></div>
+        </div>
+        <div class="case-card">
+          <div class="case-image-wrap"><span style="color:var(--color-graphite); font-size:14px;">Фото объекта</span></div>
+          <div class="case-content"><h4>Парк «Заречный»</h4><p style="font-size:14px; color:gray;">Воркаут-зона на 12 станций.</p></div>
         </div>
       </div>
     </div>
@@ -281,12 +299,16 @@
           <h3 style="margin-bottom:20px;">Центральный офис</h3>
           <p><strong>Телефон:</strong> <a href="tel:+79990000000">+7 (999) 000-00-00</a></p>
           <p><strong>Почта:</strong> info@shumger.ru</p>
+          <p><strong>Режим работы:</strong> Пн–Пт 9:00–18:00</p>
         </div>
         <div class="contact-form-card">
           <h3 style="margin-bottom:20px;">Оставить заявку</h3>
-          <input type="text" class="input-field" placeholder="Имя / ООО">
-          <input type="tel" class="input-field" placeholder="Телефон">
-          <button class="btn-lime" style="width:100%;" onclick="alert('Отправлено!')">Отправить</button>
+          <form id="contactForm" onsubmit="handleContact(event)">
+            <input type="text" class="input-field" placeholder="Имя / ООО" required>
+            <input type="tel" class="input-field" placeholder="Телефон" required>
+            <button class="btn-lime" style="width:100%;" type="submit">Отправить</button>
+          </form>
+          <p id="formStatus" style="margin-top:12px; font-size:14px; color:var(--color-graphite); display:none;"></p>
         </div>
       </div>
     </div>
@@ -303,20 +325,27 @@
             <a href="services.html">Услуги</a>
             <a href="services.html#safety">ГОСТ</a>
             <a href="#portfolio">Объекты</a>
+            <a href="#contacts">Контакты</a>
           </div>
         </div>
+      </div>
+      <div style="text-align:center; font-size:12px; color:var(--color-ash); border-top:1px solid var(--color-ash); padding-top:20px;">
+        © 2026 ШУМГЕР. Все права защищены.
       </div>
     </div>
   </footer>
 
   <!-- МОДАЛЬНОЕ ОКНО -->
-  <div class="modal-overlay" id="leadModal" onclick="closeModal(event)">
+  <div class="modal-overlay" id="leadModal" onclick="closeModal(event)" role="dialog" aria-modal="true" aria-label="Форма заявки">
     <div class="modal-card">
-      <button class="modal-close" onclick="document.getElementById('leadModal').style.display='none'">✕</button>
+      <button class="modal-close" type="button" onclick="closeModal()" aria-label="Закрыть">✕</button>
       <h3 style="margin-bottom: 20px;" id="modalTopic">Заявка</h3>
-      <input type="text" class="input-field" placeholder="Имя">
-      <input type="tel" class="input-field" placeholder="Телефон">
-      <button class="btn-lime" style="width: 100%;" onclick="alert('Отправлено!'); document.getElementById('leadModal').style.display='none'">Отправить</button>
+      <form id="modalForm" onsubmit="handleModal(event)">
+        <input type="text" class="input-field" placeholder="Имя" required>
+        <input type="tel" class="input-field" placeholder="Телефон" required>
+        <button class="btn-lime" style="width: 100%;" type="submit">Отправить</button>
+      </form>
+      <p id="modalStatus" style="margin-top:12px; font-size:14px; color:var(--color-graphite); display:none;"></p>
     </div>
   </div>
 
@@ -328,8 +357,10 @@
     function switchAudience(id, btn) {
       document.querySelectorAll('.audience-tab-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      ['dev', 'uk', 'private'].forEach(tab => document.getElementById('audience-'+tab).style.display = 'none');
-      document.getElementById('audience-'+id).style.display = 'grid';
+      ['dev', 'uk', 'private'].forEach(tab => {
+        const el = document.getElementById('audience-' + tab);
+        if (el) el.style.display = (tab === id) ? 'grid' : 'none';
+      });
     }
     function calc(btn, price) {
       document.querySelectorAll('.quiz-option').forEach(b => b.classList.remove('selected'));
@@ -339,9 +370,86 @@
     function openModal(topic) {
       document.getElementById('modalTopic').innerText = topic;
       document.getElementById('leadModal').style.display = 'flex';
+      // focus first input
+      setTimeout(function() {
+        var inp = document.getElementById('modalForm').querySelector('input');
+        if (inp) inp.focus();
+      }, 50);
     }
-    function closeModal(e) { if(e.target.id === 'leadModal') e.target.style.display='none'; }
-    function scrollToElement(id) { document.getElementById(id).scrollIntoView({behavior: 'smooth'}); }
+    function closeModal(e) {
+      if (e && e.target && e.target.id !== 'leadModal') return;
+      document.getElementById('leadModal').style.display = 'none';
+      clearFormStatus();
+    }
+    function clearFormStatus() {
+      document.getElementById('formStatus').style.display = 'none';
+      document.getElementById('modalStatus').style.display = 'none';
+    }
+    function scrollToElement(id) {
+      var el = document.getElementById(id);
+      if (el) el.scrollIntoView({behavior: 'smooth'});
+    }
+
+    // --- Заглушка отправки форм (замени на свой бекенд) ---
+    function submitLead(data, topic) {
+      // TODO: замени на fetch('/api/lead', {method:'POST', body:JSON.stringify(data)})
+      // или подключи Formspree / Telegram-бота / EmailJS.
+      return new Promise(function(resolve) {
+        setTimeout(function() { resolve({ok: true, id: Date.now()}); }, 600);
+      });
+    }
+
+    async function handleModal(e) {
+      e.preventDefault();
+      var form = e.target;
+      var inputs = form.querySelectorAll('input');
+      var data = {};
+      inputs.forEach(function(i) { data[i.name || i.placeholder] = i.value; });
+      data.topic = document.getElementById('modalTopic').innerText;
+      var status = document.getElementById('modalStatus');
+      status.textContent = 'Отправляем…';
+      status.style.display = 'block';
+      try {
+        var res = await submitLead(data, data.topic);
+        status.textContent = '✓ Спасибо! Мы свяжемся с вами shortly.';
+        status.style.color = '#2e7d32';
+        form.reset();
+        setTimeout(closeModal, 1500);
+      } catch (err) {
+        status.textContent = '✗ Не удалось отформить. Попробуйте позже.';
+        status.style.color = '#c62828';
+      }
+    }
+
+    async function handleContact(e) {
+      e.preventDefault();
+      var form = e.target;
+      var inputs = form.querySelectorAll('input');
+      var data = {from: 'contact'};
+      inputs.forEach(function(i) { data[i.name || i.placeholder] = i.value; });
+      var status = document.getElementById('formStatus');
+      status.textContent = 'Отправляем…';
+      status.style.display = 'block';
+      try {
+        var res = await submitLead(data, 'Контакт');
+        status.textContent = '✓ Спасибо! Мы свяжемся с вами shortly.';
+        status.style.color = '#2e7d32';
+        form.reset();
+      } catch (err) {
+        status.textContent = '✗ Не удалось отформить. Попробуйте позже.';
+        status.style.color = '#c62828';
+      }
+    }
+
+    // Закрытие модального окна по Esc
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        var m = document.getElementById('leadModal');
+        if (m.style.display === 'flex') closeModal();
+        var nav = document.getElementById('mobileNav');
+        if (nav.style.display === 'flex') nav.style.display = 'none';
+      }
+    });
   </script>
 </body>
 </html>
