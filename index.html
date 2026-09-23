@@ -9,143 +9,142 @@
   <meta property="og:description" content="Монтаж по ГОСТ. 500+ объектов, гарантия до 5 лет.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://shumger.ru/">
-  <!-- Логотип ur SVG -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 120 60%22%3E%3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%220%25%22%3E%3Cstop offset=%220%25%22 stop-color=%22%231a5a2e%25%22/%3E%3Cstop offset=%22100%25%22 stop-color=%22%23beff50%25%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x=%2250%25%22 y=%2280%25%22 font-family=%22sans-serif%22 font-size=%2248%22 font-weight=%22700%22 text-anchor=%22middle%22 fill=%22url(%23g)%22%3Eur%3C/text%3E%3C/svg%3E" type="image/svg+xml">
-  
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 60'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%231a5a2e'/%3E%3Cstop offset='100%25' stop-color='%23beff50'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='50%25' y='80%25' font-family='sans-serif' font-size='48' font-weight='700' text-anchor='middle' fill='url(%23g)'%3Eur%3C/text%3E%3C/svg%3E" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- OTSono нет в публичном CDN — используем Plus Jakarta Sans как ближайшую альтернативу -->
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-
   <style>
     :root {
-      --color-lime: #beff50;
-      --color-ink: #14140f;
-      --color-dark: #30302a;
-      --color-cream: #f5f5eb;
-      --color-warm-cream: #fafaf5;
-      --color-white: #ffffff;
-      --color-graphite: #6e6e64;
-      --color-ash: #d2d2c8;
-      --font-family: 'Plus Jakarta Sans', 'OTSono', sans-serif;
+      --lime: #beff50;
+      --ink: #14140f;
+      --dark: #30302a;
+      --cream: #f5f5eb;
+      --warm: #fafaf5;
+      --white: #ffffff;
+      --ash: #d2d2c8;
+      --graphite: #6e6e64;
       --radius: 26px;
       --radius-sm: 8px;
-      --radius-pill: 9999px;
-      --text-body: 16px;
+      --font: 'Plus Jakarta Sans', sans-serif;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
     html { scroll-behavior: smooth; }
-    body { font-family: var(--font-family); font-size: var(--text-body); line-height: 1.5; color: var(--color-ink); background-color: var(--color-white); overflow-x: hidden; }
+    body { font-family: var(--font); font-size: 15px; line-height: 1.5; color: var(--ink); background: var(--white); overflow-x: hidden; }
     a { color: inherit; text-decoration: none; }
     button { font-family: inherit; cursor: pointer; border: none; background: none; }
-    input { font-family: inherit; font-size: var(--text-body); }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-    
-    .eyebrow { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-graphite); margin-bottom: 12px; display: inline-block; }
-    .eyebrow-pill { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; padding: 6px 14px; border-radius: var(--radius-pill); border: 1px solid var(--color-ash); display: inline-flex; align-items: center; gap: 8px; }
-    .dot-live { width: 7px; height: 7px; border-radius: 50%; background-color: #38a169; display: inline-block; }
-    
-    .btn-lime { background-color: var(--color-lime); color: var(--color-ink); font-weight: 500; padding: 14px 28px; border-radius: var(--radius); display: inline-flex; align-items: center; justify-content: center; gap: 10px; transition: opacity 0.15s; }
-    .btn-lime:hover { opacity: 0.85; }
-    .btn-secondary { background-color: var(--color-cream); color: var(--color-ink); border: 1px solid var(--color-ash); font-weight: 500; padding: 14px 28px; border-radius: var(--radius); display: inline-flex; align-items: center; justify-content: center; transition: opacity 0.15s; }
-    .btn-secondary:hover { opacity: 0.85; }
+    input { font-family: inherit; font-size: 15px; }
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
 
-    /* Шапка — без backdrop-filter (убираем лаги) */
-    header.site-header { position: sticky; top: 0; z-index: 100; background-color: var(--color-white); border-bottom: 1px solid var(--color-ash); height: 76px; }
+    .eyebrow { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--graphite); display: inline-block; }
+    .eyebrow-pill { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; padding: 6px 14px; border-radius: var(--radius-sm); border: 1px solid var(--ash); display: inline-flex; align-items: center; gap: 8px; }
+    .dot-live { width: 7px; height: 7px; border-radius: 50%; background: #38a169; display: inline-block; }
+
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-weight: 500; padding: 14px 28px; border-radius: var(--radius); transition: opacity .15s; }
+    .btn:hover { opacity: .85; }
+    .btn-lime { background: var(--lime); color: var(--ink); }
+    .btn-dark { background: var(--ink); color: var(--white); }
+    .btn-secondary { background: var(--cream); color: var(--ink); border: 1px solid var(--ash); }
+
+    header.site-header { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--ash); height: 76px; }
     .header-inner { display: flex; align-items: center; justify-content: space-between; height: 100%; }
-    .brand-logo-wrapper { display: flex; align-items: center; gap: 12px; }
-    .brand-logo-mark { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: var(--radius); background-color: var(--color-cream); border: 1px solid var(--color-ash); overflow: hidden; }
-    .brand-logo-mark svg { width: 80%; height: 80%; }
-    .brand-name { font-size: 20px; font-weight: 700; letter-spacing: -0.03em; }
-    .nav-links { display: flex; align-items: center; gap: 24px; }
-    .nav-link { font-size: 14px; font-weight: 500; transition: opacity 0.15s; }
-    .nav-link:hover { opacity: 0.7; }
-    .header-contacts { display: flex; align-items: center; gap: 16px; }
-    .mobile-menu-btn { display: none; }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand-mark { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: var(--radius); background: var(--cream); border: 1px solid var(--ash); overflow: hidden; }
+    .brand-mark svg { width: 80%; height: 80%; }
+    .brand-name { font-size: 20px; font-weight: 700; letter-spacing: -.03em; }
+    .site-nav { display: flex; align-items: center; gap: 24px; }
+    .site-nav a { font-size: 14px; font-weight: 500; transition: opacity .15s; }
+    .site-nav a:hover { opacity: .65; }
+    .header-cta { display: flex; align-items: center; gap: 16px; }
+    .burger { display: none; margin-left: auto; margin-right: 16px; }
 
-    /* Блоки — без теней, только фоновый контраст */
-    .hero-section { padding: 56px 0 72px; background-color: var(--color-cream); }
-    .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 36px; }
-    .hero-main-card { background-color: var(--color-white); border-radius: var(--radius); padding: 48px; }
-    .hero-banner-lime { background-color: var(--color-lime); border-radius: var(--radius); padding: 36px; }
-    .hero-title { font-size: clamp(34px, 4.4vw, 54px); font-weight: 700; line-height: 0.90; letter-spacing: -0.03em; margin: 16px 0 20px; }
-    .hero-proof-bar { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding-top: 28px; border-top: 1px solid var(--color-ash); margin-top: 36px; }
-    
-    .audience-section { padding: 80px 0; background-color: var(--color-white); }
-    .section-title { font-size: clamp(26px, 3.2vw, 40px); font-weight: 700; line-height: 1.0; letter-spacing: -0.02em; margin-bottom: 32px; }
-    .audience-tabs { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 32px; }
-    .audience-tab-btn { padding: 10px 22px; border-radius: var(--radius-pill); border: 1px solid var(--color-ash); background: var(--color-white); font-size: 14px; font-weight: 500; cursor: pointer; transition: 0.15s; }
-    .audience-tab-btn:hover { opacity: 0.8; }
-    .audience-tab-btn.active { background-color: var(--color-ink); color: var(--color-white); }
-    .audience-card-container { background-color: var(--color-white); border-radius: var(--radius); border: 1px solid var(--color-ash); padding: 40px; }
-    .audience-content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .hero { padding: 56px 0 72px; background: var(--cream); }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 36px; }
+    .hero-card { background: var(--white); border-radius: var(--radius); padding: 48px; }
+    .hero-title { font-size: clamp(34px, 4.2vw, 52px); font-weight: 700; line-height: .90; letter-spacing: -.03em; margin: 20px 0 16px; }
+    .hero-lead { color: var(--graphite); margin-bottom: 28px; max-width: 480px; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .proof-bar { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding-top: 28px; border-top: 1px solid var(--ash); margin-top: 36px; }
+    .proof-bar strong { font-size: 24px; font-weight: 700; }
+    .proof-bar span { font-size: 12px; color: var(--graphite); }
+    .hero-lime { background: var(--lime); border-radius: var(--radius); padding: 36px; color: var(--ink); }
+    .hero-lime .btn { background: var(--white); color: var(--ink); border: none; }
 
-    .calc-section { padding: 96px 0; background-color: var(--color-cream); }
-    .calc-wrapper { border: 1px solid var(--color-ash); border-radius: var(--radius); padding: 48px; display: grid; grid-template-columns: 1.3fr 0.9fr; gap: 48px; background: var(--color-white); }
-    .quiz-options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 32px; }
-    .quiz-option { border: 1px solid var(--color-ash); border-radius: var(--radius); padding: 16px; cursor: pointer; transition: 0.15s; user-select: none; }
-    .quiz-option:hover { background-color: var(--color-cream); }
-    .quiz-option.selected { background: var(--color-ink); color: var(--color-white); }
-    .calc-sidebar { background-color: var(--color-cream); border-radius: var(--radius); border: 1px solid var(--color-ash); padding: 32px; }
-    .input-field { width: 100%; border: 1px solid var(--color-ash); border-radius: var(--radius-sm); padding: 12px 16px; margin-bottom: 12px; }
-    .input-field:focus { outline: 2px solid var(--color-lime); border-color: var(--color-lime); }
+    .audience { padding: 80px 0; background: var(--white); }
+    .section-title { font-size: clamp(26px, 3.2vw, 40px); font-weight: 700; line-height: 1.0; letter-spacing: -.03em; margin-bottom: 32px; }
+    .tabs { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 32px; }
+    .tab { padding: 10px 22px; border-radius: var(--radius); border: 1px solid var(--ash); background: var(--white); font-size: 14px; font-weight: 500; cursor: pointer; transition: .15s; }
+    .tab:hover { opacity: .8; }
+    .tab-active { background: var(--ink); color: var(--white); border-color: var(--ink); }
+    .audience-card { background: var(--white); border-radius: var(--radius); border: 1px solid var(--ash); padding: 40px; }
+    .audience-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .audience-panel { display: none; }
+    .audience-panel.is-active { display: grid; }
 
-    .portfolio-section { padding: 80px 0; background-color: var(--color-white); }
+    .calc { padding: 96px 0; background: var(--cream); }
+    .calc-card { background: var(--white); border-radius: var(--radius); border: 1px solid var(--ash); padding: 48px; display: grid; grid-template-columns: 1.3fr .9fr; gap: 48px; }
+    .quiz-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 32px; }
+    .quiz-opt { border: 1px solid var(--ash); border-radius: var(--radius); padding: 16px; cursor: pointer; transition: .15s; user-select: none; }
+    .quiz-opt:hover { background: var(--cream); }
+    .quiz-opt.is-sel { background: var(--ink); color: var(--white); border-color: var(--ink); }
+    .calc-sidebar { background: var(--cream); border-radius: var(--radius); border: 1px solid var(--ash); padding: 32px; }
+    .price { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+    .input { width: 100%; border: 1px solid var(--ash); border-radius: var(--radius-sm); padding: 12px 16px; margin-bottom: 12px; }
+    .input:focus { outline: 2px solid var(--lime); border-color: var(--lime); }
+
+    .portfolio { padding: 80px 0; background: var(--white); }
     .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .case-card { background: var(--color-white); border-radius: var(--radius); border: 1px solid var(--color-ash); overflow: hidden; }
-    .case-image-wrap { height: 200px; background: var(--color-cream); display: flex; align-items: center; justify-content: center; }
-    .case-content { padding: 28px; }
+    .case { background: var(--white); border-radius: var(--radius); border: 1px solid var(--ash); overflow: hidden; }
+    .case-img { height: 200px; background: var(--cream); display: flex; align-items: center; justify-content: center; color: var(--graphite); font-size: 14px; }
+    .case-body { padding: 28px; }
+    .case-body h4 { margin-bottom: 6px; font-size: 16px; }
+    .case-body p { font-size: 14px; color: var(--graphite); }
 
-    .contact-section { padding: 96px 0; background-color: var(--color-cream); }
+    .contact { padding: 96px 0; background: var(--cream); }
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
-    .contact-info-card, .contact-form-card { padding: 44px; border-radius: var(--radius); border: 1px solid var(--color-ash); }
-    .contact-info-card { background: var(--color-white); }
-    .contact-form-card { background: var(--color-white); }
+    .contact-card { background: var(--white); border-radius: var(--radius); border: 1px solid var(--ash); padding: 44px; }
+    .contact-card h3 { margin-bottom: 20px; font-size: 20px; }
+    .contact-card p { margin-bottom: 8px; }
+    .contact-card a:hover { text-decoration: underline; }
 
-    /* Подвал */
-    footer { background: var(--color-ink); color: var(--color-white); padding: 60px 0 30px; }
+    footer { background: var(--ink); color: var(--white); padding: 60px 0 30px; }
     .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 40px; }
-    .footer-links a { color: var(--color-ash); display: block; margin-bottom: 8px; transition: 0.15s; }
-    .footer-links a:hover { color: var(--color-lime); }
+    .footer-links a { color: var(--ash); display: block; margin-bottom: 8px; transition: .15s; }
+    .footer-links a:hover { color: var(--lime); }
+    .footer-copy { text-align: center; font-size: 12px; color: var(--graphite); border-top: 1px solid var(--dark); padding-top: 20px; }
 
-    /* Мобильное меню */
-    .mobile-menu-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--color-white); z-index: 1000; display: none; flex-direction: column; padding: 24px; }
-    .mobile-menu-close { align-self: flex-end; font-size: 32px; background: none; border: none; cursor: pointer; color: var(--color-ink); margin-bottom: 40px; }
-    .mobile-nav-list { display: flex; flex-direction: column; gap: 24px; font-size: 24px; font-weight: 500; }
-    
-    /* Модальное окно */
-    .modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(20,20,15,0.7); z-index: 999; display: none; align-items: center; justify-content: center; padding: 20px; }
-    .modal-card { background: var(--color-white); padding: 40px; border-radius: var(--radius); max-width: 500px; width: 100%; position: relative; }
-    .modal-close { position: absolute; top: 20px; right: 20px; font-size: 20px; cursor: pointer; border: none; background: none; color: var(--color-graphite); }
+    .overlay { position: fixed; inset: 0; background: var(--white); z-index: 1000; display: none; flex-direction: column; padding: 24px; }
+    .overlay-close { align-self: flex-end; font-size: 32px; background: none; border: none; cursor: pointer; color: var(--ink); margin-bottom: 40px; }
+    .overlay-nav { display: flex; flex-direction: column; gap: 24px; font-size: 24px; font-weight: 500; }
 
-    /* АДАПТАЦИЯ */
+    .modal { position: fixed; inset: 0; background: rgba(20,20,15,.7); z-index: 999; display: none; align-items: center; justify-content: center; padding: 20px; }
+    .modal-card { background: var(--white); padding: 40px; border-radius: var(--radius); max-width: 500px; width: 100%; position: relative; }
+    .modal-close { position: absolute; top: 20px; right: 20px; font-size: 20px; cursor: pointer; border: none; background: none; color: var(--graphite); }
+
     @media (max-width: 992px) {
-      .nav-links, .header-phone { display: none; }
-      .mobile-menu-btn { display: block; margin-left: auto; margin-right: 16px; }
-      .header-contacts .btn-lime { display: none; }
-      .hero-grid, .audience-content-grid, .calc-wrapper, .contact-grid { grid-template-columns: 1fr; }
+      .site-nav, .header-phone { display: none; }
+      .burger { display: block; }
+      .header-cta .btn-lime { display: none; }
+      .hero-grid, .audience-grid, .calc-card, .contact-grid { grid-template-columns: 1fr; }
       .portfolio-grid { grid-template-columns: 1fr 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 640px) {
       .container { padding: 0 16px; }
-      .hero-main-card, .audience-card-container, .calc-wrapper, .contact-info-card, .contact-form-card { padding: 24px; }
-      .hero-proof-bar, .quiz-options-grid, .portfolio-grid { grid-template-columns: 1fr; }
-      .btn-lime, .btn-secondary { width: 100%; }
+      .hero-card, .audience-card, .calc-card, .contact-card { padding: 24px; }
+      .proof-bar, .quiz-grid, .portfolio-grid { grid-template-columns: 1fr; }
       .hero-actions { flex-direction: column; width: 100%; }
-      .audience-tabs { flex-direction: column; width: 100%; }
-      .audience-tab-btn { text-align: center; }
+      .btn { width: 100%; }
+      .tabs { flex-direction: column; }
+      .tab { text-align: center; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ШАПКА -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand-logo-wrapper">
-        <div class="brand-logo-mark">
-          <!-- ur логотип SVG inline -->
+      <a href="index.html" class="brand">
+        <div class="brand-mark">
           <svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg" aria-label="ШУМГЕР">
             <defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#1a5a2e"/><stop offset="100%" stop-color="#beff50"/></linearGradient></defs>
             <text x="50%" y="80%" font-family="sans-serif" font-size="48" font-weight="700" text-anchor="middle" fill="url(#g)">ur</text>
@@ -153,175 +152,163 @@
         </div>
         <div class="brand-name">ШУМГЕР</div>
       </a>
-      
-      <nav class="nav-links">
-        <a href="services.html" class="nav-link">Услуги</a>
-        <a href="#audiences" class="nav-link">Для кого</a>
-        <a href="#calculator" class="nav-link">Калькулятор</a>
-        <a href="services.html#safety" class="nav-link">Стандарты</a>
-        <a href="#portfolio" class="nav-link">Объекты</a>
+      <nav class="site-nav">
+        <a href="services.html">Услуги</a>
+        <a href="#audiences">Для кого</a>
+        <a href="#calculator">Калькулятор</a>
+        <a href="services.html#safety">Стандарты</a>
+        <a href="#portfolio">Объекты</a>
       </nav>
-      
-      <div class="header-contacts">
+      <div class="header-cta">
         <div class="header-phone"><a href="tel:+79990000000">+7 (999) 000-00-00</a></div>
-        <button class="btn-lime" type="button" onclick="openModal('Получить смету')">Получить смету</button>
+        <button type="button" class="btn btn-lime" onclick="openModal('Получить смету')">Получить смету</button>
       </div>
-
-      <button class="mobile-menu-btn" type="button" onclick="toggleMenu()" aria-label="Открыть меню">
+      <button type="button" class="burger" onclick="toggleMenu()" aria-label="Меню">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#14140f" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
       </button>
     </div>
   </header>
 
-  <!-- МОБИЛЬНОЕ МЕНЮ -->
-  <div class="mobile-menu-overlay" id="mobileNav" role="dialog" aria-modal="true" aria-label="Мобильное меню">
-    <button class="mobile-menu-close" type="button" onclick="toggleMenu()" aria-label="Закрыть">✕</button>
-    <div class="mobile-nav-list">
+  <div class="overlay" id="mobileNav" role="dialog" aria-modal="true" aria-label="Меню">
+    <button type="button" class="overlay-close" onclick="toggleMenu()" aria-label="Закрыть">✕</button>
+    <div class="overlay-nav">
       <a href="services.html">Услуги</a>
       <a href="#audiences" onclick="toggleMenu()">Для кого</a>
       <a href="#calculator" onclick="toggleMenu()">Калькулятор</a>
       <a href="services.html#safety" onclick="toggleMenu()">ГОСТ</a>
       <a href="#portfolio" onclick="toggleMenu()">Объекты</a>
       <a href="#contacts" onclick="toggleMenu()">Контакты</a>
-      <hr style="border:none; border-top:1px solid var(--color-ash); margin: 10px 0;">
-      <a href="tel:+79990000000" style="color: var(--color-graphite);">+7 (999) 000-00-00</a>
-      <button class="btn-lime" type="button" onclick="toggleMenu(); openModal('Заявка')">Оставить заявку</button>
+      <hr style="border:none; border-top:1px solid var(--ash); margin: 10px 0;">
+      <a href="tel:+79990000000" style="color: var(--graphite);">+7 (999) 000-00-00</a>
+      <button type="button" class="btn btn-lime" onclick="toggleMenu(); openModal('Заявка')">Оставить заявку</button>
     </div>
   </div>
 
-  <!-- ГЛАВНЫЙ ЭКРАН -->
-  <section class="hero-section">
+  <section class="hero">
     <div class="container">
       <div class="hero-grid">
-        <div class="hero-main-card">
+        <div class="hero-card">
           <div class="eyebrow-pill"><span class="dot-live"></span>Работаем по договору</div>
           <h1 class="hero-title">Монтаж воркаут, детских площадок и МАФ</h1>
-          <p style="margin-bottom: 24px; color: var(--color-graphite);">Работаем строго по ГОСТ. Полный цикл благоустройства: от подготовки основания до покрытий.</p>
+          <p class="hero-lead">Работаем строго по ГОСТ. Полный цикл благоустройства: от подготовки основания до покрытий.</p>
           <div class="hero-actions">
-            <button class="btn-lime" type="button" onclick="scrollToElement('calculator')">Рассчитать смету</button>
-            <button class="btn-secondary" type="button" onclick="openModal('Вызов инженера')">Вызов инженера</button>
+            <button type="button" class="btn btn-lime" onclick="scrollTo('calculator')">Рассчитать смету</button>
+            <button type="button" class="btn btn-secondary" onclick="openModal('Вызов инженера')">Вызов инженера</button>
           </div>
-          <div class="hero-proof-bar">
-            <div><strong style="font-size:24px;">500+</strong><br><span style="font-size:12px;">объектов</span></div>
-            <div><strong style="font-size:24px;">до 5 лет</strong><br><span style="font-size:12px;">гарантии</span></div>
-            <div><strong style="font-size:24px;">100%</strong><br><span style="font-size:12px;">по ГОСТ</span></div>
+          <div class="proof-bar">
+            <div><strong>500+</strong><br><span>объектов</span></div>
+            <div><strong>до 5 лет</strong><br><span>гарантии</span></div>
+            <div><strong>100%</strong><br><span>по ГОСТ</span></div>
           </div>
         </div>
-        <div style="display:flex; flex-direction:column; gap:20px;">
-          <div class="hero-banner-lime">
-            <h3 style="font-size:22px; margin-bottom:10px; color: var(--color-ink);">Есть проект?</h3>
-            <p style="margin-bottom:20px; color: var(--color-ink);">Прикрепите чертеж — за 30 минут рассчитаем точную смету.</p>
-            <button class="btn-secondary" type="button" style="background:var(--color-white); border:none;" onclick="openModal('Расчет по проекту')">Отправить →</button>
-          </div>
+        <div class="hero-lime">
+          <h3 style="font-size:22px; margin-bottom:10px;">Есть проект?</h3>
+          <p style="margin-bottom:20px;">Прикрепите чертеж — за 30 минут рассчитаем точную смету.</p>
+          <button type="button" class="btn" onclick="openModal('Расчет по проекту')">Отправить →</button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ДЛЯ КОГО -->
-  <section class="audience-section" id="audiences">
+  <section class="audience" id="audiences">
     <div class="container">
       <h2 class="section-title">Кому мы помогаем</h2>
-      <div class="audience-tabs">
-        <button class="audience-tab-btn active" type="button" onclick="switchAudience('dev', this)">Застройщикам</button>
-        <button class="audience-tab-btn" type="button" onclick="switchAudience('uk', this)">УК и ТСЖ</button>
-        <button class="audience-tab-btn" type="button" onclick="switchAudience('private', this)">Частным лицам</button>
+      <div class="tabs">
+        <button type="button" class="tab tab-active" onclick="switchAudience('dev', this)">Застройщикам</button>
+        <button type="button" class="tab" onclick="switchAudience('uk', this)">УК и ТСЖ</button>
+        <button type="button" class="tab" onclick="switchAudience('private', this)">Частным лицам</button>
       </div>
-      <div class="audience-card-container">
-        <div id="audience-dev" class="audience-content-grid">
+      <div class="audience-card">
+        <div id="audience-dev" class="audience-grid audience-panel is-active">
           <div>
             <h3 style="font-size: 24px; margin-bottom: 14px;">Сдавайте дворы благоустройства точно в срок</h3>
-            <p style="color: var(--color-graphite); margin-bottom: 24px;">Берем на себя монтаж любого объема игрового и спортивного оборудования в ЖК.</p>
-            <button class="btn-lime" type="button" onclick="openModal('Для застройщика')">Запросить КП</button>
+            <p style="color: var(--graphite); margin-bottom: 24px;">Берем на себя монтаж любого объема игрового и спортивного оборудования в ЖК.</p>
+            <button type="button" class="btn btn-lime" onclick="openModal('Для застройщика')">Запросить КП</button>
           </div>
         </div>
-        <div id="audience-uk" style="display: none;">
+        <div id="audience-uk" class="audience-panel">
           <h3 style="font-size: 24px; margin-bottom: 14px;">Безопасные дворы без штрафов</h3>
-          <p style="color: var(--color-graphite); margin-bottom: 24px;">Модернизация и монтаж воркаут-комплексов во дворах.</p>
-          <button class="btn-lime" type="button" onclick="openModal('Для УК')">Рассчитать двор</button>
+          <p style="color: var(--graphite); margin-bottom: 24px;">Модернизация и монтаж воркаут-комплексов во дворах.</p>
+          <button type="button" class="btn btn-lime" onclick="openModal('Для УК')">Рассчитать двор</button>
         </div>
-        <div id="audience-private" style="display: none;">
+        <div id="audience-private" class="audience-panel">
           <h3 style="font-size: 24px; margin-bottom: 14px;">Спортзал прямо на участке</h3>
-          <p style="color: var(--color-graphite); margin-bottom: 24px;">Создаем стильные компактные воркаут-зоны на частных участках.</p>
-          <button class="btn-lime" type="button" onclick="openModal('Для дома')">Вызвать замерщика</button>
+          <p style="color: var(--graphite); margin-bottom: 24px;">Создаем стильные компактные воркаут-зоны на частных участках.</p>
+          <button type="button" class="btn btn-lime" onclick="openModal('Для дома')">Вызвать замерщика</button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- КАЛЬКУЛЯТОР -->
-  <section class="calc-section" id="calculator">
+  <section class="calc" id="calculator">
     <div class="container">
       <h2 class="section-title">Онлайн калькулятор</h2>
-      <div class="calc-wrapper">
+      <div class="calc-card">
         <div>
           <h3 style="font-size:20px; margin-bottom:16px;">Тип оборудования</h3>
-          <div class="quiz-options-grid">
-            <div class="quiz-option selected" type="button" onclick="calc(this,35000)">Воркаут площадка</div>
-            <div class="quiz-option" type="button" onclick="calc(this,55000)">Детская зона</div>
-            <div class="quiz-option" type="button" onclick="calc(this,28000)">МАФ и скамейки</div>
-            <div class="quiz-option" type="button" onclick="calc(this,90000)">Под ключ</div>
+          <div class="quiz-grid">
+            <div class="quiz-opt is-sel" role="button" onclick="calc(this,35000)">Воркаут площадка</div>
+            <div class="quiz-opt" role="button" onclick="calc(this,55000)">Детская зона</div>
+            <div class="quiz-opt" role="button" onclick="calc(this,28000)">МАФ и скамейки</div>
+            <div class="quiz-opt" role="button" onclick="calc(this,90000)">Под ключ</div>
           </div>
         </div>
         <div class="calc-sidebar">
-          <div style="font-size:14px; color:var(--color-graphite);">Ориентировочно:</div>
-          <div style="font-size:32px; font-weight:700; margin-bottom:24px;" id="price">от 35 000 ₽</div>
-          <button class="btn-lime" style="width:100%;" type="button" onclick="openModal('Точный расчет')">Получить смету</button>
+          <div style="font-size:14px; color:var(--graphite);">Ориентировочно:</div>
+          <div class="price" id="price">от 35 000 ₽</div>
+          <button type="button" class="btn btn-lime" style="width:100%" onclick="openModal('Точный расчет')">Получить смету</button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ПОРТФОЛИО -->
-  <section class="portfolio-section" id="portfolio">
+  <section class="portfolio" id="portfolio">
     <div class="container">
       <h2 class="section-title">Наши объекты</h2>
       <div class="portfolio-grid">
-        <div class="case-card">
-          <div class="case-image-wrap"><span style="color:var(--color-graphite); font-size:14px;">Фото объекта</span></div>
-          <div class="case-content"><h4>ЖК «Северные Кварталы»</h4><p style="font-size:14px; color:var(--color-graphite);">Монтаж многофункциональной зоны.</p></div>
+        <div class="case">
+          <div class="case-img">Фото объекта</div>
+          <div class="case-body"><h4>ЖК «Северные Кварталы»</h4><p>Монтаж многофункциональной зоны.</p></div>
         </div>
-        <div class="case-card">
-          <div class="case-image-wrap"><span style="color:var(--color-graphite); font-size:14px;">Фото объекта</span></div>
-          <div class="case-content"><h4>Сквер «Юбилейный»</h4><p style="font-size:14px; color:var(--color-graphite);">Установка деревянного городка.</p></div>
+        <div class="case">
+          <div class="case-img">Фото объекта</div>
+          <div class="case-body"><h4>Сквер «Юбилейный»</h4><p>Установка деревянного городка.</p></div>
         </div>
-        <div class="case-card">
-          <div class="case-image-wrap"><span style="color:var(--color-graphite); font-size:14px;">Фото объекта</span></div>
-          <div class="case-content"><h4>Парк «Заречный»</h4><p style="font-size:14px; color:var(--color-graphite);">Воркаут-зона на 12 станций.</p></div>
+        <div class="case">
+          <div class="case-img">Фото объекта</div>
+          <div class="case-body"><h4>Парк «Заречный»</h4><p>Воркаут-зона на 12 станций.</p></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- КОНТАКТЫ -->
-  <section class="contact-section" id="contacts">
+  <section class="contact" id="contacts">
     <div class="container">
       <h2 class="section-title">Контакты</h2>
       <div class="contact-grid">
-        <div class="contact-info-card">
-          <h3 style="margin-bottom:20px;">Центральный офис</h3>
+        <div class="contact-card">
+          <h3>Центральный офис</h3>
           <p><strong>Телефон:</strong> <a href="tel:+79990000000">+7 (999) 000-00-00</a></p>
           <p><strong>Почта:</strong> info@shumger.ru</p>
           <p><strong>Режим:</strong> Пн–Пт 9:00–18:00</p>
         </div>
-        <div class="contact-form-card">
-          <h3 style="margin-bottom:20px;">Оставить заявку</h3>
+        <div class="contact-card">
+          <h3>Оставить заявку</h3>
           <form id="contactForm" onsubmit="handleContact(event)">
-            <input type="text" class="input-field" placeholder="Имя / ООО" required>
-            <input type="tel" class="input-field" placeholder="Телефон" required>
-            <button class="btn-lime" style="width:100%;" type="submit">Отправить</button>
+            <input type="text" class="input" placeholder="Имя / ООО" required>
+            <input type="tel" class="input" placeholder="Телефон" required>
+            <button type="submit" class="btn btn-lime" style="width:100%">Отправить</button>
           </form>
-          <p id="formStatus" style="margin-top:12px; font-size:14px; color:var(--color-graphite); display:none;"></p>
+          <p id="formStatus" style="margin-top:12px; font-size:14px; color:var(--graphite); display:none;"></p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ПОДВАЛ -->
   <footer>
     <div class="container">
       <div class="footer-grid">
-        <div><h3>ШУМГЕР</h3><p style="color:var(--color-graphite); font-size:14px;">Монтаж по ГОСТ.</p></div>
+        <div><h3>ШУМГЕР</h3><p style="color:var(--graphite); font-size:14px;">Монтаж по ГОСТ.</p></div>
         <div>
           <h4 style="margin-bottom:10px;">Меню</h4>
           <div class="footer-links">
@@ -332,113 +319,36 @@
           </div>
         </div>
       </div>
-      <div style="text-align:center; font-size:12px; color:var(--color-graphite); border-top:1px solid var(--color-ash); padding-top:20px;">
-        © 2026 ШУМГЕР. Все права защищены.
-      </div>
+      <div class="footer-copy">© 2026 ШУМГЕР. Все права защищены.</div>
     </div>
   </footer>
 
-  <!-- МОДАЛЬНОЕ ОКНО -->
-  <div class="modal-overlay" id="leadModal" onclick="closeModal(event)" role="dialog" aria-modal="true" aria-label="Форма заявки">
+  <div class="modal" id="leadModal" onclick="if(event.target===this)closeModal()" role="dialog" aria-modal="true" aria-label="Заявка">
     <div class="modal-card">
-      <button class="modal-close" type="button" onclick="closeModal()" aria-label="Закрыть">✕</button>
-      <h3 style="margin-bottom: 20px;" id="modalTopic">Заявка</h3>
+      <button type="button" class="modal-close" onclick="closeModal()" aria-label="Закрыть">✕</button>
+      <h3 style="margin-bottom:20px;" id="modalTopic">Заявка</h3>
       <form id="modalForm" onsubmit="handleModal(event)">
-        <input type="text" class="input-field" placeholder="Имя" required>
-        <input type="tel" class="input-field" placeholder="Телефон" required>
-        <button class="btn-lime" style="width: 100%;" type="submit">Отправить</button>
+        <input type="text" class="input" placeholder="Имя" required>
+        <input type="tel" class="input" placeholder="Телефон" required>
+        <button type="submit" class="btn btn-lime" style="width:100%">Отправить</button>
       </form>
-      <p id="modalStatus" style="margin-top:12px; font-size:14px; color:var(--color-graphite); display:none;"></p>
+      <p id="modalStatus" style="margin-top:12px; font-size:14px; color:var(--graphite); display:none;"></p>
     </div>
   </div>
 
   <script>
-    // Минималистичный JS — без тяжёлых операций
-    var dom = {
-      mobileNav: document.getElementById('mobileNav'),
-      leadModal: document.getElementById('leadModal'),
-      modalTopic: document.getElementById('modalTopic'),
-      price: document.getElementById('price')
-    };
-
-    function toggleMenu() {
-      dom.mobileNav.style.display = (dom.mobileNav.style.display === 'flex') ? 'none' : 'flex';
-    }
-    function switchAudience(id, btn) {
-      document.querySelectorAll('.audience-tab-btn').forEach(function(b) { b.classList.remove('active'); });
-      btn.classList.add('active');
-      ['dev','uk','private'].forEach(function(tab) {
-        var el = document.getElementById('audience-' + tab);
-        if (el) el.style.display = (tab === id) ? 'grid' : 'none';
-      });
-    }
-    function calc(btn, price) {
-      document.querySelectorAll('.quiz-option').forEach(function(b) { b.classList.remove('selected'); });
-      btn.classList.add('selected');
-      if (dom.price) dom.price.innerText = 'от ' + price.toLocaleString() + ' ₽';
-    }
-    function openModal(topic) {
-      if (dom.modalTopic) dom.modalTopic.innerText = topic;
-      if (dom.leadModal) dom.leadModal.style.display = 'flex';
-      setTimeout(function() { var i = document.querySelector('#modalForm input'); if (i) i.focus(); }, 50);
-    }
-    function closeModal(e) {
-      if (e && e.target && e.target.id !== 'leadModal') return;
-      if (dom.leadModal) dom.leadModal.style.display = 'none';
-      clearStatus();
-    }
-    function clearStatus() {
-      var f = document.getElementById('formStatus'), m = document.getElementById('modalStatus');
-      if (f) f.style.display = 'none';
-      if (m) m.style.display = 'none';
-    }
-    function scrollToElement(id) {
-      var el = document.getElementById(id);
-      if (el) el.scrollIntoView({behavior: 'smooth'});
-    }
-
-    // Заглушка отправки — замени на реальный бекенд
-    function submitLead(data) {
-      return new Promise(function(res) { setTimeout(function(res) { res({ok: true}); }, 600); });
-    }
-
-    async function handleModal(e) {
-      e.preventDefault();
-      var form = e.target, data = {};
-      Array.from(form.querySelectorAll('input')).forEach(function(i) { data[i.placeholder] = i.value; });
-      data.topic = (dom.modalTopic) ? dom.modalTopic.innerText : '';
-      var st = document.getElementById('modalStatus');
-      if (st) { st.textContent = 'Отправляем…'; st.style.display = 'block'; }
-      try {
-        await submitLead(data);
-        if (st) { st.textContent = '✓ Свяжемся с вами'; st.style.color = '#2e7d32'; }
-        form.reset(); setTimeout(closeModal, 1500);
-      } catch (err) {
-        if (st) { st.textContent = '✗ Попробуйте позже'; st.style.color = '#c62828'; }
-      }
-    }
-
-    async function handleContact(e) {
-      e.preventDefault();
-      var form = e.target, data = {from: 'contact'};
-      Array.from(form.querySelectorAll('input')).forEach(function(i) { data[i.placeholder] = i.value; });
-      var st = document.getElementById('formStatus');
-      if (st) { st.textContent = 'Отправляем…'; st.style.display = 'block'; }
-      try {
-        await submitLead(data);
-        if (st) { st.textContent = '✓ Свяжемся с вами'; st.style.color = '#2e7d32'; }
-        form.reset();
-      } catch (err) {
-        if (st) { st.textContent = '✗ Попробуйте позже'; st.style.color = '#c62828'; }
-      }
-    }
-
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        if (dom.leadModal && dom.leadModal.style.display === 'flex') closeModal();
-        if (dom.mobileNav && dom.mobileNav.style.display === 'flex') dom.mobileNav.style.display = 'none';
-      }
-    });
+    var dom={mobileNav:document.getElementById('mobileNav'),modal:document.getElementById('leadModal'),modalTopic:document.getElementById('modalTopic'),price:document.getElementById('price'),modalForm:document.getElementById('modalForm'),contactForm:document.getElementById('contactForm')};
+    function toggleMenu(){dom.mobileNav.style.display=dom.mobileNav.style.display==='flex'?'none':'flex';}
+    function switchAudience(id,btn){document.querySelectorAll('.tab').forEach(function(b){b.classList.remove('tab-active');});btn.classList.add('tab-active');['dev','uk','private'].forEach(function(t){var e=document.getElementById('audience-'+t);if(e){e.classList.toggle('is-active',t===id);e.style.display=t===id?'grid':'none';}});}
+    function calc(btn,p){document.querySelectorAll('.quiz-opt').forEach(function(b){b.classList.remove('is-sel');});btn.classList.add('is-sel');if(dom.price)dom.price.innerText='от '+p.toLocaleString()+' ₽';}
+    function openModal(topic){if(dom.modalTopic)dom.modalTopic.innerText=topic;if(dom.modal)dom.modal.style.display='flex';setTimeout(function(){var i=dom.modalForm.querySelector('input');if(i)i.focus();},50);}
+    function closeModal(){if(dom.modal)dom.modal.style.display='none';clearStatus();}
+    function clearStatus(){var f=document.getElementById('formStatus'),m=document.getElementById('modalStatus');if(f)f.style.display='none';if(m)m.style.display='none';}
+    function scrollTo(id){var e=document.getElementById(id);if(e)e.scrollIntoView({behavior:'smooth'});}
+    function sendLead(){return new Promise(function(r){setTimeout(function(){r({ok:true});},500);});}
+    async function handleModal(e){e.preventDefault();var s=document.getElementById('modalStatus');if(s){s.textContent='Отправляем…';s.style.display='block';s.style.color='var(--graphite)';}try{await sendLead();if(s){s.textContent='✓ Свяжемся с вами';s.style.color='#2e7d32';}dom.modalForm.reset();setTimeout(closeModal,1200);}catch(err){if(s){s.textContent='✗ Попробуйте позже';s.style.color='#c62828';}}}
+    async function handleContact(e){e.preventDefault();var s=document.getElementById('formStatus');if(s){s.textContent='Отправляем…';s.style.display='block';s.style.color='var(--graphite)';}try{await sendLead();if(s){s.textContent='✓ Свяжемся с вами';s.style.color='#2e7d32';}dom.contactForm.reset();}catch(err){if(s){s.textContent='✗ Попробуйте позже';s.style.color='#c62828';}}}
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(dom.modal&&dom.modal.style.display==='flex')closeModal();if(dom.mobileNav&&dom.mobileNav.style.display==='flex')dom.mobileNav.style.display='none';}});
   </script>
 </body>
 </html>
