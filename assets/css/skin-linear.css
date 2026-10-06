@@ -1,0 +1,340 @@
+/* ============================================================================
+   Linear skin — midnight precision instrument
+   Подключается поверх style.css, включается классом skin-linear на <body>.
+   Источник: styles.refero.design (Linear). Правила: Inter Variable, cv01/ss03/zero,
+   вес 300/400/510/590 (700+ запрещён), три радиуса (12 / 6 / 9999),
+   elevation — hairline-бордеры, не тени. Градиент — только под hero.
+   ========================================================================= */
+
+body.skin-linear {
+  /* --- цвет --- */
+  --void:      #08090a;  /* канвас */
+  --carbon:    #0f1011;  /* карточки, навбар */
+  --obsidian:  #161718;  /* приподнятые панели */
+  --slate:     #23252a;  /* интерактивный тинт, бордер-адъяцент */
+  --graphite:  #23252a;  /* тонкий бордер */
+  --smoke:     #383b3f;  /* бордер контрастнее */
+  --ash:       #62666d;  /* приглушённый текст */
+  --fog:       #8a8f98;  /* третичный текст */
+  --mist:      #d0d6e0;  /* подзаголовки, текст кнопок */
+  --bone:      #e5e5e6;
+  --paper:     #ffffff;
+  --lime:      #e4f222;  /* ТОЛЬКО primary action */
+  --pulse:     #27a644;  /* вспомогательный акцент, не статус */
+  --coral:     #eb5757;
+  --teal:      #02b8cc;
+  --iris:      #6366f1;
+  --lavender:  #8b5cf6;
+
+  /* --- перекрытие токенов базового style.css --- */
+  --green:        var(--lime);
+  --green-deep:   var(--lime);
+  --ink:          var(--paper);
+  --graphite-old: var(--ash);
+  --cream:        var(--void);
+  --line:         var(--graphite);
+  --surface:      var(--carbon);
+
+  /* --- форма --- */
+  --radius:        6px;   /* кнопки, инпуты */
+  --radius-card:   12px;  /* карточки — максимум */
+  --radius-pill:   9999px;
+  --radius-badge:  4px;
+  --section-gap:   96px;
+  --element-gap:   8px;
+
+  background: var(--void);
+  color: var(--mist);
+  font-family: 'Inter Variable', Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-feature-settings: 'cv01' on, 'ss03' on, 'zero' on;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------------------------------------------------------------- типографика */
+
+body.skin-linear h1,
+body.skin-linear h2,
+body.skin-linear h3,
+body.skin-linear h4 {
+  color: var(--paper);
+  font-weight: 510;
+  letter-spacing: -0.022em;
+  line-height: 1.0;
+}
+
+body.skin-linear h1 { font-size: clamp(40px, 6vw, 72px); }
+body.skin-linear h2 { font-size: clamp(30px, 3.6vw, 48px); }
+body.skin-linear h3 { font-size: 24px; font-weight: 400; letter-spacing: -0.012em; line-height: 1.33; }
+body.skin-linear h4 { font-size: 20px; font-weight: 510; letter-spacing: -0.012em; line-height: 1.33; }
+
+body.skin-linear p,
+body.skin-linear li {
+  color: var(--mist);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: normal;
+}
+
+body.skin-linear .lead,
+body.skin-linear .section-sub { color: var(--fog); }
+
+body.skin-linear .eyebrow,
+body.skin-linear .label,
+body.skin-linear .breadcrumbs {
+  color: var(--fog);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: -0.011em;
+  text-transform: none;
+}
+
+body.skin-linear a { color: var(--mist); text-decoration: none; }
+body.skin-linear a:hover { color: var(--paper); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ---------------------------------------------------------------- шапка */
+
+body.skin-linear .site-header {
+  background: var(--void);
+  border-bottom: 1px solid var(--graphite);
+  backdrop-filter: none;
+  box-shadow: none;
+}
+
+body.skin-linear .site-header .logo,
+body.skin-linear .site-header .logo * { color: var(--paper); font-weight: 510; }
+
+body.skin-linear .site-nav a {
+  color: var(--mist);
+  background: transparent;
+  border: 0;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 400;
+  border-radius: var(--radius);
+}
+body.skin-linear .site-nav a:hover { color: var(--paper); background: transparent; text-decoration: underline; }
+body.skin-linear .site-nav a[aria-current="page"] { color: var(--paper); }
+
+body.skin-linear .nav-toggle {
+  color: var(--mist);
+  border: 1px solid var(--graphite);
+  border-radius: var(--radius);
+  background: transparent;
+}
+
+/* ---------------------------------------------------------------- кнопки */
+
+body.skin-linear .btn,
+body.skin-linear button.btn,
+body.skin-linear a.btn {
+  border-radius: var(--radius);
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 510;
+  letter-spacing: -0.011em;
+  box-shadow: none;
+  border: 1px solid transparent;
+}
+
+/* primary — единственный цветной элемент на вид */
+body.skin-linear .btn-primary,
+body.skin-linear .btn--primary {
+  background: var(--lime);
+  color: var(--void);
+  border-color: var(--lime);
+  box-shadow: 0 5px 2px 0 rgba(0,0,0,0.01), 0 3px 2px 0 rgba(0,0,0,0.04),
+              0 1px 1px 0 rgba(0,0,0,0.07), 0 0 1px 0 rgba(0,0,0,0.08);
+}
+body.skin-linear .btn-primary:hover { background: #d6e51a; border-color: #d6e51a; color: var(--void); }
+
+/* secondary — ghost */
+body.skin-linear .btn-secondary,
+body.skin-linear .btn--ghost,
+body.skin-linear .btn-ghost {
+  background: transparent;
+  color: var(--mist);
+  border: 1px solid var(--graphite);
+}
+body.skin-linear .btn-secondary:hover,
+body.skin-linear .btn--ghost:hover { border-color: var(--smoke); color: var(--paper); }
+
+/* neutral pill (аналог sign-up) */
+body.skin-linear .btn-pill {
+  background: var(--paper);
+  color: var(--void);
+  border-radius: 9999px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 510;
+}
+
+/* ---------------------------------------------------------------- секции */
+
+body.skin-linear section { background: transparent; border-color: var(--graphite); }
+body.skin-linear .section { padding-block: var(--section-gap); }
+body.skin-linear .section--cream,
+body.skin-linear .section--alt { background: var(--carbon); border-block: 1px solid var(--graphite); }
+
+/* тёмные блоки базовой темы → obsidian */
+body.skin-linear .section--dark,
+body.skin-linear .safety,
+body.skin-linear .cta-band,
+body.skin-linear .dark-block {
+  background: var(--carbon);
+  border: 1px solid var(--graphite);
+  border-radius: var(--radius-card);
+}
+body.skin-linear .section--dark *,
+body.skin-linear .safety *,
+body.skin-linear .cta-band *,
+body.skin-linear .dark-block * { color: var(--paper); }
+body.skin-linear .section--dark p,
+body.skin-linear .safety p,
+body.skin-linear .cta-band p,
+body.skin-linear .dark-block p { color: var(--mist); }
+body.skin-linear .section--dark h2,
+body.skin-linear .section--dark h3,
+body.skin-linear .safety h2,
+body.skin-linear .safety h3,
+body.skin-linear .cta-band h2,
+body.skin-linear .cta-band h3 { color: var(--paper); }
+
+/* ---------------------------------------------------------------- карточки */
+
+body.skin-linear .card,
+body.skin-linear .service-card,
+body.skin-linear .case-card,
+body.skin-linear .feature,
+body.skin-linear .step {
+  background: var(--carbon);
+  border: 1px solid var(--graphite);
+  border-radius: var(--radius-card);
+  padding: 24px;
+  box-shadow: none;
+}
+body.skin-linear .card:hover,
+body.skin-linear .service-card:hover,
+body.skin-linear .case-card:hover { border-color: var(--smoke); box-shadow: none; transform: none; }
+
+body.skin-linear .card h3,
+body.skin-linear .service-card h3 { color: var(--paper); }
+body.skin-linear .card p,
+body.skin-linear .service-card p { color: var(--fog); }
+
+/* бейдж / тег / пилюля */
+body.skin-linear .badge,
+body.skin-linear .tag,
+body.skin-linear .chip,
+body.skin-linear .pill {
+  background: rgba(255,255,255,0.05);
+  color: var(--fog);
+  border: 0;
+  border-radius: var(--radius-badge);
+  padding: 0 6px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* ---------------------------------------------------------------- формы */
+
+body.skin-linear .input,
+body.skin-linear input,
+body.skin-linear textarea,
+body.skin-linear select {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: var(--mist);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  font-size: 14px;
+  font-weight: 400;
+  box-shadow: none;
+}
+body.skin-linear input::placeholder,
+body.skin-linear textarea::placeholder { color: var(--fog); }
+body.skin-linear .input:focus,
+body.skin-linear input:focus,
+body.skin-linear textarea:focus,
+body.skin-linear select:focus {
+  outline: none;
+  border-color: var(--mist);
+  box-shadow: none;
+}
+body.skin-linear label { color: var(--mist); font-size: 13px; }
+
+/* статусы формы */
+body.skin-linear .form-status.is-pending { color: var(--fog); }
+body.skin-linear .form-status.is-ok { color: var(--pulse); }
+body.skin-linear .form-status.is-err { color: var(--coral); }
+
+/* ---------------------------------------------------------------- подвал */
+
+body.skin-linear .site-footer {
+  background: var(--void);
+  border-top: 1px solid var(--graphite);
+  color: var(--mist);
+}
+body.skin-linear .site-footer h3,
+body.skin-linear .site-footer h4 {
+  color: var(--paper);
+  font-size: 13px;
+  font-weight: 510;
+  letter-spacing: -0.011em;
+}
+body.skin-linear .site-footer a { color: var(--fog); }
+body.skin-linear .site-footer a:hover { color: var(--paper); }
+body.skin-linear .site-footer .copyright,
+body.skin-linear .site-footer small { color: var(--ash); font-size: 13px; }
+
+/* ---------------------------------------------------------------- калькулятор / аккордеон */
+
+body.skin-linear .calc-result,
+body.skin-linear .result-box {
+  background: var(--carbon);
+  border: 1px solid var(--graphite);
+  border-radius: var(--radius-card);
+  color: var(--paper);
+  box-shadow: none;
+}
+
+body.skin-linear details,
+body.skin-linear .faq-item {
+  background: transparent;
+  border-bottom: 1px solid var(--graphite);
+  border-radius: 0;
+}
+body.skin-linear summary { color: var(--paper); font-weight: 510; }
+
+/* ---------------------------------------------------------------- модалка */
+
+body.skin-linear .modal,
+body.skin-linear .modal-content {
+  background: var(--carbon);
+  border: 1px solid var(--graphite);
+  border-radius: var(--radius-card);
+  box-shadow: 0 4px 32px 0 rgba(8,9,10,0.6);
+  color: var(--mist);
+}
+body.skin-linear .modal h2,
+body.skin-linear .modal h3 { color: var(--paper); }
+body.skin-linear .modal-close { color: var(--fog); }
+body.skin-linear .modal-close:hover { color: var(--paper); }
+
+/* ---------------------------------------------------------------- hero */
+
+body.skin-linear .hero {
+  background: linear-gradient(180deg, rgba(8,9,10,1) 10%, rgba(208,214,224,0.14) 100%);
+  border-bottom: 1px solid var(--graphite);
+}
+body.skin-linear .hero h1 { color: var(--paper); }
+body.skin-linear .hero p { color: var(--fog); font-size: 16px; line-height: 1.5; }
+
+/* hairline-разделители вместо теней */
+body.skin-linear hr,
+body.skin-linear .divider { border: 0; border-top: 1px solid var(--graphite); }
+
+/* иконки — одноцветный грей-скейл */
+body.skin-linear svg.icon,
+body.skin-linear .icon svg { color: var(--fog); stroke: currentColor; }

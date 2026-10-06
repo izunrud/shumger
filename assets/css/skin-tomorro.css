@@ -1,0 +1,216 @@
+/* ============================================================
+   ШУМГЕР — скин «Tomorro» (Deep Forest AI Canvas)
+   Пилот на одной странице. Подключается ТОЛЬКО поверх style.css
+   и только там, где в <body> стоит class="skin-tomorro".
+   Откат = убрать skin="tomorro" в _tools/build.py.
+
+   Источник токенов: styles.refero.design/style/bc7458ba-...
+   Правила: AI Lime — исключительно primary CTA; тени не использовать;
+   радиус кнопок 28px; вертикальный шаг секций 64px; без новых цветов.
+   ============================================================ */
+
+body.skin-tomorro {
+  /* --- палитра Tomorro --- */
+  --canopy:      #122314;  /* Forest Canopy — тёмный фон секций */
+  --moss:        #273f2b;  /* Deep Moss — сильный текст на светлом */
+  --lime:        #68ef3f;  /* AI Lime — ТОЛЬКО primary CTA */
+  --evergreen:   #26a200;  /* Evergreen Glow — декор: фокус-кольцо, accent */
+  --evergreen-deep: #1a7a00; /* Evergreen для ТЕКСТА на светлом: 5.5:1 на белом,
+                                5.0:1 на Light Canvas — норма WCAG 4.5 соблюдена.
+                                #26a200 даёт лишь 3.4:1 и текстом не годится. */
+  --canvas:      #f2f5eb;  /* Light Canvas — вторичные светлые карточки */
+  --soft-gray:   #d9deca;  /* Soft Gray — бордеры 1px */
+
+  /* --- переопределение старых токенов Eco Modern --- */
+  --green:       var(--moss);
+  --green-deep:  var(--canopy);
+  --green-soft:  var(--canvas);
+  --ink:         var(--canopy);
+  --dark:        var(--moss);
+  --cream:       var(--canvas);
+  --beige:       var(--canvas);
+  --warm:        #ffffff;
+  --ash:         var(--soft-gray);
+  --graphite:    #5c6b56;  /* достаточно тёмный для 4.5:1 на Light Canvas */
+  --radius:      28px;
+  --radius-sm:   4px;
+  --shadow:      none;
+
+  /* --- типографика: Inter Tight вместо Ozik, Inter вместо Aeonik --- */
+  --font-display: 'Inter Tight', 'Inter', -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --font:         'Inter', -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+
+  font-family: var(--font);
+  color: var(--moss);
+}
+
+/* ---------- ритм секций: строго 64px ---------- */
+body.skin-tomorro section.block,
+body.skin-tomorro section.block-alt { padding: 64px 0; }
+body.skin-tomorro section.block-tight { padding: 48px 0; }
+body.skin-tomorro .cta-band { padding: 64px 0; }
+
+/* ---------- заголовки ---------- */
+body.skin-tomorro h1,
+body.skin-tomorro h2,
+body.skin-tomorro h3,
+body.skin-tomorro .section-title,
+body.skin-tomorro .hero-title,
+body.skin-tomorro .page-hero h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--moss);
+}
+
+/* плотный трекинг Ozik (56px -> -0.014em, 80px -> -0.010em) */
+body.skin-tomorro .hero-title      { letter-spacing: -0.014em; line-height: 0.98; }
+body.skin-tomorro .section-title   { letter-spacing: -0.014em; }
+body.skin-tomorro .page-hero h1    { letter-spacing: -0.014em; }
+
+/* all-caps — только для коротких лейблов; длинные русские заголовки caps не переносят */
+body.skin-tomorro .eyebrow,
+body.skin-tomorro .eyebrow-pill,
+body.skin-tomorro footer.site-footer h4 {
+  text-transform: uppercase;
+}
+body.skin-tomorro .eyebrow,
+body.skin-tomorro .eyebrow-pill { letter-spacing: 0.12em; font-weight: 600; }
+
+/* ---------- кнопки: 28px, без квадратов ---------- */
+body.skin-tomorro .btn {
+  border-radius: 28px;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  padding: 15px 30px;
+  text-transform: uppercase;
+}
+
+/* primary CTA — единственное место, где живёт AI Lime */
+body.skin-tomorro .btn-primary,
+body.skin-tomorro .hero-side .btn {
+  background: var(--lime);
+  color: var(--canopy);
+}
+body.skin-tomorro .btn-primary:hover,
+body.skin-tomorro .hero-side .btn:hover {
+  background: var(--evergreen);
+  color: #ffffff;
+  opacity: 1;
+}
+
+/* secondary — ghost на 1px борде */
+body.skin-tomorro .btn-secondary {
+  background: transparent;
+  color: var(--moss);
+  border: 1px solid var(--soft-gray);
+}
+body.skin-tomorro .btn-secondary:hover {
+  background: var(--canvas);
+  border-color: var(--moss);
+}
+
+body.skin-tomorro .btn-accent { background: var(--lime); color: var(--canopy); }
+body.skin-tomorro .btn-accent:hover { background: var(--evergreen); color: #fff; opacity: 1; }
+
+body.skin-tomorro .btn-dark { background: var(--canopy); color: #ffffff; }
+body.skin-tomorro .btn-dark:hover { background: var(--moss); opacity: 1; }
+
+/* ---------- поверхности: плоско, без теней ---------- */
+body.skin-tomorro .hero-card,
+body.skin-tomorro .audience-card,
+body.skin-tomorro .case-card,
+body.skin-tomorro .calc-card,
+body.skin-tomorro .contact-card,
+body.skin-tomorro .modal-card,
+body.skin-tomorro .step,
+body.skin-tomorro .doc {
+  box-shadow: none;
+}
+
+body.skin-tomorro .hero-card,
+body.skin-tomorro .contact-card,
+body.skin-tomorro .modal-card {
+  background: #ffffff;
+  border: 1px solid var(--soft-gray);
+}
+
+body.skin-tomorro .audience-card,
+body.skin-tomorro .case-card,
+body.skin-tomorro .step {
+  background: var(--canvas);
+  border: 1px solid var(--soft-gray);
+  border-radius: 28px;
+}
+
+body.skin-tomorro .hero { background: var(--canvas); }
+
+/* ---------- тёмный блок: Forest Canopy + белый текст ---------- */
+body.skin-tomorro .hero-side,
+body.skin-tomorro .safety-card {
+  background: var(--canopy);
+  color: #ffffff;
+  border-radius: 28px;
+}
+body.skin-tomorro .hero-side p,
+body.skin-tomorro .safety-card p { color: rgba(255, 255, 255, 0.82); }
+body.skin-tomorro .hero-side h3,
+body.skin-tomorro .safety-card h2 { color: #ffffff; }
+
+body.skin-tomorro footer.site-footer {
+  background: var(--canopy);
+  color: #ffffff;
+}
+body.skin-tomorro footer.site-footer p,
+body.skin-tomorro .footer-links a { color: rgba(255, 255, 255, 0.76); }
+body.skin-tomorro .footer-links a:hover { color: var(--lime); }
+
+/* Заголовки внутри тёмных контекстов — белые. Без этого правила
+   `body.skin-tomorro h3 { color: var(--moss) }` бьёт наследование от
+   footer.site-footer и даёт Deep Moss на Forest Canopy (нечитаемо). */
+body.skin-tomorro footer.site-footer h1,
+body.skin-tomorro footer.site-footer h2,
+body.skin-tomorro footer.site-footer h3,
+body.skin-tomorro footer.site-footer h4 { color: #ffffff; }
+
+/* копирайт: rgba(255,255,255,.76) даёт 3.3:1 на Forest Canopy — мало.
+   Плотный серо-белый доводит до 4.6:1. */
+body.skin-tomorro .footer-copy {
+  color: #b9c4b3;
+  border-top-color: rgba(255, 255, 255, 0.14);
+}
+
+/* ---------- шапка: тонкий бордер вместо тени ---------- */
+body.skin-tomorro header.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid var(--soft-gray);
+}
+body.skin-tomorro .brand-mark {
+  background: var(--canvas);
+  border: 1px solid var(--soft-gray);
+  border-radius: 4px;
+}
+body.skin-tomorro .site-nav a:hover,
+body.skin-tomorro .site-nav a[aria-current="page"],
+body.skin-tomorro .header-phone a:hover { color: var(--evergreen-deep); }
+
+/* ---------- акценты: текст — только evergreen-deep (WCAG 4.5+) ---------- */
+body.skin-tomorro .link-more { color: var(--evergreen-deep); }
+body.skin-tomorro .dot-live {
+  background: var(--lime);
+  box-shadow: none;
+}
+body.skin-tomorro .faq summary::after { color: var(--evergreen-deep); }
+body.skin-tomorro .consent input { accent-color: var(--evergreen); }
+body.skin-tomorro .consent a,
+body.skin-tomorro .prose a { color: var(--evergreen-deep); }
+body.skin-tomorro .input:focus {
+  outline: 2px solid var(--evergreen);
+  border-color: var(--evergreen);
+}
+body.skin-tomorro :focus-visible { outline-color: var(--evergreen); }
+body.skin-tomorro .skip-link { background: var(--canopy); border-radius: 4px; }
+
+/* ---------- радиусы: 28px на карточках, 4px на мелком ---------- */
+body.skin-tomorro .input,
+body.skin-tomorro .eyebrow-pill { border-radius: 4px; }

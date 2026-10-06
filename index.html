@@ -3,352 +3,1081 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ШУМГЕР — Монтаж детских площадок, воркаут-зон и МАФ по ГОСТ</title>
-  <meta name="description" content="Монтаж детских площадок, воркаут-зон и МАФ по ГОСТ. Полный цикл благоустройства: от основания до покрытий. Гарантия до 5 лет.">
-  <meta property="og:title" content="ШУМГЕР — Монтаж детских площадок и воркаут-зон">
-  <meta property="og:description" content="Монтаж по ГОСТ. 500+ объектов, гарантия до 5 лет.">
+  <title>ШУМГЕР — Строительно-монтажная компания. Благоустройство и монтаж площадок по ГОСТ</title>
+  <meta name="description" content="Строительно-монтажные работы, благоустройство территорий, устройство оснований, монтаж детских городков, воркаут-зон и МАФ по ГОСТ и СНиП. Работаем с НДС, генподряд, гарантия по договору до 5 лет.">
+  <link rel="canonical" href="https://shumger.ru/">
+  <meta name="theme-color" content="#111113">
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ШУМГЕР">
+  <meta property="og:title" content="ШУМГЕР — Монтаж площадок и благоустройство территорий по ГОСТ">
+  <meta property="og:description" content="Строительно-монтажные работы под ключ: детские игровые комплексы, спортивные зоны, МАФ, покрытия и основания.">
   <meta property="og:url" content="https://shumger.ru/">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 60'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%231a5a2e'/%3E%3Cstop offset='100%25' stop-color='%23beff50'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='50%25' y='80%25' font-family='sans-serif' font-size='48' font-weight='700' text-anchor='middle' fill='url(%23g)'%3Eur%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+  <meta property="og:image" content="https://shumger.ru/og-image.png">
+  <meta property="og:locale" content="ru_RU">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/images/favicon.png">
+
+  <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --lime: #beff50;
-      --ink: #14140f;
-      --dark: #30302a;
-      --cream: #f5f5eb;
-      --warm: #fafaf5;
-      --white: #ffffff;
-      --ash: #d2d2c8;
-      --graphite: #6e6e64;
-      --radius: 26px;
-      --radius-sm: 8px;
-      --font: 'Plus Jakarta Sans', sans-serif;
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Schema.org Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "GeneralContractor",
+    "name": "ШУМГЕР",
+    "alternateName": "Строительно-монтажная компания ШУМГЕР",
+    "image": "https://shumger.ru/og-image.png",
+    "logo": "https://shumger.ru/assets/images/logo.png",
+    "url": "https://shumger.ru/",
+    "telephone": "+7-900-000-00-00",
+    "email": "info@shumger.ru",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ул. Примерная, д. 1, стр. 2",
+      "addressLocality": "Москва",
+      "addressCountry": "RU"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "19:00"
+    },
+    "sameAs": [
+      "https://t.me/shumger"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Строительно-монтажные услуги",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Монтаж детских игровых площадок по ГОСТ",
+            "description": "Установка игровых городков, качелей, каруселей по ГОСТ Р 52169-2012 с паспортом безопасности"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Монтаж воркаут-зон и спортивных комплексов",
+            "description": "Спортивные тренажеры, полосы препятствий и уличный воркаут"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Монтаж малых архитектурных форм (МАФ)",
+            "description": "Перголы, скамьи, навесы, ограждения и урны"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Укладка бесшовных резиновых и EPDM покрытий",
+            "description": "Травмобезопасные ударопоглощающие покрытия для детских и спортивных зон"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Устройство бетонных и щебеночных оснований",
+            "description": "Монолитные железобетонные плиты B22.5 и дренажные основания"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Сервисное обслуживание и ремонт площадок",
+            "description": "Ежегодный аудит безопасности, протяжка узлов и ремонт покрытий"
+          }
+        }
+      ]
     }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
-    html { scroll-behavior: smooth; }
-    body { font-family: var(--font); font-size: 15px; line-height: 1.5; color: var(--ink); background: var(--white); overflow-x: hidden; }
-    a { color: inherit; text-decoration: none; }
-    button { font-family: inherit; cursor: pointer; border: none; background: none; }
-    input { font-family: inherit; font-size: 15px; }
-    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+  }
+  </script>
 
-    .eyebrow { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--graphite); display: inline-block; }
-    .eyebrow-pill { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; padding: 6px 14px; border-radius: var(--radius-sm); border: 1px solid var(--ash); display: inline-flex; align-items: center; gap: 8px; }
-    .dot-live { width: 7px; height: 7px; border-radius: 50%; background: #38a169; display: inline-block; }
-
-    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-weight: 500; padding: 14px 28px; border-radius: var(--radius); transition: opacity .15s; }
-    .btn:hover { opacity: .85; }
-    .btn-lime { background: var(--lime); color: var(--ink); }
-    .btn-dark { background: var(--ink); color: var(--white); }
-    .btn-secondary { background: var(--cream); color: var(--ink); border: 1px solid var(--ash); }
-
-    header.site-header { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--ash); height: 76px; }
-    .header-inner { display: flex; align-items: center; justify-content: space-between; height: 100%; }
-    .brand { display: flex; align-items: center; gap: 12px; }
-    .brand-mark { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: var(--radius); background: var(--cream); border: 1px solid var(--ash); overflow: hidden; }
-    .brand-mark svg { width: 80%; height: 80%; }
-    .brand-name { font-size: 20px; font-weight: 700; letter-spacing: -.03em; }
-    .site-nav { display: flex; align-items: center; gap: 24px; }
-    .site-nav a { font-size: 14px; font-weight: 500; transition: opacity .15s; }
-    .site-nav a:hover { opacity: .65; }
-    .header-cta { display: flex; align-items: center; gap: 16px; }
-    .burger { display: none; margin-left: auto; margin-right: 16px; }
-
-    .hero { padding: 56px 0 72px; background: var(--cream); }
-    .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 36px; }
-    .hero-card { background: var(--white); border-radius: var(--radius); padding: 48px; }
-    .hero-title { font-size: clamp(34px, 4.2vw, 52px); font-weight: 700; line-height: .90; letter-spacing: -.03em; margin: 20px 0 16px; }
-    .hero-lead { color: var(--graphite); margin-bottom: 28px; max-width: 480px; }
-    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
-    .proof-bar { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding-top: 28px; border-top: 1px solid var(--ash); margin-top: 36px; }
-    .proof-bar strong { font-size: 24px; font-weight: 700; }
-    .proof-bar span { font-size: 12px; color: var(--graphite); }
-    .hero-lime { background: var(--lime); border-radius: var(--radius); padding: 36px; color: var(--ink); }
-    .hero-lime .btn { background: var(--white); color: var(--ink); border: none; }
-
-    .audience { padding: 80px 0; background: var(--white); }
-    .section-title { font-size: clamp(26px, 3.2vw, 40px); font-weight: 700; line-height: 1.0; letter-spacing: -.03em; margin-bottom: 32px; }
-    .tabs { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 32px; }
-    .tab { padding: 10px 22px; border-radius: var(--radius); border: 1px solid var(--ash); background: var(--white); font-size: 14px; font-weight: 500; cursor: pointer; transition: .15s; }
-    .tab:hover { opacity: .8; }
-    .tab-active { background: var(--ink); color: var(--white); border-color: var(--ink); }
-    .audience-card { background: var(--white); border-radius: var(--radius); border: 1px solid var(--ash); padding: 40px; }
-    .audience-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
-    .audience-panel { display: none; }
-    .audience-panel.is-active { display: grid; }
-
-    .calc { padding: 96px 0; background: var(--cream); }
-    .calc-card { background: var(--white); border-radius: var(--radius); border: 1px solid var(--ash); padding: 48px; display: grid; grid-template-columns: 1.3fr .9fr; gap: 48px; }
-    .quiz-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 32px; }
-    .quiz-opt { border: 1px solid var(--ash); border-radius: var(--radius); padding: 16px; cursor: pointer; transition: .15s; user-select: none; }
-    .quiz-opt:hover { background: var(--cream); }
-    .quiz-opt.is-sel { background: var(--ink); color: var(--white); border-color: var(--ink); }
-    .calc-sidebar { background: var(--cream); border-radius: var(--radius); border: 1px solid var(--ash); padding: 32px; }
-    .price { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
-    .input { width: 100%; border: 1px solid var(--ash); border-radius: var(--radius-sm); padding: 12px 16px; margin-bottom: 12px; }
-    .input:focus { outline: 2px solid var(--lime); border-color: var(--lime); }
-
-    .portfolio { padding: 80px 0; background: var(--white); }
-    .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .case { background: var(--white); border-radius: var(--radius); border: 1px solid var(--ash); overflow: hidden; }
-    .case-img { height: 200px; background: var(--cream); display: flex; align-items: center; justify-content: center; color: var(--graphite); font-size: 14px; }
-    .case-body { padding: 28px; }
-    .case-body h4 { margin-bottom: 6px; font-size: 16px; }
-    .case-body p { font-size: 14px; color: var(--graphite); }
-
-    .contact { padding: 96px 0; background: var(--cream); }
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
-    .contact-card { background: var(--white); border-radius: var(--radius); border: 1px solid var(--ash); padding: 44px; }
-    .contact-card h3 { margin-bottom: 20px; font-size: 20px; }
-    .contact-card p { margin-bottom: 8px; }
-    .contact-card a:hover { text-decoration: underline; }
-
-    footer { background: var(--ink); color: var(--white); padding: 60px 0 30px; }
-    .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 40px; }
-    .footer-links a { color: var(--ash); display: block; margin-bottom: 8px; transition: .15s; }
-    .footer-links a:hover { color: var(--lime); }
-    .footer-copy { text-align: center; font-size: 12px; color: var(--graphite); border-top: 1px solid var(--dark); padding-top: 20px; }
-
-    .overlay { position: fixed; inset: 0; background: var(--white); z-index: 1000; display: none; flex-direction: column; padding: 24px; }
-    .overlay-close { align-self: flex-end; font-size: 32px; background: none; border: none; cursor: pointer; color: var(--ink); margin-bottom: 40px; }
-    .overlay-nav { display: flex; flex-direction: column; gap: 24px; font-size: 24px; font-weight: 500; }
-
-    .modal { position: fixed; inset: 0; background: rgba(20,20,15,.7); z-index: 999; display: none; align-items: center; justify-content: center; padding: 20px; }
-    .modal-card { background: var(--white); padding: 40px; border-radius: var(--radius); max-width: 500px; width: 100%; position: relative; }
-    .modal-close { position: absolute; top: 20px; right: 20px; font-size: 20px; cursor: pointer; border: none; background: none; color: var(--graphite); }
-
-    @media (max-width: 992px) {
-      .site-nav, .header-phone { display: none; }
-      .burger { display: block; }
-      .header-cta .btn-lime { display: none; }
-      .hero-grid, .audience-grid, .calc-card, .contact-grid { grid-template-columns: 1fr; }
-      .portfolio-grid { grid-template-columns: 1fr 1fr; }
-      .footer-grid { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 640px) {
-      .container { padding: 0 16px; }
-      .hero-card, .audience-card, .calc-card, .contact-card { padding: 24px; }
-      .proof-bar, .quiz-grid, .portfolio-grid { grid-template-columns: 1fr; }
-      .hero-actions { flex-direction: column; width: 100%; }
-      .btn { width: 100%; }
-      .tabs { flex-direction: column; }
-      .tab { text-align: center; }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="brand">
-        <div class="brand-mark">
-          <svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg" aria-label="ШУМГЕР">
-            <defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#1a5a2e"/><stop offset="100%" stop-color="#beff50"/></linearGradient></defs>
-            <text x="50%" y="80%" font-family="sans-serif" font-size="48" font-weight="700" text-anchor="middle" fill="url(#g)">ur</text>
-          </svg>
+  <a class="skip-link" href="#main-content">Перейти к основному содержанию</a>
+
+  <!-- ==========================================================================
+       Шапка сайта (Header)
+       ========================================================================== -->
+  <header class="header">
+    <div class="container">
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="index.html" class="logo" aria-label="ШУМГЕР — Строительно-монтажная компания">
+          <div class="logo-icon" aria-hidden="true"><img src="assets/images/logo.png" alt="ШУМГЕР" class="logo-img" width="44" height="44"></div>
+          <div class="logo-text">
+            <span class="logo-title">ШУМГЕР</span>
+            <span class="logo-tag">Строительство & Монтаж</span>
+          </div>
+        </a>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link active">Главная</a></li>
+          <li><a href="services.html" class="nav-link">Услуги</a></li>
+          <li><a href="portfolio.html" class="nav-link">Объекты</a></li>
+          <li><a href="about.html" class="nav-link">О компании</a></li>
+          <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="tel:+79000000000" class="header-phone" aria-label="Позвонить в компанию">
+            <span class="header-phone-number">+7 (900) 000-00-00</span>
+            <span class="header-phone-hint">ПТО: 9:00–19:00</span>
+          </a>
+          <button type="button" class="btn btn-primary btn-sm" data-lead-trigger="Заявка из шапки">Запросить смету</button>
         </div>
-        <div class="brand-name">ШУМГЕР</div>
-      </a>
-      <nav class="site-nav">
-        <a href="services.html">Услуги</a>
-        <a href="#audiences">Для кого</a>
-        <a href="#calculator">Калькулятор</a>
-        <a href="services.html#safety">Стандарты</a>
-        <a href="#portfolio">Объекты</a>
+
+        <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileDrawer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
       </nav>
-      <div class="header-cta">
-        <div class="header-phone"><a href="tel:+79990000000">+7 (999) 000-00-00</a></div>
-        <button type="button" class="btn btn-lime" onclick="openModal('Получить смету')">Получить смету</button>
-      </div>
-      <button type="button" class="burger" onclick="toggleMenu()" aria-label="Меню">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#14140f" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-      </button>
     </div>
   </header>
 
-  <div class="overlay" id="mobileNav" role="dialog" aria-modal="true" aria-label="Меню">
-    <button type="button" class="overlay-close" onclick="toggleMenu()" aria-label="Закрыть">✕</button>
-    <div class="overlay-nav">
-      <a href="services.html">Услуги</a>
-      <a href="#audiences" onclick="toggleMenu()">Для кого</a>
-      <a href="#calculator" onclick="toggleMenu()">Калькулятор</a>
-      <a href="services.html#safety" onclick="toggleMenu()">ГОСТ</a>
-      <a href="#portfolio" onclick="toggleMenu()">Объекты</a>
-      <a href="#contacts" onclick="toggleMenu()">Контакты</a>
-      <hr style="border:none; border-top:1px solid var(--ash); margin: 10px 0;">
-      <a href="tel:+79990000000" style="color: var(--graphite);">+7 (999) 000-00-00</a>
-      <button type="button" class="btn btn-lime" onclick="toggleMenu(); openModal('Заявка')">Оставить заявку</button>
-    </div>
-  </div>
+  <!-- Мобильное меню (Drawer) -->
+  <div class="mobile-drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Мобильное меню">
+    <div>
+      <div class="drawer-header">
+        <div class="logo">
+          <div class="logo-icon" aria-hidden="true"><img src="assets/images/logo.png" alt="ШУМГЕР" class="logo-img" width="44" height="44"></div>
+          <span class="logo-title">ШУМГЕР</span>
+        </div>
+        <button class="drawer-close" aria-label="Закрыть меню">✕</button>
+      </div>
 
-  <section class="hero">
-    <div class="container">
-      <div class="hero-grid">
-        <div class="hero-card">
-          <div class="eyebrow-pill"><span class="dot-live"></span>Работаем по договору</div>
-          <h1 class="hero-title">Монтаж воркаут, детских площадок и МАФ</h1>
-          <p class="hero-lead">Работаем строго по ГОСТ. Полный цикл благоустройства: от подготовки основания до покрытий.</p>
-          <div class="hero-actions">
-            <button type="button" class="btn btn-lime" onclick="scrollTo('calculator')">Рассчитать смету</button>
-            <button type="button" class="btn btn-secondary" onclick="openModal('Вызов инженера')">Вызов инженера</button>
+      <nav class="drawer-nav">
+        <a href="index.html" class="drawer-link active">Главная</a>
+        <a href="services.html" class="drawer-link">Услуги</a>
+        <a href="portfolio.html" class="drawer-link">Объекты</a>
+        <a href="about.html" class="drawer-link">О компании</a>
+        <a href="contacts.html" class="drawer-link">Контакты</a>
+      </nav>
+    </div>
+
+    <div class="drawer-footer">
+      <a href="tel:+79000000000" class="btn btn-ghost btn-block">
+        +7 (900) 000-00-00
+      </a>
+      <button type="button" class="btn btn-primary btn-block" data-lead-trigger="Заявка из моб. меню">Оставить заявку</button>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       Основной контент (Main)
+       ========================================================================== -->
+  <main id="main-content">
+
+        <!-- HERO SECTION: Архитектурный двуколоночный блок -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Левая колонка: Текст и призывы в премиальной панели Liquid Glass -->
+          <div class="hero-left hero-glass-panel">
+            <div class="hero-tech-kicker">
+              <span class="tech-dot"></span>
+              <span>СТРОИТЕЛЬНО-МОНТАЖНЫЙ ГЕНПОДРЯД · СРО-С-284</span>
+            </div>
+
+            <h1 class="hero-title">
+              Инженерный монтаж площадок и благоустройство <span class="hero-title-accent">территорий</span>
+            </h1>
+
+            <p class="hero-lead">
+              Строительно-монтажные работы полного цикла: от нулевого цикла и монолитных железобетонных оснований B22.5 до сертифицированных детских городков, воркаут-парков и бесшовных EPDM-покрытий. Закрывающие документы КС-2, КС-3, паспорта безопасности по ТР ЕАЭС 042/2017.
+            </p>
+
+            <div class="hero-actions">
+              <button type="button" class="btn btn-primary btn-lg" data-lead-trigger="Главный экран: Запросить смету">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                Запросить расчет сметы
+              </button>
+              <a href="portfolio.html" class="btn btn-outline-light btn-lg">
+                Смотреть сданные объекты
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+
+            <div class="hero-specs-row">
+              <div class="hero-spec-card">
+                <div class="hero-spec-icon-box" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <path d="m9 12 2 2 4-4"></path>
+                  </svg>
+                </div>
+                <div class="hero-spec-content">
+                  <div class="hero-spec-header">
+                    <span class="hero-spec-num">01</span>
+                    <span class="hero-spec-code">44-ФЗ И 223-ФЗ</span>
+                  </div>
+                  <span class="hero-spec-text">Работа с НДС, казначейские счета и спецсчета</span>
+                </div>
+              </div>
+
+              <div class="hero-spec-card">
+                <div class="hero-spec-icon-box" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <path d="m9 15 2 2 4-4"></path>
+                  </svg>
+                </div>
+                <div class="hero-spec-content">
+                  <div class="hero-spec-header">
+                    <span class="hero-spec-num">02</span>
+                    <span class="hero-spec-code">НАДЗОР И ГОСТ</span>
+                  </div>
+                  <span class="hero-spec-text">Акты скрытых работ, входной контроль бетона B22.5</span>
+                </div>
+              </div>
+
+              <div class="hero-spec-card">
+                <div class="hero-spec-icon-box" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="8" r="6"></circle>
+                    <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+                  </svg>
+                </div>
+                <div class="hero-spec-content">
+                  <div class="hero-spec-header">
+                    <span class="hero-spec-num">03</span>
+                    <span class="hero-spec-code">ГАРАНТИЯ 5 ЛЕТ</span>
+                  </div>
+                  <span class="hero-spec-text">Собственные бригады монтажников и парк техники</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="proof-bar">
-            <div><strong>500+</strong><br><span>объектов</span></div>
-            <div><strong>до 5 лет</strong><br><span>гарантии</span></div>
-            <div><strong>100%</strong><br><span>по ГОСТ</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- СТРОИТЕЛЬНЫЕ ПОКАЗАТЕЛИ (Швейцарская полоса) -->
+    <div class="container">
+      <div class="stats-strip">
+        <div class="stat-cell">
+          <div class="stat-number"><span data-count="120">120</span><span class="stat-suffix">+</span></div>
+          <div class="stat-label">Сданных объектов в РФ</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-number"><span data-count="8">8</span><span class="stat-suffix">лет</span></div>
+          <div class="stat-label">Строительного генподряда</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-number"><span data-count="100">100</span><span class="stat-suffix">%</span></div>
+          <div class="stat-label">Приёмка Гостехнадзором</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-number"><span>В22.5</span></div>
+          <div class="stat-label">Монолитные основания М300</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- СЕКЦИЯ: НАШИ НАПРАВЛЕНИЯ -->
+    <section class="section section-alt" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">КОМПЕТЕНЦИИ И НАПРАВЛЕНИЯ</span>
+          <h2 class="section-title">Строительно-монтажные работы полного цикла</h2>
+          <p class="section-subtitle">Работаем с генеральными подрядчиками, девелоперами, управляющими компаниями и муниципальными заказчиками.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Направление 1: Детские городки -->
+          <div class="service-card">
+            <div>
+              <div class="service-top">
+                <div class="service-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V10l4-3 4 3v11"></path><path d="M12 4V2l3 2-3 2"></path><path d="M7 21v-4a1.5 1.5 0 0 1 3 0v4"></path><path d="M12 12h2a3 3 0 0 1 3 3v6"></path><path d="M14 9l6 4"></path></svg>
+                </div>
+                <span class="service-tag">ГОСТ Р 52169</span>
+              </div>
+              <h3 class="service-title">Детские игровые комплексы</h3>
+              <p class="service-desc">Монтаж игровых городков, горок, качелей-гнезд, канатных лабиринтов и полос препятствий. Проектирование зон безопасности и строгое соблюдение регламентов ТР ЕАЭС 042/2017.</p>
+              <ul class="service-features-list">
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Бетонирование закладных на расчетную глубину грунта</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Антивандальный крепеж со скрытыми заглушками</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Паспорта безопасности и сертификаты завода-изготовителя</li>
+              </ul>
+            </div>
+            <div class="service-footer">
+              <div>
+                <div class="service-price-hint">Ориентир стоимости</div>
+                <div class="service-price-value">от 4 800 ₽ / м²</div>
+              </div>
+              <a href="services.html#detskie" class="service-link">
+                Спецификация
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Направление 2: Воркаут и спорт -->
+          <div class="service-card">
+            <div>
+              <div class="service-top">
+                <div class="service-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="5" x2="21" y2="5"></line><line x1="5" y1="5" x2="5" y2="21"></line><line x1="19" y1="5" x2="19" y2="21"></line><line x1="11" y1="10" x2="19" y2="10"></line><line x1="11" y1="10" x2="11" y2="21"></line><circle cx="12" cy="7.5" r="1.2" fill="currentColor"></circle></svg>
+                </div>
+                <span class="service-tag">ГОСТ Р 55677</span>
+              </div>
+              <h3 class="service-title">Спортивные и воркаут-площадки</h3>
+              <p class="service-desc">Строительство спортивных зон для уличной гимнастики, кроссфита и сдачи норм ГТО. Износостойкие металлоконструкции с порошковым напылением и антикоррозийной обработкой.</p>
+              <ul class="service-features-list">
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Толстостенная конструкционная сталь 3.5–4.0 мм</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Высокопрочные хомутовые соединения с фиксаторами</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Уличные силовые тренажёры с регулируемым сопротивлением</li>
+              </ul>
+            </div>
+            <div class="service-footer">
+              <div>
+                <div class="service-price-hint">Ориентир стоимости</div>
+                <div class="service-price-value">от 3 900 ₽ / м²</div>
+              </div>
+              <a href="services.html#workout" class="service-link">
+                Спецификация
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Направление 3: МАФ -->
+          <div class="service-card">
+            <div>
+              <div class="service-top">
+                <div class="service-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="6" x2="22" y2="6"></line><line x1="4" y1="6" x2="4" y2="21"></line><line x1="20" y1="6" x2="20" y2="21"></line><line x1="7" y1="3" x2="9" y2="6"></line><line x1="12" y1="3" x2="14" y2="6"></line><line x1="17" y1="3" x2="19" y2="6"></line><path d="M8 15h8a2 2 0 0 1 2 2v4"></path><path d="M6 21v-4a2 2 0 0 1 2-2"></path></svg>
+                </div>
+                <span class="service-tag">Архитектура</span>
+              </div>
+              <h3 class="service-title">Малые архитектурные формы (МАФ)</h3>
+              <p class="service-desc">Поставка и монтаж парковых пергол, теневых навесов, скамей из термоясеня и лиственницы, урн раздельного сбора и велопарковок в едином дизайн-коде проекта.</p>
+              <ul class="service-features-list">
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Премиальная термодревесина и оцинкованная сталь</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Анкерное и скрытое бетонированное крепление опор</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Индивидуальное изготовление по чертежам заказчика</li>
+              </ul>
+            </div>
+            <div class="service-footer">
+              <div>
+                <div class="service-price-hint">Ориентир стоимости</div>
+                <div class="service-price-value">от 3 100 ₽ / м²</div>
+              </div>
+              <a href="services.html#maf" class="service-link">
+                Спецификация
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Направление 4: Покрытия -->
+          <div class="service-card">
+            <div>
+              <div class="service-top">
+                <div class="service-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7c2.5-1 4.5-1 7 0s4.5 1 7 0 4.5-1 6 0"></path><path d="M2 12c2.5-1 4.5-1 7 0s4.5 1 7 0 4.5-1 6 0"></path><path d="M2 17c2.5-1 4.5-1 7 0s4.5 1 7 0 4.5-1 6 0"></path><rect x="2" y="5" width="20" height="14" rx="2"></rect></svg>
+                </div>
+                <span class="service-tag">ГОСТ Р ЕН 1177</span>
+              </div>
+              <h3 class="service-title">Бесшовные покрытия EPDM</h3>
+              <p class="service-desc">Укладка монолитного ударопоглощающего резинового покрытия с полиуретановым связующим. Создание 3D-геопластики и зон торможения.</p>
+              <ul class="service-features-list">
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Толщина от 10 до 50 мм под высоту свободного падения (HIC)</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Стойкость к ультрафиолету и перепадам температур РФ</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Водопроницаемость — площадка высыхает за 15 минут</li>
+              </ul>
+            </div>
+            <div class="service-footer">
+              <div>
+                <div class="service-price-hint">Ориентир стоимости</div>
+                <div class="service-price-value">от 1 850 ₽ / м²</div>
+              </div>
+              <a href="services.html#pokrytiya" class="service-link">
+                Спецификация
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Направление 5: Основания и бетон -->
+          <div class="service-card">
+            <div>
+              <div class="service-top">
+                <div class="service-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"></rect><line x1="3" y1="16" x2="21" y2="16"></line><line x1="9" y1="11" x2="9" y2="21"></line><line x1="15" y1="11" x2="15" y2="21"></line><path d="M8 7l4-4 4 4"></path><line x1="12" y1="3" x2="12" y2="11"></line></svg>
+                </div>
+                <span class="service-tag">СП 63.13330</span>
+              </div>
+              <h3 class="service-title">Монолитные основания и дренаж</h3>
+              <p class="service-desc">Земляные работы нулевого цикла, послойное виброуплотнение подушки, армирование плиты сеткой А500С и заливка бетона B22.5 с разуклонками.</p>
+              <ul class="service-features-list">
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Бетон класса B22.5 (М300) с морозостойкостью F150</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Лабораторный контроль плотности основания</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Кольцевой дренаж и отвод ливневых стоков</li>
+              </ul>
+            </div>
+            <div class="service-footer">
+              <div>
+                <div class="service-price-hint">Ориентир стоимости</div>
+                <div class="service-price-value">от 3 200 ₽ / м²</div>
+              </div>
+              <a href="services.html#osnovaniya" class="service-link">
+                Спецификация
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Направление 6: ТО и аудит -->
+          <div class="service-card">
+            <div>
+              <div class="service-top">
+                <div class="service-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path><circle cx="12" cy="12" r="2" fill="currentColor"></circle></svg>
+                </div>
+                <span class="service-tag">ТР ЕАЭС 042</span>
+              </div>
+              <h3 class="service-title">Сервисное обслуживание и аудит</h3>
+              <p class="service-desc">Инструментальная экспертиза оборудования, измерение ударопоглощения HIC, протяжка шарниров, замена узлов и оформление паспортов безопасности.</p>
+              <ul class="service-features-list">
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Выезд экспертной бригады с измерительным прибором за 24 ч</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Дефектная ведомость с фотофиксацией узлов</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Официальное заключение для УК, девелоперов и технадзора</li>
+              </ul>
+            </div>
+            <div class="service-footer">
+              <div>
+                <div class="service-price-hint">Ориентир стоимости</div>
+                <div class="service-price-value">от 15 000 ₽ / выезд</div>
+              </div>
+              <a href="services.html#obsluzhivanie" class="service-link">
+                Спецификация
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
           </div>
         </div>
-        <div class="hero-lime">
-          <h3 style="font-size:22px; margin-bottom:10px;">Есть проект?</h3>
-          <p style="margin-bottom:20px;">Прикрепите чертеж — за 30 минут рассчитаем точную смету.</p>
-          <button type="button" class="btn" onclick="openModal('Расчет по проекту')">Отправить →</button>
-        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="audience" id="audiences">
-    <div class="container">
-      <h2 class="section-title">Кому мы помогаем</h2>
-      <div class="tabs">
-        <button type="button" class="tab tab-active" onclick="switchAudience('dev', this)">Застройщикам</button>
-        <button type="button" class="tab" onclick="switchAudience('uk', this)">УК и ТСЖ</button>
-        <button type="button" class="tab" onclick="switchAudience('private', this)">Частным лицам</button>
-      </div>
-      <div class="audience-card">
-        <div id="audience-dev" class="audience-grid audience-panel is-active">
-          <div>
-            <h3 style="font-size: 24px; margin-bottom: 14px;">Сдавайте дворы благоустройства точно в срок</h3>
-            <p style="color: var(--graphite); margin-bottom: 24px;">Берем на себя монтаж любого объема игрового и спортивного оборудования в ЖК.</p>
-            <button type="button" class="btn btn-lime" onclick="openModal('Для застройщика')">Запросить КП</button>
+    <!-- СЕКЦИЯ: СТРОИТЕЛЬНЫЕ КОМПЕТЕНЦИИ И ГЕНПОДРЯД -->
+    <section class="section" id="construction">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">СТРОИТЕЛЬНЫЙ ПРОФИЛЬ</span>
+          <h2 class="section-title">Комплексные строительные работы и благоустройство</h2>
+          <p class="section-subtitle">Мы реализуем не просто точечный монтаж оборудования, а выполняем полный комплекс общестроительных работ на объекте.</p>
+        </div>
+
+        <div class="standards-grid">
+          <div class="standard-card">
+            <div class="standard-code">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Земляные работы и геодезия
+            </div>
+            <h3 class="standard-title">Планировка и нулевой цикл</h3>
+            <p class="standard-text">Геодезическая разбивка осей, выемка и вывоз грунта, послойная трамбовка с виброиспытаниями, устройство разуклонки и ливневой канализации.</p>
+          </div>
+
+          <div class="standard-card">
+            <div class="standard-code">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Бетонные и монолитные работы
+            </div>
+            <h3 class="standard-title">Железобетонные основания</h3>
+            <p class="standard-text">Устройство армированных плит основания Б20–Б25, бетонирование фундаментов под тяжелое оборудование, подпорные стенки и бордюрный камень.</p>
+          </div>
+
+          <div class="standard-card">
+            <div class="standard-code">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Инженерные сети и инфраструктура
+            </div>
+            <h3 class="standard-title">Освещение и безопасность</h3>
+            <p class="standard-text">Прокладка кабельных линий в траншеях, монтаж парковых опор освещения, систем видеонаблюдения, дренажных лотков и 3D-ограждений.</p>
           </div>
         </div>
-        <div id="audience-uk" class="audience-panel">
-          <h3 style="font-size: 24px; margin-bottom: 14px;">Безопасные дворы без штрафов</h3>
-          <p style="color: var(--graphite); margin-bottom: 24px;">Модернизация и монтаж воркаут-комплексов во дворах.</p>
-          <button type="button" class="btn btn-lime" onclick="openModal('Для УК')">Рассчитать двор</button>
+      </div>
+    </section>
+
+    <!-- СЕКЦИЯ: ОБЪЕКТЫ В ПОРТФОЛИО -->
+    <section class="section" id="portfolio">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">РЕАЛИЗОВАННЫЕ КЕЙСЫ</span>
+          <h2 class="section-title">Сданные объекты благоустройства</h2>
+          <p class="section-subtitle">Каждый проект выполнен в строгом соответствии с проектом, СП и ГОСТ, сдан комиссиям технадзора с первого предъявления.</p>
         </div>
-        <div id="audience-private" class="audience-panel">
-          <h3 style="font-size: 24px; margin-bottom: 14px;">Спортзал прямо на участке</h3>
-          <p style="color: var(--graphite); margin-bottom: 24px;">Создаем стильные компактные воркаут-зоны на частных участках.</p>
-          <button type="button" class="btn btn-lime" onclick="openModal('Для дома')">Вызвать замерщика</button>
+
+        <div class="services-filter-pills portfolio-filter-bar">
+          <button type="button" class="services-filter-pill filter-btn active" data-filter="all">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect></svg>
+            Все объекты (6)
+          </button>
+          <button type="button" class="services-filter-pill filter-btn" data-filter="kids">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V10l4-3 4 3v11"></path><path d="M12 4V2l3 2-3 2"></path><path d="M7 21v-4a1.5 1.5 0 0 1 3 0v4"></path><path d="M12 12h2a3 3 0 0 1 3 3v6"></path><path d="M14 9l6 4"></path></svg>
+            Детские городки
+          </button>
+          <button type="button" class="services-filter-pill filter-btn" data-filter="workout">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="5" x2="21" y2="5"></line><line x1="5" y1="5" x2="5" y2="21"></line><line x1="19" y1="5" x2="19" y2="21"></line><line x1="11" y1="10" x2="19" y2="10"></line><line x1="11" y1="10" x2="11" y2="21"></line><circle cx="12" cy="7.5" r="1.2" fill="currentColor"></circle></svg>
+            Воркаут и спорт
+          </button>
+          <button type="button" class="services-filter-pill filter-btn" data-filter="maf">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="6" x2="22" y2="6"></line><line x1="4" y1="6" x2="4" y2="21"></line><line x1="20" y1="6" x2="20" y2="21"></line><line x1="7" y1="3" x2="9" y2="6"></line><line x1="12" y1="3" x2="14" y2="6"></line><line x1="17" y1="3" x2="19" y2="6"></line><path d="M8 15h8a2 2 0 0 1 2 2v4"></path><path d="M6 21v-4a2 2 0 0 1 2-2"></path></svg>
+            МАФ и парки
+          </button>
+          <button type="button" class="services-filter-pill filter-btn" data-filter="rubber">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7c2.5-1 4.5-1 7 0s4.5 1 7 0 4.5-1 6 0"></path><path d="M2 12c2.5-1 4.5-1 7 0s4.5 1 7 0 4.5-1 6 0"></path><path d="M2 17c2.5-1 4.5-1 7 0s4.5 1 7 0 4.5-1 6 0"></path><rect x="2" y="5" width="20" height="14" rx="2"></rect></svg>
+            Резиновые покрытия
+          </button>
+        </div>
+
+        <div class="portfolio-grid">
+          <!-- 1. ЖК Солнечный -->
+          <article class="portfolio-card" data-category="kids" data-project-id="solnechny">
+            <div class="portfolio-media">
+              <span class="portfolio-badge">Детский ландшафт</span>
+              <img src="assets/images/projects/project-playground.jpg" alt="ЖК Солнечный — игровой комплекс" class="portfolio-img" loading="lazy">
+            </div>
+            <div class="portfolio-body">
+              <div class="portfolio-meta">240 м² • СРОК: 8 ДНЕЙ</div>
+              <h3 class="portfolio-title">ЖК «Солнечный»</h3>
+              <p class="portfolio-desc">Многоуровневый игровой комплекс из северной лиственницы с горками-трубами, качелями-гнездами и травмобезопасным покрытием EPDM с геопластикой.</p>
+              <div class="portfolio-tags">
+                <span class="portfolio-tag-item">ТР ЕАЭС 042</span>
+                <span class="portfolio-tag-item">EPDM 30 мм</span>
+                <span class="portfolio-tag-item">Лиственница</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Парк Победы -->
+          <article class="portfolio-card" data-category="workout" data-project-id="pobeda">
+            <div class="portfolio-media">
+              <span class="portfolio-badge">Воркаут-кластер</span>
+              <img src="assets/images/projects/project-workout.jpg" alt="Парк Победы — воркаут комплекс" class="portfolio-img" loading="lazy">
+            </div>
+            <div class="portfolio-body">
+              <div class="portfolio-meta">320 м² • СРОК: 10 ДНЕЙ</div>
+              <h3 class="portfolio-title">Парк «Победы»</h3>
+              <p class="portfolio-desc">Профессиональный спортивный комплекс для силовой гимнастики и кроссфита с 12 снарядами, антивандальными хомутами и графитовой разметкой.</p>
+              <div class="portfolio-tags">
+                <span class="portfolio-tag-item">ГОСТ Р 55677</span>
+                <span class="portfolio-tag-item">Сталь 3.5 мм</span>
+                <span class="portfolio-tag-item">СП 31-115</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Набережная Заречье -->
+          <article class="portfolio-card" data-category="maf" data-project-id="zareche">
+            <div class="portfolio-media">
+              <span class="portfolio-badge">Авторские МАФ</span>
+              <img src="assets/images/projects/project-maf.jpg" alt="Набережная Заречье — перголы и МАФ" class="portfolio-img" loading="lazy">
+            </div>
+            <div class="portfolio-body">
+              <div class="portfolio-meta">180 м² • СРОК: 7 ДНЕЙ</div>
+              <h3 class="portfolio-title">Набережная «Заречье»</h3>
+              <p class="portfolio-desc">Установка теневых пергол из кортеновской стали и лиственницы с интегрированной линейной подсветкой, радиусных скамей и амфитеатра.</p>
+              <div class="portfolio-tags">
+                <span class="portfolio-tag-item">Кортен / Лиственница</span>
+                <span class="portfolio-tag-item">LED-подсветка</span>
+                <span class="portfolio-tag-item">Индивидуальный КМ</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. ЖК Новая Заря -->
+          <article class="portfolio-card" data-category="rubber" data-project-id="zarya">
+            <div class="portfolio-media">
+              <span class="portfolio-badge">Основания и бетон</span>
+              <img src="assets/images/projects/project-foundations.jpg" alt="ЖК Новая Заря — бетонное основание" class="portfolio-img" loading="lazy">
+            </div>
+            <div class="portfolio-body">
+              <div class="portfolio-meta">450 м² • СРОК: 14 ДНЕЙ</div>
+              <h3 class="portfolio-title">ЖК «Новая Заря»</h3>
+              <p class="portfolio-desc">Устройство армированной монолитной фундаментной плиты B22.5 (М300) толщиной 180 мм с дренажной системой и подготовкой под игровое покрытие.</p>
+              <div class="portfolio-tags">
+                <span class="portfolio-tag-item">Бетон B22.5</span>
+                <span class="portfolio-tag-item">Арматура А500С</span>
+                <span class="portfolio-tag-item">Лабораторный тест</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div style="text-align: center; margin-top: var(--space-2xl);">
+          <a href="portfolio.html" class="btn btn-ghost btn-lg">Смотреть все сданные объекты →</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="calc" id="calculator">
-    <div class="container">
-      <h2 class="section-title">Онлайн калькулятор</h2>
-      <div class="calc-card">
-        <div>
-          <h3 style="font-size:20px; margin-bottom:16px;">Тип оборудования</h3>
-          <div class="quiz-grid">
-            <div class="quiz-opt is-sel" role="button" onclick="calc(this,35000)">Воркаут площадка</div>
-            <div class="quiz-opt" role="button" onclick="calc(this,55000)">Детская зона</div>
-            <div class="quiz-opt" role="button" onclick="calc(this,28000)">МАФ и скамейки</div>
-            <div class="quiz-opt" role="button" onclick="calc(this,90000)">Под ключ</div>
+    <!-- СЕКЦИЯ: СТРОИТЕЛЬНЫЙ РЕГЛАМЕНТ РАБОТ -->
+    <section class="section section-alt" id="process">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">РЕГЛАМЕНТ ГЕНПОДРЯДЧИКА</span>
+          <h2 class="section-title">5 этапов реализации объекта под ключ</h2>
+          <p class="section-subtitle">Прозрачный строительный контроль и отчётность на каждом шаге от геодезической съемки до передачи исполнительной документации.</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-item">
+            <div class="step-number-box">
+              <span class="step-number">01</span>
+            </div>
+            <h3 class="step-title">Выезд инженера ПТО</h3>
+            <p class="step-desc">Геодезический замер участка, анализ несущей способности грунта, уклонов и трасс подземных коммуникаций.</p>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number-box">
+              <span class="step-number">02</span>
+            </div>
+            <h3 class="step-title">Проект и смета</h3>
+            <p class="step-desc">3D-моделирование расстановки с расчётом зон безопасности по ГОСТ и детальная смета по государственным или рыночным расценкам.</p>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number-box">
+              <span class="step-number">03</span>
+            </div>
+            <h3 class="step-title">Земляные работы</h3>
+            <p class="step-desc">Разработка корыта, укладка геотекстиля, дренаж и устройство твердого основания (щебень или монолитный железобетон).</p>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number-box">
+              <span class="step-number">04</span>
+            </div>
+            <h3 class="step-title">Монтаж по ГОСТ</h3>
+            <p class="step-desc">Бетонирование закладных сертифицированными монтажниками, сборка конструкций, укладка бесшовного резинового покрытия.</p>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number-box">
+              <span class="step-number">05</span>
+            </div>
+            <h3 class="step-title">Сдача по КС-2, КС-3</h3>
+            <p class="step-desc">Подписание актов освидетельствования скрытых работ, передача паспорта безопасности площадки и официальной гарантии до 5 лет.</p>
           </div>
         </div>
-        <div class="calc-sidebar">
-          <div style="font-size:14px; color:var(--graphite);">Ориентировочно:</div>
-          <div class="price" id="price">от 35 000 ₽</div>
-          <button type="button" class="btn btn-lime" style="width:100%" onclick="openModal('Точный расчет')">Получить смету</button>
+      </div>
+    </section>
+
+    <!-- СЕКЦИЯ: ГОСТ И СТРОИТЕЛЬНЫЕ СТАНДАРТЫ -->
+    <section class="section" id="standards">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">СТРОИТЕЛЬНЫЕ СТАНДАРТЫ</span>
+          <h2 class="section-title">Соблюдение норм и безопасность по закону</h2>
+          <p class="section-subtitle">Мы несём полную юридическую ответственность за безопасность и надежность возводимых конструкций.</p>
+        </div>
+
+        <div class="standards-grid">
+          <div class="standard-card">
+            <div class="standard-code">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              ГОСТ Р 52169-2012
+            </div>
+            <h3 class="standard-title">Детские игровые комплексы</h3>
+            <p class="standard-text">Регламентирует зоны падения, безопасность узлов, отсутствие защемляющих зазоров и токсичных лакокрасочных покрытий.</p>
+          </div>
+
+          <div class="standard-card">
+            <div class="standard-code">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              ТР ЕАЭС 042/2017
+            </div>
+            <h3 class="standard-title">Технический регламент ЕАЭС</h3>
+            <p class="standard-text">Обязательная сертификация и паспортизация оборудования для ввода площадки в эксплуатацию муниципальными комиссиями.</p>
+          </div>
+
+          <div class="standard-card">
+            <div class="standard-code">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              ГОСТ Р ЕН 1177-2013
+            </div>
+            <h3 class="standard-title">Ударопоглощающие покрытия</h3>
+            <p class="standard-text">Определяет критическую высоту свободного падения (HIC) и минимальную толщину резинового амортизирующего слоя.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="portfolio" id="portfolio">
-    <div class="container">
-      <h2 class="section-title">Наши объекты</h2>
-      <div class="portfolio-grid">
-        <div class="case">
-          <div class="case-img">Фото объекта</div>
-          <div class="case-body"><h4>ЖК «Северные Кварталы»</h4><p>Монтаж многофункциональной зоны.</p></div>
+    <!-- СЕКЦИЯ: ЧАСТЫЕ ВОПРОСЫ (FAQ) -->
+    <section class="section section-alt" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">ОТВЕТЫ НА ВОПРОСЫ</span>
+          <h2 class="section-title">Часто задаваемые вопросы заказчиков</h2>
+          <p class="section-subtitle">Всё, что важно знать о заключении договора, сроках, оплате и сдаче объекта.</p>
         </div>
-        <div class="case">
-          <div class="case-img">Фото объекта</div>
-          <div class="case-body"><h4>Сквер «Юбилейный»</h4><p>Установка деревянного городка.</p></div>
-        </div>
-        <div class="case">
-          <div class="case-img">Фото объекта</div>
-          <div class="case-body"><h4>Парк «Заречный»</h4><p>Воркаут-зона на 12 станций.</p></div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span>Работаете ли вы с НДС и по государственным контрактам (44-ФЗ, 223-ФЗ)?</span>
+              <div class="faq-icon">+</div>
+            </button>
+            <div class="faq-content">
+              <p>Да, компания ШУМГЕР работает с юридическими лицами любой формы собственности на ОСНО с НДС 20%, участвует в электронных торгах и аукционах по 44-ФЗ и 223-ФЗ. Предоставляем полный комплект закрывающих документов (КС-2, КС-3, счета-фактуры).</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span>Можете ли вы выполнить основание, земляные работы и асфальтирование?</span>
+              <div class="faq-icon">+</div>
+            </button>
+            <div class="faq-content">
+              <p>Да, мы выполняем благоустройство под ключ: выемку грунта спецтехникой, планировку участка, устройство песчано-щебеночного пирога, укладку армированных бетонных плит, установку дорожного и тротуарного бордюра, а также асфальтирование прилегающих дорожек.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span>Сколько времени занимает строительство площадки?</span>
+              <div class="faq-icon">+</div>
+            </button>
+            <div class="faq-content">
+              <p>В среднем стандартный объект площадью 150–250 м² с устройством основания и укладкой резинового покрытия реализуется за 7–12 рабочих дней. Сроки фиксируются в договоре с финансовой ответственностью.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span>Предоставляете ли вы паспорта безопасности для сдачи технадзору?</span>
+              <div class="faq-icon">+</div>
+            </button>
+            <div class="faq-content">
+              <p>Да. На все смонтированные элементы и покрытия передается полный комплект исполнительной документации: сертификаты соответствия ТР ЕАЭС 042/2017, паспорта изделий по ГОСТ 2.601, акты скрытых работ и журнал монтажа.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span>Какая гарантия предоставляется по договору?</span>
+              <div class="faq-icon">+</div>
+            </button>
+            <div class="faq-content">
+              <p>Гарантия на строительно-монтажные работы и основание составляет до 5 лет. На оборудование и покрытия действует официальная заводская гарантия до 10 лет.</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="contact" id="contacts">
-    <div class="container">
-      <h2 class="section-title">Контакты</h2>
-      <div class="contact-grid">
-        <div class="contact-card">
-          <h3>Центральный офис</h3>
-          <p><strong>Телефон:</strong> <a href="tel:+79990000000">+7 (999) 000-00-00</a></p>
-          <p><strong>Почта:</strong> info@shumger.ru</p>
-          <p><strong>Режим:</strong> Пн–Пт 9:00–18:00</p>
-        </div>
-        <div class="contact-card">
-          <h3>Оставить заявку</h3>
-          <form id="contactForm" onsubmit="handleContact(event)">
-            <input type="text" class="input" placeholder="Имя / ООО" required>
-            <input type="tel" class="input" placeholder="Телефон" required>
-            <button type="submit" class="btn btn-lime" style="width:100%">Отправить</button>
+    <!-- СЕКЦИЯ: ФОРМА ЗАЯВКИ И СВЯЗИ -->
+    <section class="section" id="order">
+      <div class="container">
+        <div class="lead-box">
+          <div class="lead-info">
+            <span class="eyebrow">ОФИЦИАЛЬНОЕ КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ</span>
+            <h2 class="section-title">Закажите детальный сметный расчёт за 30 минут</h2>
+            <p class="section-subtitle" style="margin-bottom: var(--space-xl);">
+              Наш инженер ПТО изучит ваше ТЗ или план участка, подготовит смету с учётом строительных объемов и согласует выезд на замер.
+            </p>
+
+            <div style="display:flex; flex-direction:column; gap:14px;">
+              <div style="display:flex; align-items:center; gap:12px;">
+                <div class="hero-trust-icon">✓</div>
+                <span>Выезд инженера и лазерный замер — бесплатно</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:12px;">
+                <div class="hero-trust-icon">✓</div>
+                <span>3 ценовых варианта сметы (Стандарт / Комфорт / Премиум)</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:12px;">
+                <div class="hero-trust-icon">✓</div>
+                <span>Фиксация стоимости в договоре без скрытых доплат</span>
+              </div>
+            </div>
+          </div>
+
+          <form class="lead-form" id="leadForm">
+            <input type="hidden" name="lead_context" value="Заявка с главной страницы">
+
+            <div class="form-group">
+              <label class="form-label">Предпочтительный канал связи</label>
+              <div class="messenger-selector">
+                <div class="messenger-option">
+                  <input type="radio" id="msgPhone" name="messenger" value="Телефон" checked>
+                  <label for="msgPhone" class="messenger-label">Звонок</label>
+                </div>
+                <div class="messenger-option">
+                  <input type="radio" id="msgWa" name="messenger" value="WhatsApp">
+                  <label for="msgWa" class="messenger-label">WhatsApp</label>
+                </div>
+                <div class="messenger-option">
+                  <input type="radio" id="msgTg" name="messenger" value="Telegram">
+                  <label for="msgTg" class="messenger-label">Telegram</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="leadName">Контактное лицо / Организация *</label>
+              <input type="text" id="leadName" name="name" class="form-input" placeholder="Иван Иванов (или название компании)" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="leadPhone">Номер телефона для связи *</label>
+              <input type="tel" id="leadPhone" name="phone" class="form-input" placeholder="+7 (___) ___-__-__" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="leadComment">Параметры объекта или техническое задание</label>
+              <textarea id="leadComment" name="message" class="form-textarea" placeholder="Укажите город, площадь, вид работ (земляные, монтаж оборудования, основание, МАФ)..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block btn-lg">
+              Отправить заявку в отдел смет
+            </button>
+            <p style="font-size: 12px; color: #a1a1aa; text-align: center; margin-top: 10px;">
+              Нажимая кнопку, вы соглашаетесь с <a href="privacy.html" class="link-underlined">политикой конфиденциальности</a>
+            </p>
           </form>
-          <p id="formStatus" style="margin-top:12px; font-size:14px; color:var(--graphite); display:none;"></p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
+  </main>
+
+  <!-- ==========================================================================
+       Подвал (Footer)
+       ========================================================================== -->
+  <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div><h3>ШУМГЕР</h3><p style="color:var(--graphite); font-size:14px;">Монтаж по ГОСТ.</p></div>
-        <div>
-          <h4 style="margin-bottom:10px;">Меню</h4>
-          <div class="footer-links">
-            <a href="services.html">Услуги</a>
-            <a href="services.html#safety">ГОСТ</a>
-            <a href="#portfolio">Объекты</a>
-            <a href="#contacts">Контакты</a>
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon" aria-hidden="true"><img src="assets/images/logo.png" alt="ШУМГЕР" class="logo-img" width="44" height="44"></div>
+            <span class="logo-title" style="color:#ffffff;">ШУМГЕР</span>
+          </div>
+          <p>Строительно-монтажная компания. Комплексное благоустройство, устройство оснований, монтаж игровых и спортивных площадок, МАФ и покрытий по ГОСТ.</p>
+          <div style="font-size: 13px; color: var(--color-dark-muted);">
+            Работаем с юрлицами с НДС 20% | СРО | ГОСТ Р 52169-2012
           </div>
         </div>
+
+        <div>
+          <h4 class="footer-title">Направления</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#detskie">Детские городки</a></li>
+            <li><a href="services.html#workout">Воркаут и спорт</a></li>
+            <li><a href="services.html#maf">МАФ и перголы</a></li>
+            <li><a href="services.html#pokrytiya">Покрытия EPDM</a></li>
+            <li><a href="#construction">Основания и земляные работы</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Компания</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">О компании</a></li>
+            <li><a href="portfolio.html">Объекты в портфолио</a></li>
+            <li><a href="#standards">Стандарты ГОСТ и СРО</a></li>
+            <li><a href="#process">Регламент работ</a></li>
+            <li><a href="privacy.html">Политика конфиденциальности</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Контакты</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+79000000000">+7 (900) 000-00-00</a></li>
+            <li><a href="mailto:info@shumger.ru">info@shumger.ru</a></li>
+            <li><span style="color:var(--color-dark-muted); font-size:13px;">Москва, ул. Примерная, д. 1</span></li>
+            <li><span style="color:var(--color-dark-muted); font-size:12px;">Пн–Пт: 09:00 — 19:00</span></li>
+          </ul>
+        </div>
       </div>
-      <div class="footer-copy">© 2026 ШУМГЕР. Все права защищены.</div>
+
+      <div class="footer-bottom">
+        <div>© 2026 ШУМГЕР. Строительно-монтажные работы и благоустройство по ГОСТ.</div>
+        <div>
+          <a href="privacy.html" style="color:inherit; text-decoration: underline;">Политика конфиденциальности</a>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <div class="modal" id="leadModal" onclick="if(event.target===this)closeModal()" role="dialog" aria-modal="true" aria-label="Заявка">
-    <div class="modal-card">
-      <button type="button" class="modal-close" onclick="closeModal()" aria-label="Закрыть">✕</button>
-      <h3 style="margin-bottom:20px;" id="modalTopic">Заявка</h3>
-      <form id="modalForm" onsubmit="handleModal(event)">
-        <input type="text" class="input" placeholder="Имя" required>
-        <input type="tel" class="input" placeholder="Телефон" required>
-        <button type="submit" class="btn btn-lime" style="width:100%">Отправить</button>
-      </form>
-      <p id="modalStatus" style="margin-top:12px; font-size:14px; color:var(--graphite); display:none;"></p>
+  <!-- ==========================================================================
+       Плавающая кнопка быстрой связи (Speed Dial FAB)
+       ========================================================================== -->
+  <div class="quick-contact-fab" id="quickContactFab" aria-label="Быстрая связь">
+    <button type="button" class="fab-main-btn" aria-label="Открыть контакты">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+      </svg>
+    </button>
+    <div class="fab-options">
+      <a href="https://wa.me/79000000000" target="_blank" rel="noopener noreferrer" class="fab-item fab-wa" aria-label="WhatsApp">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15c-1.49 0-2.95-.4-4.22-1.15l-.3-.18-3.13.82.83-3.05-.2-.31a8.16 8.16 0 0 1-1.25-4.38c0-4.52 3.68-8.2 8.2-8.2 2.19 0 4.25.85 5.8 2.4 1.55 1.55 2.4 3.61 2.4 5.8 0 4.52-3.68 8.2-8.2 8.2zm4.49-6.14c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.98-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.23.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.54.12.17 1.73 2.64 4.19 3.7.59.25 1.05.4 1.41.51.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29z"/>
+        </svg>
+      </a>
+      <a href="https://t.me/shumger" target="_blank" rel="noopener noreferrer" class="fab-item fab-tg" aria-label="Telegram">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.52 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+        </svg>
+      </a>
+      <a href="tel:+79000000000" class="fab-item fab-tel" aria-label="Позвонить">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+      </a>
     </div>
   </div>
 
-  <script>
-    var dom={mobileNav:document.getElementById('mobileNav'),modal:document.getElementById('leadModal'),modalTopic:document.getElementById('modalTopic'),price:document.getElementById('price'),modalForm:document.getElementById('modalForm'),contactForm:document.getElementById('contactForm')};
-    function toggleMenu(){dom.mobileNav.style.display=dom.mobileNav.style.display==='flex'?'none':'flex';}
-    function switchAudience(id,btn){document.querySelectorAll('.tab').forEach(function(b){b.classList.remove('tab-active');});btn.classList.add('tab-active');['dev','uk','private'].forEach(function(t){var e=document.getElementById('audience-'+t);if(e){e.classList.toggle('is-active',t===id);e.style.display=t===id?'grid':'none';}});}
-    function calc(btn,p){document.querySelectorAll('.quiz-opt').forEach(function(b){b.classList.remove('is-sel');});btn.classList.add('is-sel');if(dom.price)dom.price.innerText='от '+p.toLocaleString()+' ₽';}
-    function openModal(topic){if(dom.modalTopic)dom.modalTopic.innerText=topic;if(dom.modal)dom.modal.style.display='flex';setTimeout(function(){var i=dom.modalForm.querySelector('input');if(i)i.focus();},50);}
-    function closeModal(){if(dom.modal)dom.modal.style.display='none';clearStatus();}
-    function clearStatus(){var f=document.getElementById('formStatus'),m=document.getElementById('modalStatus');if(f)f.style.display='none';if(m)m.style.display='none';}
-    function scrollTo(id){var e=document.getElementById(id);if(e)e.scrollIntoView({behavior:'smooth'});}
-    function sendLead(){return new Promise(function(r){setTimeout(function(){r({ok:true});},500);});}
-    async function handleModal(e){e.preventDefault();var s=document.getElementById('modalStatus');if(s){s.textContent='Отправляем…';s.style.display='block';s.style.color='var(--graphite)';}try{await sendLead();if(s){s.textContent='✓ Свяжемся с вами';s.style.color='#2e7d32';}dom.modalForm.reset();setTimeout(closeModal,1200);}catch(err){if(s){s.textContent='✗ Попробуйте позже';s.style.color='#c62828';}}}
-    async function handleContact(e){e.preventDefault();var s=document.getElementById('formStatus');if(s){s.textContent='Отправляем…';s.style.display='block';s.style.color='var(--graphite)';}try{await sendLead();if(s){s.textContent='✓ Свяжемся с вами';s.style.color='#2e7d32';}dom.contactForm.reset();}catch(err){if(s){s.textContent='✗ Попробуйте позже';s.style.color='#c62828';}}}
-    document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(dom.modal&&dom.modal.style.display==='flex')closeModal();if(dom.mobileNav&&dom.mobileNav.style.display==='flex')dom.mobileNav.style.display='none';}});
-  </script>
+  <!-- Модальное окно детализации проекта -->
+  <div class="modal-backdrop" id="projectModal" role="dialog" aria-modal="true" aria-label="Детали проекта">
+    <div class="modal-dialog modal-dialog-project">
+      <button type="button" class="modal-close" aria-label="Закрыть окно">✕</button>
+
+      <!-- Фото объекта -->
+      <div class="project-modal-preview">
+        <img src="assets/images/projects/project-playground.jpg" alt="Фото реализованного объекта" data-modal-img class="project-modal-photo" loading="lazy">
+        <span class="project-modal-status-badge">Сдан в эксплуатацию</span>
+      </div>
+
+      <div class="project-modal-header">
+        <span class="eyebrow" data-modal-cat>Объект</span>
+        <h2 class="section-title project-modal-title" data-modal-title>ЖК «Солнечный»</h2>
+      </div>
+
+      <!-- Инженерные характеристики выполненного объекта -->
+      <div class="project-specs-panel">
+        <div class="project-spec-item">
+          <div class="project-spec-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+              <path d="M3 9h4"></path>
+              <path d="M3 15h4"></path>
+              <path d="M9 21v-4"></path>
+              <path d="M15 21v-4"></path>
+            </svg>
+          </div>
+          <div class="project-spec-content">
+            <span class="project-spec-label">Площадь</span>
+            <span class="project-spec-val" data-modal-area>240 м²</span>
+          </div>
+        </div>
+
+        <div class="project-spec-item">
+          <div class="project-spec-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <div class="project-spec-content">
+            <span class="project-spec-label">Срок монтажа</span>
+            <span class="project-spec-val" data-modal-term>8 рабочих дней</span>
+          </div>
+        </div>
+
+        <div class="project-spec-item">
+          <div class="project-spec-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <polyline points="9 12 11 14 15 10"></polyline>
+            </svg>
+          </div>
+          <div class="project-spec-content">
+            <span class="project-spec-label">Регламент</span>
+            <span class="project-spec-val" data-modal-gost>ГОСТ Р 52169</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="portfolio-desc" data-modal-desc style="font-size: 14.5px; margin-bottom: 18px; color: var(--color-graphite); line-height: 1.6;"></p>
+
+      <div style="margin-bottom: 22px;">
+        <div style="font-size: 12.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-dark); margin-bottom: 10px;">Выполненные строительно-монтажные работы:</div>
+        <ul class="project-modal-list" data-modal-list></ul>
+      </div>
+
+      <button type="button" class="btn btn-primary btn-block btn-lg" data-modal-cta>
+        Заказать расчёт сметы по аналогичному объекту
+      </button>
+    </div>
+  </div>
+
+  <!-- Модальное окно заявки -->
+  <div class="modal-backdrop" id="leadModal" role="dialog" aria-modal="true" aria-label="Заявка на расчёт">
+    <div class="modal-dialog" style="max-width: 520px;">
+      <button type="button" class="modal-close" aria-label="Закрыть окно">✕</button>
+      <span class="eyebrow">ПТО И СМЕТНЫЙ ОТДЕЛ</span>
+      <h2 class="section-title modal-lead-title" style="margin-top: 6px;">Запросить смету</h2>
+      <p style="font-size: 14px; color: var(--color-text-secondary); margin-bottom: 20px;">
+        Инженер ПТО свяжется с вами в течение 15 минут, согласует объемы работ и подготовит официальное КП по ГОСТ.
+      </p>
+
+      <form id="modalLeadForm">
+        <input type="hidden" name="lead_context" value="Заявка из модального окна">
+
+        <div class="form-group">
+          <label class="form-label" for="modalName">Контактное лицо / Организация *</label>
+          <input type="text" id="modalName" name="name" class="form-input" placeholder="Иван Иванов" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="modalPhone">Номер телефона *</label>
+          <input type="tel" id="modalPhone" name="phone" class="form-input" placeholder="+7 (___) ___-__-__" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Удобный канал для связи</label>
+          <div class="messenger-selector">
+            <div class="messenger-option">
+              <input type="radio" id="modalMsgPhone" name="messenger" value="Телефон" checked>
+              <label for="modalMsgPhone" class="messenger-label">Звонок</label>
+            </div>
+            <div class="messenger-option">
+              <input type="radio" id="modalMsgWa" name="messenger" value="WhatsApp">
+              <label for="modalMsgWa" class="messenger-label">WhatsApp</label>
+            </div>
+            <div class="messenger-option">
+              <input type="radio" id="modalMsgTg" name="messenger" value="Telegram">
+              <label for="modalMsgTg" class="messenger-label">Telegram</label>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top: 10px;">
+          Отправить заявку инженеру
+        </button>
+      </form>
+    </div>
+  </div>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

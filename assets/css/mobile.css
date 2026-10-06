@@ -1,0 +1,162 @@
+/* ============================================================
+   ШУМГЕР — адаптация под телефоны и планшеты.
+   Подключается ПОСЛЕ style.css и skin-tomorro.css, поэтому
+   переопределяет их. Десктоп шире 992px не затрагивается:
+   вся эргономика спрятана в media-запросы.
+
+   Зачем отдельный файл: style.css и скин задают «плотность»
+   под мышь (высота строк ~20px, шрифт поля 15px). На тач-экране
+   это даёт промахи по ссылкам и автозум Safari при фокусе в поле.
+   ============================================================ */
+
+/* --- iOS: не раздувать текст при повороте в ландшафт --- */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* --- защита от переполнения: медиа и длинные слова --- */
+img, svg, video, canvas { max-width: 100%; height: auto; }
+.prose, .lead, .calc-note, .case-body { overflow-wrap: break-word; }
+
+/* ============================================================
+   Планшет и телефон: <= 992px
+   ============================================================ */
+@media (max-width: 992px) {
+
+  /* --- 1. Поля ввода ---
+     Safari на iOS принудительно зумит страницу, если у поля
+     font-size < 16px, и обратно уже не отматывает. */
+  input, textarea, select, .input { font-size: 16px; }
+
+  /* --- 2. Кнопка-бургер: 40x40 -> 48x48 ---
+     Рекомендация Apple/Google — минимум 44px по короткой стороне. */
+  .burger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    margin-left: auto;
+  }
+  .burger svg { width: 26px; height: 26px; }
+
+  /* --- 3. Выдвижное меню: строки под палец --- */
+  .overlay {
+    padding: max(20px, env(safe-area-inset-top)) 24px
+             max(20px, env(safe-area-inset-bottom)) 24px;
+  }
+  .overlay-nav { gap: 0; }
+  .overlay-nav a {
+    display: flex;
+    align-items: center;
+    min-height: 52px;
+    padding: 8px 0;
+  }
+  .overlay-nav .btn { min-height: 52px; width: 100%; margin-top: 12px; }
+  .overlay-sep { margin: 12px 0; }
+  .overlay-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    margin: 0 0 20px auto;
+    font-size: 28px;
+  }
+
+  /* --- 4. Ссылки в подвале: строки по 44px --- */
+  .footer-links a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    margin-bottom: 0;
+  }
+
+  /* --- 4b. Хлебные крошки на страницах услуг ---
+     «Главная / Услуги / …» были строками по 20px — по ним
+     невозможно попасть пальцем. Разделители остаются тонкими,
+     кликабельные ссылки получают полноценную высоту. */
+  .breadcrumbs { gap: 0 4px; }
+  .breadcrumbs a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 4px;
+  }
+
+  /* --- 5. Кнопки и текстовые ссылки --- */
+  .btn { min-height: 48px; }
+  .link-more { min-height: 44px; }
+
+  /* --- 5b. Телефон и почта в списке контактов ---
+     Строка li — 15px, ссылка внутри неё была 19px. */
+  .contact-list a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 4px 0;
+  }
+
+  /* --- 5c. Согласие на обработку данных ---
+     Чекбокс остаётся мелким визуально, но тап-зона — это сам label
+     (клик по тексту тоже переключает). Ссылку на политику делаем
+     полноценной строкой. */
+  .consent { min-height: 44px; align-items: center; }
+  .consent input { width: 22px; height: 22px; flex: 0 0 auto; margin-top: 0; }
+  .consent a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  /* --- 6. Пропустить к содержанию: не мешать, но попадать --- */
+  .skip-link { padding: 14px 20px; }
+}
+
+/* ============================================================
+   Телефон: <= 640px
+   ============================================================ */
+@media (max-width: 640px) {
+
+  /* --- отступы секций под узкий экран --- */
+  .hero-title { font-size: clamp(30px, 8.5vw, 44px); line-height: 1.08; }
+  .section-title { font-size: clamp(24px, 6.5vw, 32px); }
+
+  /* --- меню: чуть компактнее, но всё ещё крупно --- */
+  .overlay-nav { font-size: 20px; }
+  .overlay-nav a { min-height: 50px; }
+
+  /* --- кнопки на всю ширину в блоках действий --- */
+  .hero-actions .btn,
+  .cta-actions .btn { width: 100%; }
+  .cta-actions { flex-direction: column; align-items: stretch; }
+
+  /* --- горизонтальные таблицы/списки не рвут макет --- */
+  .grid-2, .grid-3, .grid-4,
+  .steps, .portfolio-grid, .footer-grid,
+  .proof-bar, .quiz-grid, .contact-grid { grid-template-columns: 1fr; }
+
+  /* --- карточки: одинаковые внутренние отступы --- */
+  .hero-card, .audience-card, .calc-card,
+  .contact-card, .hero-side, .safety-card { padding: 24px; }
+
+  /* --- модальное окно почти на всю ширину --- */
+  .modal-card { padding: 24px; width: calc(100% - 32px); }
+
+  /* --- контакты: подпись над значением, а не в строку --- */
+  .contact-list .k { min-width: 0; }
+  .contact-list li { display: block; }
+}
+
+/* ============================================================
+   Очень узкие экраны: <= 380px
+   ============================================================ */
+@media (max-width: 380px) {
+  .container, .container-narrow { padding: 0 14px; }
+  .overlay { padding-left: 16px; padding-right: 16px; }
+  .hero-title { font-size: clamp(26px, 8.5vw, 34px); }
+  .btn { padding-left: 18px; padding-right: 18px; }
+}
